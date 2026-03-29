@@ -59,7 +59,7 @@ export default function RandomNumberGenerator() {
     <ToolLayout
       title="Random Number Generator"
       description="Generate random numbers within a specified range. Perfect for games, raffles, lottery picks, and random sampling."
-      category={{ name: "Random Generators", slug: "random" }}
+      category={{ name: "Random Generators", slug: "random-generators" }}
       relatedTools={[
         { name: "Percentage Calculator", href: "/percentage-calculator" },
         { name: "BMI Calculator", href: "/bmi-calculator" },

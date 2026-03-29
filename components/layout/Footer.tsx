@@ -9,6 +9,7 @@ import {
   Shuffle,
   Code,
   Mail,
+  Image,
 } from "lucide-react";
 import { siteConfig, categories } from "@/config/site";
 import { tools } from "@/lib/tools";
@@ -22,6 +23,8 @@ const categoryIcons: Record<string, React.ReactNode> = {
   "date-time": <Clock className="h-4 w-4" strokeWidth={1.5} />,
   random: <Shuffle className="h-4 w-4" strokeWidth={1.5} />,
   developer: <Code className="h-4 w-4" strokeWidth={1.5} />,
+  pdf: <FileText className="h-4 w-4" strokeWidth={1.5} />,
+  image: <Image className="h-4 w-4" strokeWidth={1.5} />,
 };
 
 export function Footer() {
@@ -34,9 +37,9 @@ export function Footer() {
         <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-5">
           {/* Brand — OmniCalculator Style */}
           <div className="col-span-2 sm:col-span-3 lg:col-span-1">
-            <Link href="/" className="flex items-center gap-2">
-              <span className="text-xl font-bold text-foreground font-[family-name:var(--font-wallpoet)] tracking-wider">
-                Soft<span className="text-primary">Zar</span>
+            <Link href="/" className="group flex items-center gap-2">
+              <span className="text-xl md:text-2xl font-bold text-foreground font-[family-name:var(--font-wallpoet)] tracking-wider transition-colors group-hover:text-primary">
+                Soft<span className="text-primary">ZaR</span>
               </span>
             </Link>
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground max-w-[220px]">
@@ -89,7 +92,7 @@ export function Footer() {
               {categories.map((category) => (
                 <Link
                   key={category.id}
-                  href={`/category/${category.slug}`}
+                  href={`/${category.slug}`}
                   className="flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-primary"
                 >
                   <span className="text-primary/70">
@@ -180,9 +183,12 @@ export function Footer() {
 
         {/* Bottom Bar — OmniCalculator Style */}
         <div className="mt-10 flex flex-col items-center justify-between gap-3 border-t border-border pt-6 sm:flex-row">
-          <p className="text-xs text-muted-foreground">
+          <Link
+            href="/privacy-policy"
+            className="text-xs text-muted-foreground transition-colors hover:text-primary"
+          >
             Privacy, Cookies & Terms of Service
-          </p>
+          </Link>
           <p className="text-xs text-muted-foreground">
             Copyright &copy; {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
           </p>

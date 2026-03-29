@@ -14,6 +14,7 @@ export type ToolCategory =
   | "conversion"
   | "text"
   | "image"
+  | "pdf"
   | "date-time"
   | "random"
   | "developer";

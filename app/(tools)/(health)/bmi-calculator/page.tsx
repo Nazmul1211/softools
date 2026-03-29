@@ -91,11 +91,20 @@ export default function BMICalculator() {
     <ToolLayout
       title="BMI Calculator"
       description="Calculate your Body Mass Index (BMI) to see if you're at a healthy weight. Get personalized results based on your height and weight."
-      category={{ name: "Health & Fitness", slug: "health" }}
+      category={{ name: "Health & Fitness", slug: "health-fitness" }}
       relatedTools={[
-        { name: "Percentage Calculator", href: "/percentage-calculator" },
-        { name: "Age Calculator", href: "/age-calculator" },
-        { name: "Loan Calculator", href: "/loan-calculator" },
+        { name: "Calorie Calculator", href: "/calorie-calculator" },
+        { name: "BMR Calculator", href: "/bmr-calculator" },
+        { name: "Ideal Weight Calculator", href: "/ideal-weight-calculator" },
+        { name: "Body Fat Calculator", href: "/body-fat-calculator" },
+      ]}
+      lastUpdated="2024-03-28"
+      datePublished="2024-01-15"
+      howToSteps={[
+        { name: "Select Unit System", text: "Choose between Metric (cm/kg) or Imperial (ft/in/lbs) measurement system." },
+        { name: "Enter Your Height", text: "Input your height using the selected unit system." },
+        { name: "Enter Your Weight", text: "Input your current weight in the selected unit." },
+        { name: "View Results", text: "Your BMI score, category, and healthy weight range will appear automatically." },
       ]}
       content={
         <>

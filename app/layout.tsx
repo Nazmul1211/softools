@@ -70,6 +70,51 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${wallpoet.variable} h-full`} suppressHydrationWarning>
+      <head>
+        {/* Site-wide Organization Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "@id": "https://softzar.com/#organization",
+              name: "Softzar",
+              url: "https://softzar.com",
+              logo: "https://softzar.com/logo.png",
+              description: "Free online calculators, converters, and utility tools for everyone.",
+              foundingDate: "2024",
+              sameAs: [
+                "https://twitter.com/softzar",
+                "https://github.com/softzar",
+              ],
+            }),
+          }}
+        />
+        {/* WebSite Schema for sitelinks search box */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "@id": "https://softzar.com/#website",
+              name: "Softzar",
+              url: "https://softzar.com",
+              description: "Free online calculators, converters, and developer tools",
+              publisher: { "@id": "https://softzar.com/#organization" },
+              potentialAction: {
+                "@type": "SearchAction",
+                target: {
+                  "@type": "EntryPoint",
+                  urlTemplate: "https://softzar.com/tools?q={search_term_string}",
+                },
+                "query-input": "required name=search_term_string",
+              },
+            }),
+          }}
+        />
+      </head>
       <body className="min-h-full flex flex-col bg-background text-foreground antialiased">
         <ThemeProvider>
           <JourneyRefreshProvider>

@@ -81,7 +81,7 @@ export default function CumulativeGPACalculator() {
     <ToolLayout
       title="Cumulative GPA Calculator"
       description="Combine multiple semesters or terms to calculate your overall cumulative GPA. Enter each semester's GPA and credit hours to get your weighted cumulative average."
-      category={{ name: "Math Calculators", slug: "math" }}
+      category={{ name: "Math Calculators", slug: "math-calculators" }}
       relatedTools={[
         { name: "College GPA Calculator", href: "/college-gpa-calculator" },
         { name: "High School GPA Calculator", href: "/high-school-gpa-calculator" },

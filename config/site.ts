@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "Softzar",
   description:
     "Free online tools and calculators for everyday tasks. Math, finance, health, conversion tools and more.",
-  url: "https://softzar.com",
+  url: "https://softzar.com/",
   ogImage: "https://softzar.com/og.png",
   links: {
     twitter: "https://twitter.com/softzar",
@@ -67,5 +67,19 @@ export const categories = [
     name: "Developer Tools",
     description: "Tools for developers and programmers",
     icon: "code",
+  },
+  {
+    id: "pdf" as const,
+    slug: "pdf-tools",
+    name: "PDF Tools",
+    description: "Compress, merge, split and convert PDF files",
+    icon: "file-text",
+  },
+  {
+    id: "image" as const,
+    slug: "image-tools",
+    name: "Image Tools",
+    description: "Compress, resize and optimize images",
+    icon: "image",
   },
 ];

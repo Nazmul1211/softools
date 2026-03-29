@@ -12,6 +12,7 @@ import {
   Zap,
   Shield,
   ChevronRight,
+  Image as ImageIcon,
 } from "lucide-react";
 import { categories } from "@/config/site";
 import { tools } from "@/lib/tools";
@@ -26,6 +27,8 @@ const categoryIcons: Record<string, React.ReactNode> = {
   "date-time": <Clock className="h-8 w-8" strokeWidth={1.5} />,
   random: <Shuffle className="h-8 w-8" strokeWidth={1.5} />,
   developer: <Code className="h-8 w-8" strokeWidth={1.5} />,
+  pdf: <FileText className="h-8 w-8" strokeWidth={1.5} />,
+  image: <ImageIcon className="h-8 w-8" strokeWidth={1.5} />,
 };
 
 const categorySmallIcons: Record<string, React.ReactNode> = {
@@ -37,6 +40,8 @@ const categorySmallIcons: Record<string, React.ReactNode> = {
   "date-time": <Clock className="h-5 w-5" strokeWidth={1.5} />,
   random: <Shuffle className="h-5 w-5" strokeWidth={1.5} />,
   developer: <Code className="h-5 w-5" strokeWidth={1.5} />,
+  pdf: <FileText className="h-5 w-5" strokeWidth={1.5} />,
+  image: <ImageIcon className="h-5 w-5" strokeWidth={1.5} />,
 };
 
 export default function Home() {
@@ -62,7 +67,7 @@ export default function Home() {
           <HomeSearch />
 
           {/* Category Icon Grid — 4 columns */}
-          <div className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-4">
+          <div className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
             {categories.map((category) => {
               const count = tools.filter(
                 (t) => t.category === category.id
@@ -71,7 +76,7 @@ export default function Home() {
               return (
                 <Link
                   key={category.id}
-                  href={`/category/${category.slug}`}
+                  href={`/${category.slug}`}
                   className="group flex flex-col items-center gap-3 rounded-xl border border-card-border bg-card-bg px-4 py-6 transition-all hover:border-card-hover-border hover:shadow-md"
                 >
                   <div className="text-primary transition-transform duration-200 group-hover:scale-110">
@@ -107,12 +112,16 @@ export default function Home() {
       {/* ═══════════════════════════════════════════
           FEATURED IN — OmniCalculator Style
          ═══════════════════════════════════════════ */}
-      <section className="border-y border-border bg-background px-4 py-12 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden border-y border-border bg-gradient-to-b from-background via-background to-muted/40 px-4 py-12 sm:px-6 lg:px-8">
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-[radial-gradient(70%_100%_at_50%_0%,rgba(225,29,99,0.1),transparent)]" />
         <div className="mx-auto max-w-5xl">
-          <p className="mb-8 text-center text-sm font-medium uppercase tracking-wider text-muted-foreground">
+          <p className="mb-3 text-center text-xs font-semibold uppercase tracking-[0.24em] text-primary/80">
             Trusted by Students &amp; Professionals Worldwide
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-6 opacity-60 grayscale">
+          <h2 className="mx-auto mb-8 max-w-2xl text-center text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
+            A clean, dependable toolkit designed for everyday flow.
+          </h2>
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
             {[
               { name: "Google Scholar", svg: "M12 14l-2-1-4 2V4a1 1 0 011-1h10a1 1 0 011 1v11l-4-2-2 1z" },
               { name: "Medium", svg: "M4 4h16v16H4z" },
@@ -122,9 +131,9 @@ export default function Home() {
             ].map((brand) => (
               <div
                 key={brand.name}
-                className="flex items-center gap-2 text-muted-foreground"
+                className="group flex items-center justify-center gap-2 rounded-xl border border-border/80 bg-background/90 px-3 py-4 text-muted-foreground shadow-[0_8px_18px_rgba(15,23,42,0.06)] transition-all hover:-translate-y-0.5 hover:border-primary/35 hover:text-foreground hover:shadow-[0_12px_24px_rgba(225,29,99,0.12)] dark:bg-card-bg/80 dark:shadow-none"
               >
-                <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                <svg className="h-5 w-5 text-primary/80 transition-colors group-hover:text-primary" fill="currentColor" viewBox="0 0 24 24">
                   <path d={brand.svg} />
                 </svg>
                 <span className="text-sm font-semibold tracking-tight">
@@ -193,7 +202,7 @@ export default function Home() {
 
                   {/* See All */}
                   <Link
-                    href={`/category/${category.slug}`}
+                    href={`/${category.slug}`}
                     className="block w-full rounded-lg border border-card-border py-2 text-center text-sm font-medium text-muted-foreground transition-all hover:border-primary hover:text-primary"
                   >
                     See All

@@ -63,7 +63,7 @@ export default function CompoundInterestCalculator() {
     <ToolLayout
       title="Compound Interest Calculator"
       description="See how your money grows over time with compound interest. Enter your initial investment, interest rate, time period, and optional monthly contributions to visualize your wealth accumulation."
-      category={{ name: "Finance Tools", slug: "finance" }}
+      category={{ name: "Finance Tools", slug: "finance-tools" }}
       relatedTools={[
         { name: "ROI Calculator", href: "/roi-calculator" },
         { name: "Savings Goal Calculator", href: "/savings-goal-calculator" },

@@ -70,7 +70,7 @@ export default function SavingsGoalCalculator() {
     <ToolLayout
       title="Savings Goal Calculator"
       description="Find out exactly how much you need to save each month to reach your financial goal. Factor in your current savings, expected interest rate, and timeline to get a personalized monthly savings target."
-      category={{ name: "Finance Tools", slug: "finance" }}
+      category={{ name: "Finance Tools", slug: "finance-tools" }}
       relatedTools={[
         { name: "Compound Interest Calculator", href: "/compound-interest-calculator" },
         { name: "ROI Calculator", href: "/roi-calculator" },

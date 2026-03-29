@@ -2,7 +2,7 @@
 
 > **Purpose:** Complete list of tools to build for softzar website
 > **Created:** March 2026
-> **Status:** Planning Phase
+> **Status:** Execution Phase (Actively Shipping)
 
 ---
 
@@ -31,61 +31,61 @@
 
 | # | Tool Name | Competitor | Status |
 |---|-----------|------------|--------|
-| 1 | Mortgage Calculator | Calculator.net, Omni | ⬜ Todo |
-| 2 | Loan Calculator | Calculator.net, Omni | ⬜ Todo |
-| 3 | Compound Interest Calculator | Calculator.net, Omni | ⬜ Todo |
-| 4 | EMI Calculator | Calculator.net | ⬜ Todo |
-| 5 | Salary Calculator | Calculator.net | ⬜ Todo |
-| 6 | Tax Calculator | Calculator.net | ⬜ Todo |
-| 7 | Tip Calculator | Calculator.net, Omni | ⬜ Todo |
-| 8 | Discount Calculator | Calculator.net, Omni | ⬜ Todo |
-| 9 | Percentage Calculator | Calculator.net, Omni | ⬜ Todo |
-| 10 | ROI Calculator | Calculator.net, Omni | ⬜ Todo |
+| 1 | Mortgage Calculator | Calculator.net, Omni | ✅ Done |
+| 2 | Loan Calculator | Calculator.net, Omni | ✅ Done |
+| 3 | Compound Interest Calculator | Calculator.net, Omni | ✅ Done |
+| 4 | EMI Calculator | Calculator.net | ✅ Done |
+| 5 | Salary Calculator | Calculator.net | ✅ Done |
+| 6 | Tax Calculator | Calculator.net | ✅ Done |
+| 7 | Tip Calculator | Calculator.net, Omni | ✅ Done |
+| 8 | Discount Calculator | Calculator.net, Omni | ✅ Done |
+| 9 | Percentage Calculator | Calculator.net, Omni | ✅ Done |
+| 10 | ROI Calculator | Calculator.net, Omni | ✅ Done |
 
 ## 🏃 Health & Fitness (High Traffic)
 
 | # | Tool Name | Competitor | Status |
 |---|-----------|------------|--------|
-| 11 | BMI Calculator | Calculator.net, Omni | ⬜ Todo |
-| 12 | Calorie Calculator | Calculator.net, Omni | ⬜ Todo |
-| 13 | BMR Calculator | Calculator.net, Omni | ⬜ Todo |
-| 14 | Body Fat Calculator | Calculator.net, Omni | ⬜ Todo |
-| 15 | Ideal Weight Calculator | Calculator.net, Omni | ⬜ Todo |
-| 16 | Pregnancy Due Date Calculator | Calculator.net, Omni | ⬜ Todo |
-| 17 | Age Calculator | Calculator.net, Omni | ⬜ Todo |
-| 18 | TDEE Calculator | Calculator.net, Omni | ⬜ Todo |
-| 19 | Macro Calculator | Calculator.net, Omni | ⬜ Todo |
-| 20 | Water Intake Calculator | Omni | ⬜ Todo |
+| 11 | BMI Calculator | Calculator.net, Omni | ✅ Done |
+| 12 | Calorie Calculator | Calculator.net, Omni | ✅ Done |
+| 13 | BMR Calculator | Calculator.net, Omni | ✅ Done |
+| 14 | Body Fat Calculator | Calculator.net, Omni | ✅ Done |
+| 15 | Ideal Weight Calculator | Calculator.net, Omni | ✅ Done |
+| 16 | Pregnancy Due Date Calculator | Calculator.net, Omni | ✅ Done |
+| 17 | Age Calculator | Calculator.net, Omni | ✅ Done |
+| 18 | TDEE Calculator | Calculator.net, Omni | ✅ Done |
+| 19 | Macro Calculator | Calculator.net, Omni | ✅ Done |
+| 20 | Water Intake Calculator | Omni | ✅ Done |
 
 ## 🔢 Math Calculators (High Traffic)
 
 | # | Tool Name | Competitor | Status |
 |---|-----------|------------|--------|
-| 21 | Scientific Calculator | Calculator.net | ⬜ Todo |
-| 22 | Fraction Calculator | Calculator.net, Omni | ⬜ Todo |
-| 23 | Percentage Calculator | Calculator.net, Omni | ⬜ Todo |
-| 24 | Square Root Calculator | Omni | ⬜ Todo |
-| 25 | Average Calculator | Calculator.net, Omni | ⬜ Todo |
-| 26 | Random Number Generator | Calculator.net | ⬜ Todo |
-| 27 | GPA Calculator | Calculator.net, GPA.io | ⬜ Todo |
-| 28 | Grade Calculator | Calculator.net, GPA.io | ⬜ Todo |
-| 29 | Ratio Calculator | Calculator.net, Omni | ⬜ Todo |
-| 30 | Standard Deviation Calculator | Calculator.net, Omni | ⬜ Todo |
+| 21 | Scientific Calculator | Calculator.net | ✅ Done |
+| 22 | Fraction Calculator | Calculator.net, Omni | ✅ Done |
+| 23 | Percentage Calculator | Calculator.net, Omni | ✅ Done |
+| 24 | Square Root Calculator | Omni | ✅ Done |
+| 25 | Average Calculator | Calculator.net, Omni | ✅ Done |
+| 26 | Random Number Generator | Calculator.net | ✅ Done |
+| 27 | GPA Calculator | Calculator.net, GPA.io | ✅ Done |
+| 28 | Grade Calculator | Calculator.net, GPA.io | ✅ Done |
+| 29 | Ratio Calculator | Calculator.net, Omni | ✅ Done |
+| 30 | Standard Deviation Calculator | Calculator.net, Omni | ✅ Done |
 
 ## 🖼️ Image Tools (High Demand)
 
 | # | Tool Name | Competitor | Status |
 |---|-----------|------------|--------|
-| 31 | Image Resizer | iLoveIMG, TinyPNG | ⬜ Todo |
-| 32 | Image Compressor | TinyPNG, Squoosh | ⬜ Todo |
-| 33 | Image to PNG Converter | iLoveIMG | ⬜ Todo |
-| 34 | Image to JPG Converter | iLoveIMG | ⬜ Todo |
-| 35 | Image Cropper | iLoveIMG | ⬜ Todo |
-| 36 | WEBP to PNG Converter | CloudConvert | ⬜ Todo |
-| 37 | PNG to WEBP Converter | CloudConvert | ⬜ Todo |
-| 38 | Image to Base64 | Various | ⬜ Todo |
+| 31 | Image Resizer | iLoveIMG, TinyPNG | ✅ Done |
+| 32 | Image Compressor | TinyPNG, Squoosh | ✅ Done |
+| 33 | Image to PNG Converter | iLoveIMG | ✅ Done |
+| 34 | Image to JPG Converter | iLoveIMG | ✅ Done |
+| 35 | Image Cropper | iLoveIMG | ✅ Done |
+| 36 | WEBP to PNG Converter | CloudConvert | ✅ Done |
+| 37 | PNG to WEBP Converter | CloudConvert | ✅ Done |
+| 38 | Image to Base64 | Various | ✅ Done |
 | 39 | Remove Background | Remove.bg | ⬜ Todo |
-| 40 | QR Code Generator | Various | ⬜ Todo |
+| 40 | QR Code Generator | Various | ✅ Done |
 
 ## 📄 PDF Tools (High Demand)
 
@@ -93,10 +93,10 @@
 |---|-----------|------------|--------|
 | 41 | PDF to Word Converter | iLovePDF, SmallPDF | ⬜ Todo |
 | 42 | Word to PDF Converter | iLovePDF, SmallPDF | ⬜ Todo |
-| 43 | PDF Compressor | iLovePDF, SmallPDF | ⬜ Todo |
-| 44 | Merge PDF | iLovePDF, SmallPDF | ⬜ Todo |
-| 45 | Split PDF | iLovePDF, SmallPDF | ⬜ Todo |
-| 46 | PDF to Image | iLovePDF | ⬜ Todo |
+| 43 | PDF Compressor | iLovePDF, SmallPDF | ✅ Done |
+| 44 | Merge PDF | iLovePDF, SmallPDF | ✅ Done |
+| 45 | Split PDF | iLovePDF, SmallPDF | ✅ Done |
+| 46 | PDF to Image | iLovePDF | ✅ Done |
 | 47 | Image to PDF | iLovePDF | ⬜ Todo |
 | 48 | PDF to Excel | iLovePDF | ⬜ Todo |
 | 49 | Rotate PDF | iLovePDF | ⬜ Todo |
@@ -180,14 +180,14 @@
 
 | # | Tool Name | Competitor | Status |
 |---|-----------|------------|--------|
-| 106 | Date Calculator | Calculator.net, Omni | ⬜ Todo |
+| 106 | Date Calculator | Calculator.net, Omni | ✅ Done |
 | 107 | Time Calculator | Calculator.net, Omni | ⬜ Todo |
 | 108 | Hours Calculator | Calculator.net | ⬜ Todo |
-| 109 | Time Zone Converter | Calculator.net, Omni | ⬜ Todo |
+| 109 | Time Zone Converter | Calculator.net, Omni | ✅ Done |
 | 110 | Day Counter | Calculator.net | ⬜ Todo |
 | 111 | Days Between Dates | Omni | ⬜ Todo |
 | 112 | Birthday Calculator | Omni | ⬜ Todo |
-| 113 | Countdown Timer | Various | ⬜ Todo |
+| 113 | Countdown Timer | Various | ✅ Done |
 | 114 | Stopwatch | Various | ⬜ Todo |
 | 115 | Time Card Calculator | Calculator.net | ⬜ Todo |
 | 116 | Work Hours Calculator | Various | ⬜ Todo |
@@ -219,25 +219,25 @@
 
 | # | Tool Name | Competitor | Status |
 |---|-----------|------------|--------|
-| 131 | JSON Formatter | Various | ⬜ Todo |
-| 132 | JSON Validator | Various | ⬜ Todo |
+| 131 | JSON Formatter | Various | ✅ Done |
+| 132 | JSON Validator | Various | ✅ Done |
 | 133 | JSON to CSV Converter | Various | ⬜ Todo |
 | 134 | XML Formatter | Various | ⬜ Todo |
 | 135 | HTML Formatter | Various | ⬜ Todo |
 | 136 | CSS Formatter | Various | ⬜ Todo |
 | 137 | JavaScript Formatter | Various | ⬜ Todo |
 | 138 | SQL Formatter | Various | ⬜ Todo |
-| 139 | Base64 Encoder/Decoder | Calculator.net | ⬜ Todo |
-| 140 | URL Encoder/Decoder | Calculator.net | ⬜ Todo |
+| 139 | Base64 Encoder/Decoder | Calculator.net | ✅ Done |
+| 140 | URL Encoder/Decoder | Calculator.net | ✅ Done |
 | 141 | HTML Encoder/Decoder | Various | ⬜ Todo |
-| 142 | MD5 Hash Generator | Various | ⬜ Todo |
+| 142 | MD5 Hash Generator | Various | ✅ Done |
 | 143 | SHA Hash Generator | Various | ⬜ Todo |
-| 144 | UUID Generator | Various | ⬜ Todo |
-| 145 | Password Generator | Calculator.net | ⬜ Todo |
-| 146 | Lorem Ipsum Generator | Various | ⬜ Todo |
-| 147 | Regex Tester | Various | ⬜ Todo |
+| 144 | UUID Generator | Various | ✅ Done |
+| 145 | Password Generator | Calculator.net | ✅ Done |
+| 146 | Lorem Ipsum Generator | Various | ✅ Done |
+| 147 | Regex Tester | Various | ✅ Done |
 | 148 | Cron Expression Generator | Various | ⬜ Todo |
-| 149 | Color Converter (HEX/RGB/HSL) | Various | ⬜ Todo |
+| 149 | Color Converter (HEX/RGB/HSL) | Various | ✅ Done |
 | 150 | IP Address Lookup | Various | ⬜ Todo |
 | 151 | IP Subnet Calculator | Calculator.net | ⬜ Todo |
 | 152 | Binary Calculator | Calculator.net | ⬜ Todo |
@@ -249,9 +249,9 @@
 
 | # | Tool Name | Competitor | Status |
 |---|-----------|------------|--------|
-| 156 | Word Counter | Various | ⬜ Todo |
-| 157 | Character Counter | Various | ⬜ Todo |
-| 158 | Text Case Converter | Various | ⬜ Todo |
+| 156 | Word Counter | Various | ✅ Done |
+| 157 | Character Counter | Various | ✅ Done |
+| 158 | Text Case Converter | Various | ✅ Done |
 | 159 | Remove Duplicate Lines | Various | ⬜ Todo |
 | 160 | Text Reverser | Various | ⬜ Todo |
 | 161 | Find and Replace | Various | ⬜ Todo |
@@ -259,7 +259,7 @@
 | 163 | Speech to Text | Various | ⬜ Todo |
 | 164 | Plagiarism Checker | Various | ⬜ Todo |
 | 165 | Grammar Checker | Various | ⬜ Todo |
-| 166 | Slug Generator | Various | ⬜ Todo |
+| 166 | Slug Generator | Various | ✅ Done |
 | 167 | Random Text Generator | Various | ⬜ Todo |
 | 168 | Text Diff Checker | Various | ⬜ Todo |
 | 169 | Markdown to HTML | Various | ⬜ Todo |
@@ -388,9 +388,9 @@
 
 | # | Tool Name | Competitor | Status |
 |---|-----------|------------|--------|
-| 256 | College GPA Calculator | GPA.io | ⬜ Todo |
-| 257 | High School GPA Calculator | GPA.io | ⬜ Todo |
-| 258 | Cumulative GPA Calculator | GPA.io | ⬜ Todo |
+| 256 | College GPA Calculator | GPA.io | ✅ Done |
+| 257 | High School GPA Calculator | GPA.io | ✅ Done |
+| 258 | Cumulative GPA Calculator | GPA.io | ✅ Done |
 | 259 | Final Grade Calculator | GPA.io | ⬜ Todo |
 | 260 | Weighted Grade Calculator | GPA.io | ⬜ Todo |
 | 261 | Test Score Calculator | Various | ⬜ Todo |

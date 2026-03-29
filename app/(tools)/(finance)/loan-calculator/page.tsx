@@ -61,11 +61,20 @@ export default function LoanCalculator() {
     <ToolLayout
       title="Loan Calculator"
       description="Calculate your monthly loan payments, total interest, and total amount payable. Works for mortgages, auto loans, personal loans, and more."
-      category={{ name: "Finance Tools", slug: "finance" }}
+      category={{ name: "Finance Tools", slug: "finance-tools" }}
       relatedTools={[
+        { name: "Mortgage Calculator", href: "/mortgage-calculator" },
+        { name: "EMI Calculator", href: "/emi-calculator" },
         { name: "Compound Interest Calculator", href: "/compound-interest-calculator" },
         { name: "ROI Calculator", href: "/roi-calculator" },
-        { name: "Savings Goal Calculator", href: "/savings-goal-calculator" },
+      ]}
+      lastUpdated="2024-03-28"
+      datePublished="2024-01-12"
+      howToSteps={[
+        { name: "Enter Loan Amount", text: "Input the total principal amount you want to borrow." },
+        { name: "Set Interest Rate", text: "Enter the annual interest rate (APR) as a percentage." },
+        { name: "Choose Loan Term", text: "Specify the loan duration in years." },
+        { name: "Calculate Payment", text: "Click Calculate to see your monthly payment, total interest, and total repayment amount." },
       ]}
       content={
         <>

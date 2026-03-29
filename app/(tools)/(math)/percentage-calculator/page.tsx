@@ -51,11 +51,20 @@ export default function PercentageCalculator() {
     <ToolLayout
       title="Percentage Calculator"
       description="Calculate percentages easily. Find what percent a number is of another, calculate percentage increase/decrease, and more."
-      category={{ name: "Math Calculators", slug: "math" }}
+      category={{ name: "Math Calculators", slug: "math-calculators" }}
       relatedTools={[
-        { name: "Loan Calculator", href: "/loan-calculator" },
-        { name: "BMI Calculator", href: "/bmi-calculator" },
-        { name: "Age Calculator", href: "/age-calculator" },
+        { name: "Fraction Calculator", href: "/fraction-calculator" },
+        { name: "Ratio Calculator", href: "/ratio-calculator" },
+        { name: "Average Calculator", href: "/average-calculator" },
+        { name: "Discount Calculator", href: "/discount-calculator" },
+      ]}
+      lastUpdated="2024-03-28"
+      datePublished="2024-01-10"
+      howToSteps={[
+        { name: "Choose Calculation Type", text: "Select what you want to calculate: 'What is X% of Y?', 'X is what % of Y?', or '% Change'." },
+        { name: "Enter First Value", text: "Input the first number based on your chosen calculation type." },
+        { name: "Enter Second Value", text: "Input the second number for the calculation." },
+        { name: "Calculate", text: "Click Calculate to see your percentage result instantly." },
       ]}
       content={
         <>
