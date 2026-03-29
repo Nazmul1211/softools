@@ -298,7 +298,7 @@ export function Header() {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden items-center gap-1 md:flex">
+        <div className="hidden text-black items-center gap-1 md:flex">
           {/* Categories Dropdown */}
           <div className="relative" ref={categoryDropdownRef}>
             <button
@@ -350,7 +350,7 @@ export function Header() {
         </div>
 
         {/* Right Side - Search & Theme */}
-        <div className="flex items-center gap-2">
+        <div className="flex text-black items-center gap-2">
           {/* Search Button */}
           <div className="relative" ref={searchRef}>
             <button
