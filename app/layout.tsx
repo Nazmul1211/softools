@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Wallpoet } from "next/font/google";
+import { Inter, Poppins, Wallpoet } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -14,6 +14,11 @@ const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
 });
+
+const poppins = Poppins({
+  weight: ["100", "200", "300", "400", "500", "600"],
+  subsets: ["latin"],
+})
 
 const wallpoet = Wallpoet({
   variable: "--font-wallpoet",
@@ -81,7 +86,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${wallpoet.variable} h-full`}
+      className={`${wallpoet.variable} h-full`}
       suppressHydrationWarning
     >
       <head>
@@ -186,7 +191,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="min-h-full flex flex-col bg-background text-foreground antialiased">
+      <body className={`${poppins.className} min-h-full flex flex-col bg-background text-foreground antialiased`}>
         <ThemeProvider>
           <JourneyRefreshProvider>
             <Suspense fallback={null}>

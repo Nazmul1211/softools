@@ -142,7 +142,7 @@ export const metadata: Metadata = {
 
 export default function ReviewCategoryPage() {
   return (
-    <main className="mx-auto max-w-5xl px-4 py-10 sm:px-6 lg:px-8">
+    <main className="mx-auto max-w-5xl mt-4 px-4 py-10 sm:px-6 lg:px-8">
       <nav className="mb-6 text-sm text-muted-foreground" aria-label="Breadcrumb">
         <Link href="/" className="hover:text-primary">
           Home
@@ -166,30 +166,25 @@ export default function ReviewCategoryPage() {
         </p>
       </header>
 
-      <section className="rounded-2xl border border-border bg-card-bg p-6 sm:p-8">
+      <section className="rounded-2xl border border-border bg-card-bg p-6 mb-12 sm:p-8">
         <h2 className="text-xl font-semibold text-foreground">All Review Posts</h2>
         <p className="mt-2 text-sm text-muted-foreground">
-          20 preservation review URLs are listed below in content-list format.
+          20 content-preservation review posts are listed below as direct links.
         </p>
 
-        <ul className="mt-6 space-y-3">
+        <ul className="mt-6 list-disc space-y-4 pl-5 marker:text-primary">
           {reviewPosts.map((post) => (
-            <li key={post.href} className="rounded-xl border border-border bg-background p-4">
-              <div className="flex items-start gap-3">
-                <span className="mt-1 text-primary">•</span>
-                <div>
-                  <Link
-                    href={post.href}
-                    className="text-base font-semibold text-primary hover:underline"
-                  >
-                    {post.title}
-                  </Link>
-                  <p className="mt-1 text-sm text-muted-foreground">{post.snippet}</p>
-                  <p className="mt-1 text-xs text-muted-foreground/90">
-                    URL: https://softzar.com{post.href}
-                  </p>
-                </div>
-              </div>
+            <li key={post.href}>
+              <Link
+                href={post.href}
+                className="text-base font-semibold text-primary hover:underline"
+              >
+                {post.title}
+              </Link>
+              <p className="mt-1 text-sm text-muted-foreground">{post.snippet}</p>
+              <p className="mt-1 text-xs text-muted-foreground/90">
+                https://softzar.com{post.href}
+              </p>
             </li>
           ))}
         </ul>

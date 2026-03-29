@@ -39,10 +39,10 @@ const categoryIconMap: Record<string, LucideIcon> = {
 };
 
 const navigationItemClassName =
-  "rounded-lg px-3 py-2 text-sm font-medium text-slate-700 transition-colors hover:bg-slate-200/90 hover:text-slate-950 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-slate-50";
+  "rounded-lg px-3 py-2 text-sm font-medium text-black transition-colors hover:bg-slate-100 hover:text-black dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-slate-50";
 
 const dropdownItemClassName =
-  "flex items-center gap-2 rounded-lg px-3 py-2.5 text-sm text-slate-700 transition-colors hover:bg-slate-200/90 hover:text-slate-950 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-slate-50";
+  "flex items-center gap-2 rounded-lg px-3 py-2.5 text-sm text-black transition-colors hover:bg-slate-100 hover:text-black dark:text-white dark:hover:bg-slate-800 dark:hover:text-white";
 
 const iconButtonClassName =
   "flex h-9 w-9 items-center justify-center rounded-lg text-slate-600 transition-colors hover:bg-slate-200/90 hover:text-slate-950 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-slate-50";
@@ -65,7 +65,8 @@ export function Header() {
   const searchRef = useRef<HTMLDivElement>(null);
   const searchInputRef = useRef<HTMLInputElement>(null);
   const router = useRouter();
-  const { theme, setTheme } = useTheme();
+  const { theme, resolvedTheme, setTheme } = useTheme();
+  const isDarkTheme = (resolvedTheme ?? theme) === "dark";
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -169,6 +170,14 @@ export function Header() {
         href: "/about/",
         type: "page",
         keywords: ["about", "company", "team"],
+      },
+      {
+        id: "page-review",
+        title: "Review Category",
+        description: "Browse all legacy software review preservation posts.",
+        href: "/category/review/",
+        type: "page",
+        keywords: ["review", "software review", "preservation", "category"],
       },
       {
         id: "page-contact",
@@ -303,7 +312,7 @@ export function Header() {
             </button>
 
             {categoryDropdownOpen && (
-              <div className="absolute left-0 top-full z-[60] mt-2 w-64 rounded-xl border border-border bg-background/95 p-2 shadow-xl backdrop-blur-xl">
+              <div className="absolute left-0 top-full z-[60] mt-2 w-64 rounded-xl border border-border bg-white p-2 shadow-xl dark:bg-background">
                 {categories.map((category) => {
                   const CategoryIcon = categoryIconMap[category.id] ?? Menu;
 
@@ -315,7 +324,9 @@ export function Header() {
                       onClick={() => setCategoryDropdownOpen(false)}
                     >
                       <CategoryIcon className="h-4 w-4 text-primary" strokeWidth={1.7} />
-                      <span>{category.name}</span>
+                      <span style={{ color: isDarkTheme ? "#ffffff" : "#000000" }}>
+                        {category.name}
+                      </span>
                     </Link>
                   );
                 })}
@@ -331,10 +342,10 @@ export function Header() {
           </Link>
 
           <Link
-            href="/about/"
+            href="/category/review/"
             className={navigationItemClassName}
           >
-            About
+            Reviews
           </Link>
         </div>
 
@@ -507,17 +518,19 @@ export function Header() {
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     <CategoryIcon className="h-4 w-4 text-primary" strokeWidth={1.7} />
-                    <span>{category.name}</span>
+                    <span style={{ color: isDarkTheme ? "#ffffff" : "#000000" }}>
+                      {category.name}
+                    </span>
                   </Link>
                 );
               })}
             </div>
             <Link
-              href="/about/"
+              href="/category/review/"
               className={`block ${navigationItemClassName}`}
               onClick={() => setMobileMenuOpen(false)}
             >
-              About
+              Reviews
             </Link>
           </div>
         </div>
