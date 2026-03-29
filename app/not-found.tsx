@@ -27,7 +27,7 @@ export default function NotFoundPage() {
             Browse All Tools
           </Link>
           <Link
-            href="/category/review/"
+            href="/review/"
             className="rounded-xl border border-border bg-background px-4 py-3 text-sm font-medium text-foreground transition-colors hover:border-primary hover:text-primary"
           >
             Open Reviews

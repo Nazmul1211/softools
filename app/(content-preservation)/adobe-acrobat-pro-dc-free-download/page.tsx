@@ -22,7 +22,7 @@ export default function ReviewPage() {
       <nav className="mb-6 text-sm text-muted-foreground" aria-label="Breadcrumb">
         <Link href="/" className="hover:text-primary">Home</Link>
         <span className="mx-2">/</span>
-        <Link href="/category/review/" className="hover:text-primary">Review</Link>
+        <Link href="/review/" className="hover:text-primary">Review</Link>
         <span className="mx-2">/</span>
         <span className="text-foreground">Adobe Acrobat Pro DC Review</span>
       </nav>
@@ -119,8 +119,8 @@ export default function ReviewPage() {
             <ul className="mt-3 list-disc space-y-1 pl-5">
             <li><Link href="/adobe-indesign-free-download/" className="text-primary hover:underline">Adobe InDesign Review</Link></li>
             <li><Link href="/adobe-photoshop-2025/" className="text-primary hover:underline">Adobe Photoshop 2025 Review</Link></li>
-            <li><Link href="/category/review/" className="text-primary hover:underline">All Software Reviews</Link></li>
-              <li><Link href="/category/review/" className="text-primary hover:underline">View all review posts</Link></li>
+            <li><Link href="/review/" className="text-primary hover:underline">All Software Reviews</Link></li>
+              <li><Link href="/review/" className="text-primary hover:underline">View all review posts</Link></li>
             </ul>
           </div>
         </section>

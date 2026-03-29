@@ -49,7 +49,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/privacy-policy/", priority: 0.3 },
     { path: "/terms-and-conditions/", priority: 0.3 },
     { path: "/disclaimer/", priority: 0.3 },
-    { path: "/category/review/", priority: 0.7 },
+    { path: "/review/", priority: 0.7 },
   ].map((page) => ({
     url: absoluteUrl(page.path),
     lastModified: new Date(),

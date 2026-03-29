@@ -175,7 +175,7 @@ export function Header() {
         id: "page-review",
         title: "Review Category",
         description: "Browse all legacy software review preservation posts.",
-        href: "/category/review/",
+        href: "/review/",
         type: "page",
         keywords: ["review", "software review", "preservation", "category"],
       },
@@ -342,7 +342,7 @@ export function Header() {
           </Link>
 
           <Link
-            href="/category/review/"
+            href="/review/"
             className={navigationItemClassName}
           >
             Reviews
@@ -526,7 +526,7 @@ export function Header() {
               })}
             </div>
             <Link
-              href="/category/review/"
+              href="/review/"
               className={`block ${navigationItemClassName}`}
               onClick={() => setMobileMenuOpen(false)}
             >
