@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
-        source: "/category/:slug",
+        source: "/category/:slug((?!review$).*)",
         destination: "/:slug/",
         permanent: true,
       },
