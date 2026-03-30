@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "JSON Validator - Validate JSON Online Free | Softzar",
+  title: "JSON Validator - Validate JSON Online Free",
   description:
     "Validate JSON instantly with line and column error hints, format and minify options, and browser-based privacy. Free JSON validator for developers.",
   keywords: [

@@ -3,13 +3,13 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Adobe Acrobat Pro DC Review | Softzar",
+  title: "Adobe Acrobat Pro DC Review",
   description: "Professional review of Adobe Acrobat Pro DC for PDF editing, signing, collaboration, and secure document workflows.",
   alternates: {
     canonical: "https://softzar.com/adobe-acrobat-pro-dc-free-download/",
   },
   openGraph: {
-    title: "Adobe Acrobat Pro DC Review | Softzar",
+    title: "Adobe Acrobat Pro DC Review",
     description: "Professional review of Adobe Acrobat Pro DC for PDF editing, signing, collaboration, and secure document workflows.",
     url: "https://softzar.com/adobe-acrobat-pro-dc-free-download/",
     type: "article",

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Slug Generator - Create SEO-Friendly URL Slugs | Softzar",
+  title: "Slug Generator - Create SEO-Friendly URL Slugs",
   description:
     "Generate clean SEO-friendly slugs from titles and text. Convert to lowercase, choose separators, remove stop words, and create bulk slugs instantly.",
   keywords: [

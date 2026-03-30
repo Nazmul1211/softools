@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "PDF Compressor - Compress PDF Online Free | Softzar",
+  title: "PDF Compressor - Compress PDF Online Free",
   description:
     "Free online PDF compressor. Reduce PDF file size up to 90% while maintaining quality. No upload to server - 100% private. No sign-up required.",
   keywords: [

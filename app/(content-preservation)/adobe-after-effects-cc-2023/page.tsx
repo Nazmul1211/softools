@@ -3,13 +3,13 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Adobe After Effects CC 2023 Review | Softzar",
+  title: "Adobe After Effects CC 2023 Review",
   description: "Professional review of Adobe After Effects CC 2023 for users maintaining established pipelines and plugin-heavy workflows.",
   alternates: {
     canonical: "https://softzar.com/adobe-after-effects-cc-2023/",
   },
   openGraph: {
-    title: "Adobe After Effects CC 2023 Review | Softzar",
+    title: "Adobe After Effects CC 2023 Review",
     description: "Professional review of Adobe After Effects CC 2023 for users maintaining established pipelines and plugin-heavy workflows.",
     url: "https://softzar.com/adobe-after-effects-cc-2023/",
     type: "article",

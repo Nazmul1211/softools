@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "MD5 Hash Generator - Generate MD5 Checksums Online | Softzar",
+  title: "MD5 Hash Generator - Generate MD5 Checksums Online",
   description:
     "Free online MD5 hash generator. Generate MD5 checksums for text strings instantly. Compare hashes and verify file integrity.",
   keywords: [

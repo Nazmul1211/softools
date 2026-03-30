@@ -3,13 +3,13 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Adobe Illustrator 2024 Review | Softzar",
+  title: "Adobe Illustrator 2024 Review",
   description: "Professional review of Adobe Illustrator 2024 covering vector performance, workflow fit, and practical value for design teams.",
   alternates: {
     canonical: "https://softzar.com/adobe-illustrator-2024-free-download/",
   },
   openGraph: {
-    title: "Adobe Illustrator 2024 Review | Softzar",
+    title: "Adobe Illustrator 2024 Review",
     description: "Professional review of Adobe Illustrator 2024 covering vector performance, workflow fit, and practical value for design teams.",
     url: "https://softzar.com/adobe-illustrator-2024-free-download/",
     type: "article",

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Image Cropper - Crop Images Online Free | Softzar",
+  title: "Image Cropper - Crop Images Online Free",
   description:
     "Crop images online with pixel-perfect controls, aspect ratio presets, and instant browser-based processing. Free, fast, and private image cropping tool.",
   keywords: [

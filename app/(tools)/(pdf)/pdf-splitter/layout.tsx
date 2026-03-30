@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "PDF Splitter - Split PDF Pages Online Free | Softzar",
+  title: "PDF Splitter - Split PDF Pages Online Free",
   description:
     "Free online PDF splitter. Split PDF into individual pages or extract specific pages. No upload required - 100% private processing in your browser.",
   keywords: [

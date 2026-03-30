@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Unit Converter - Length, Weight, Temperature & More | Softzar",
+  title: "Unit Converter - Length, Weight, Temperature & More",
   description:
     "Free online unit converter. Convert between metric and imperial units for length, weight, temperature, volume, area, speed, and time. Fast and accurate conversions.",
   keywords: [

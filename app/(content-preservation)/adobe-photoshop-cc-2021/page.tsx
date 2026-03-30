@@ -3,13 +3,13 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Adobe Photoshop CC 2021 Review | Softzar",
+  title: "Adobe Photoshop CC 2021 Review",
   description: "Professional review of Adobe Photoshop CC 2021 for users maintaining older systems and legacy creative workflows.",
   alternates: {
     canonical: "https://softzar.com/adobe-photoshop-cc-2021/",
   },
   openGraph: {
-    title: "Adobe Photoshop CC 2021 Review | Softzar",
+    title: "Adobe Photoshop CC 2021 Review",
     description: "Professional review of Adobe Photoshop CC 2021 for users maintaining older systems and legacy creative workflows.",
     url: "https://softzar.com/adobe-photoshop-cc-2021/",
     type: "article",

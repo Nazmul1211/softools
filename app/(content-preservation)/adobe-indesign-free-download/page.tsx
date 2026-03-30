@@ -3,13 +3,13 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Adobe InDesign Review | Softzar",
+  title: "Adobe InDesign Review",
   description: "Professional review of Adobe InDesign for editorial design, publication workflows, and multi-page layout production.",
   alternates: {
     canonical: "https://softzar.com/adobe-indesign-free-download/",
   },
   openGraph: {
-    title: "Adobe InDesign Review | Softzar",
+    title: "Adobe InDesign Review",
     description: "Professional review of Adobe InDesign for editorial design, publication workflows, and multi-page layout production.",
     url: "https://softzar.com/adobe-indesign-free-download/",
     type: "article",

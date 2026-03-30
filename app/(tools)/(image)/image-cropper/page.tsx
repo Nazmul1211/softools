@@ -19,6 +19,7 @@ import {
 
 type OutputFormat = "original" | "jpg" | "png" | "webp";
 type AspectPreset = "free" | "1:1" | "4:3" | "16:9" | "9:16";
+type DragHandle = "move" | "nw" | "ne" | "sw" | "se" | "n" | "s" | "e" | "w" | null;
 
 interface CropArea {
   x: number;
@@ -33,6 +34,7 @@ interface Dimensions {
 }
 
 const DEFAULT_DIMS: Dimensions = { width: 0, height: 0 };
+const MIN_CROP_SIZE = 20;
 
 const ASPECT_MAP: Record<Exclude<AspectPreset, "free">, number> = {
   "1:1": 1,
@@ -47,13 +49,25 @@ function clamp(value: number, min: number, max: number): number {
   return value;
 }
 
-function normalizeCrop(crop: CropArea, dims: Dimensions): CropArea {
+function normalizeCrop(crop: CropArea, dims: Dimensions, aspectRatio?: number): CropArea {
   if (dims.width === 0 || dims.height === 0) {
     return crop;
   }
 
-  const width = clamp(Math.round(crop.width), 1, dims.width);
-  const height = clamp(Math.round(crop.height), 1, dims.height);
+  let width = clamp(Math.round(crop.width), MIN_CROP_SIZE, dims.width);
+  let height = clamp(Math.round(crop.height), MIN_CROP_SIZE, dims.height);
+
+  if (aspectRatio) {
+    const currentRatio = width / height;
+    if (Math.abs(currentRatio - aspectRatio) > 0.01) {
+      if (width / aspectRatio <= dims.height) {
+        height = Math.round(width / aspectRatio);
+      } else {
+        width = Math.round(height * aspectRatio);
+      }
+    }
+  }
+
   const x = clamp(Math.round(crop.x), 0, dims.width - width);
   const y = clamp(Math.round(crop.y), 0, dims.height - height);
 
@@ -61,8 +75,8 @@ function normalizeCrop(crop: CropArea, dims: Dimensions): CropArea {
 }
 
 function centeredInitialCrop(dims: Dimensions): CropArea {
-  const width = Math.max(1, Math.floor(dims.width * 0.8));
-  const height = Math.max(1, Math.floor(dims.height * 0.8));
+  const width = Math.max(MIN_CROP_SIZE, Math.floor(dims.width * 0.8));
+  const height = Math.max(MIN_CROP_SIZE, Math.floor(dims.height * 0.8));
   const x = Math.floor((dims.width - width) / 2);
   const y = Math.floor((dims.height - height) / 2);
   return { x, y, width, height };
@@ -88,6 +102,15 @@ export default function ImageCropperPage() {
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
   const [resultUrl, setResultUrl] = useState<string | null>(null);
   const replaceInputRef = useRef<HTMLInputElement>(null);
+
+  // Interactive drag state
+  const [isDragging, setIsDragging] = useState(false);
+  const [dragHandle, setDragHandle] = useState<DragHandle>(null);
+  const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
+  const [cropStart, setCropStart] = useState<CropArea>({ x: 0, y: 0, width: 0, height: 0 });
+  const previewContainerRef = useRef<HTMLDivElement>(null);
+
+  const aspectRatio = aspectPreset === "free" ? undefined : ASPECT_MAP[aspectPreset];
 
   useEffect(() => {
     return () => {
@@ -138,9 +161,9 @@ export default function ImageCropperPage() {
 
   const updateCrop = useCallback(
     (next: CropArea) => {
-      setCrop(normalizeCrop(next, originalDimensions));
+      setCrop(normalizeCrop(next, originalDimensions, aspectRatio));
     },
-    [originalDimensions]
+    [originalDimensions, aspectRatio]
   );
 
   const setCropField = (field: keyof CropArea, value: number) => {
@@ -152,9 +175,9 @@ export default function ImageCropperPage() {
     if (aspectPreset !== "free" && (field === "width" || field === "height")) {
       const ratio = ASPECT_MAP[aspectPreset];
       if (field === "width") {
-        proposed.height = Math.max(1, Math.round(rounded / ratio));
+        proposed.height = Math.max(MIN_CROP_SIZE, Math.round(rounded / ratio));
       } else {
-        proposed.width = Math.max(1, Math.round(rounded * ratio));
+        proposed.width = Math.max(MIN_CROP_SIZE, Math.round(rounded * ratio));
       }
     }
 
@@ -190,16 +213,6 @@ export default function ImageCropperPage() {
       width,
       height,
     });
-  };
-
-  const moveCrop = (direction: "left" | "right" | "up" | "down", amount: number) => {
-    if (amount <= 0) return;
-    const delta = Math.round(amount);
-
-    if (direction === "left") updateCrop({ ...crop, x: crop.x - delta });
-    if (direction === "right") updateCrop({ ...crop, x: crop.x + delta });
-    if (direction === "up") updateCrop({ ...crop, y: crop.y - delta });
-    if (direction === "down") updateCrop({ ...crop, y: crop.y + delta });
   };
 
   const centerCrop = () => {
@@ -245,9 +258,12 @@ export default function ImageCropperPage() {
     return `${base}-cropped-${crop.width}x${crop.height}.${ext}`;
   }, [crop.height, crop.width, file, format]);
 
+  // Calculate preview dimensions to fit container while maintaining aspect ratio
   const previewScale = useMemo(() => {
     if (originalDimensions.width === 0 || originalDimensions.height === 0) return 1;
-    return Math.min(1, 720 / originalDimensions.width, 420 / originalDimensions.height);
+    const maxWidth = 600;
+    const maxHeight = 450;
+    return Math.min(1, maxWidth / originalDimensions.width, maxHeight / originalDimensions.height);
   }, [originalDimensions.height, originalDimensions.width]);
 
   const previewSize = useMemo(
@@ -258,18 +274,142 @@ export default function ImageCropperPage() {
     [originalDimensions.height, originalDimensions.width, previewScale]
   );
 
+  // Convert crop coordinates to preview percentages for overlay positioning
   const overlayStyle = useMemo(() => {
     if (originalDimensions.width === 0) {
-      return { left: "0%", top: "0%", width: "0%", height: "0%" };
+      return { left: 0, top: 0, width: 0, height: 0 };
     }
 
     return {
-      left: `${(crop.x / originalDimensions.width) * 100}%`,
-      top: `${(crop.y / originalDimensions.height) * 100}%`,
-      width: `${(crop.width / originalDimensions.width) * 100}%`,
-      height: `${(crop.height / originalDimensions.height) * 100}%`,
+      left: (crop.x / originalDimensions.width) * previewSize.width,
+      top: (crop.y / originalDimensions.height) * previewSize.height,
+      width: (crop.width / originalDimensions.width) * previewSize.width,
+      height: (crop.height / originalDimensions.height) * previewSize.height,
     };
-  }, [crop.height, crop.width, crop.x, crop.y, originalDimensions.height, originalDimensions.width]);
+  }, [crop, originalDimensions, previewSize]);
+
+  // Handle mouse/touch events for interactive cropping
+  const getEventPosition = useCallback((e: React.MouseEvent | React.TouchEvent) => {
+    if (!previewContainerRef.current) return { x: 0, y: 0 };
+    const rect = previewContainerRef.current.getBoundingClientRect();
+    const clientX = "touches" in e ? e.touches[0].clientX : e.clientX;
+    const clientY = "touches" in e ? e.touches[0].clientY : e.clientY;
+    return {
+      x: clientX - rect.left,
+      y: clientY - rect.top,
+    };
+  }, []);
+
+  const handleDragStart = useCallback((e: React.MouseEvent | React.TouchEvent, handle: DragHandle) => {
+    e.preventDefault();
+    e.stopPropagation();
+    const pos = getEventPosition(e);
+    setIsDragging(true);
+    setDragHandle(handle);
+    setDragStart(pos);
+    setCropStart({ ...crop });
+  }, [crop, getEventPosition]);
+
+  const handleDragMove = useCallback((e: React.MouseEvent | React.TouchEvent) => {
+    if (!isDragging || !dragHandle) return;
+
+    const pos = getEventPosition(e);
+    const deltaX = (pos.x - dragStart.x) / previewScale;
+    const deltaY = (pos.y - dragStart.y) / previewScale;
+
+    let newCrop = { ...cropStart };
+
+    if (dragHandle === "move") {
+      newCrop.x = cropStart.x + deltaX;
+      newCrop.y = cropStart.y + deltaY;
+    } else {
+      // Resize handles
+      const ratio = aspectRatio;
+
+      if (dragHandle.includes("w")) {
+        const newX = cropStart.x + deltaX;
+        const newWidth = cropStart.width - deltaX;
+        if (newWidth >= MIN_CROP_SIZE) {
+          newCrop.x = newX;
+          newCrop.width = newWidth;
+          if (ratio) newCrop.height = newWidth / ratio;
+        }
+      }
+      if (dragHandle.includes("e")) {
+        const newWidth = cropStart.width + deltaX;
+        if (newWidth >= MIN_CROP_SIZE) {
+          newCrop.width = newWidth;
+          if (ratio) newCrop.height = newWidth / ratio;
+        }
+      }
+      if (dragHandle.includes("n")) {
+        if (ratio) {
+          // For locked ratio, compute from width change
+          const newHeight = cropStart.height - deltaY;
+          if (newHeight >= MIN_CROP_SIZE) {
+            const newWidth = newHeight * ratio;
+            newCrop.y = cropStart.y + deltaY;
+            newCrop.height = newHeight;
+            newCrop.width = newWidth;
+          }
+        } else {
+          const newY = cropStart.y + deltaY;
+          const newHeight = cropStart.height - deltaY;
+          if (newHeight >= MIN_CROP_SIZE) {
+            newCrop.y = newY;
+            newCrop.height = newHeight;
+          }
+        }
+      }
+      if (dragHandle.includes("s")) {
+        if (ratio) {
+          const newHeight = cropStart.height + deltaY;
+          if (newHeight >= MIN_CROP_SIZE) {
+            newCrop.height = newHeight;
+            newCrop.width = newHeight * ratio;
+          }
+        } else {
+          const newHeight = cropStart.height + deltaY;
+          if (newHeight >= MIN_CROP_SIZE) {
+            newCrop.height = newHeight;
+          }
+        }
+      }
+    }
+
+    updateCrop(newCrop);
+  }, [isDragging, dragHandle, dragStart, cropStart, previewScale, aspectRatio, updateCrop, getEventPosition]);
+
+  const handleDragEnd = useCallback(() => {
+    setIsDragging(false);
+    setDragHandle(null);
+  }, []);
+
+  // Global mouse/touch event listeners for drag operations
+  useEffect(() => {
+    if (!isDragging) return;
+
+    const handleMouseMove = (e: MouseEvent) => {
+      handleDragMove(e as unknown as React.MouseEvent);
+    };
+    const handleTouchMove = (e: TouchEvent) => {
+      handleDragMove(e as unknown as React.TouchEvent);
+    };
+    const handleMouseUp = () => handleDragEnd();
+    const handleTouchEnd = () => handleDragEnd();
+
+    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("touchmove", handleTouchMove, { passive: false });
+    window.addEventListener("mouseup", handleMouseUp);
+    window.addEventListener("touchend", handleTouchEnd);
+
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("touchmove", handleTouchMove);
+      window.removeEventListener("mouseup", handleMouseUp);
+      window.removeEventListener("touchend", handleTouchEnd);
+    };
+  }, [isDragging, handleDragMove, handleDragEnd]);
 
   const runCrop = async () => {
     if (!file) {
@@ -310,6 +450,18 @@ export default function ImageCropperPage() {
       console.error("Cropping failed:", caughtError);
       setError(caughtError instanceof Error ? caughtError.message : "Image crop failed.");
       setStatus("error");
+    }
+  };
+
+  // Handle cursor style based on drag handle
+  const getCursorStyle = (handle: DragHandle): string => {
+    switch (handle) {
+      case "move": return "cursor-move";
+      case "nw": case "se": return "cursor-nwse-resize";
+      case "ne": case "sw": return "cursor-nesw-resize";
+      case "n": case "s": return "cursor-ns-resize";
+      case "e": case "w": return "cursor-ew-resize";
+      default: return "cursor-default";
     }
   };
 
@@ -471,9 +623,11 @@ export default function ImageCropperPage() {
                   }}
                 />
 
-                <div className="overflow-auto rounded-xl border border-border bg-gradient-to-b from-background to-muted/30 p-4">
+                {/* Interactive Crop Preview */}
+                <div className="flex min-h-[350px] items-center justify-center overflow-auto rounded-xl border border-border bg-[repeating-conic-gradient(#e5e7eb_0%_25%,transparent_0%_50%)_50%/16px_16px] p-4 dark:bg-[repeating-conic-gradient(#374151_0%_25%,transparent_0%_50%)_50%/16px_16px]">
                   <div
-                    className="relative mx-auto"
+                    ref={previewContainerRef}
+                    className={`relative select-none ${isDragging ? getCursorStyle(dragHandle) : ""}`}
                     style={{ width: previewSize.width, height: previewSize.height }}
                   >
                     <img
@@ -481,20 +635,117 @@ export default function ImageCropperPage() {
                       alt="Original uploaded image"
                       style={{ width: previewSize.width, height: previewSize.height }}
                       className="rounded-lg border border-border object-cover"
+                      draggable={false}
                     />
 
+                    {/* Dark overlay outside crop area */}
+                    <div 
+                      className="pointer-events-none absolute inset-0 rounded-lg"
+                      style={{
+                        background: `linear-gradient(to right, 
+                          rgba(0,0,0,0.5) 0%, 
+                          rgba(0,0,0,0.5) ${(crop.x / originalDimensions.width) * 100}%, 
+                          transparent ${(crop.x / originalDimensions.width) * 100}%, 
+                          transparent ${((crop.x + crop.width) / originalDimensions.width) * 100}%, 
+                          rgba(0,0,0,0.5) ${((crop.x + crop.width) / originalDimensions.width) * 100}%, 
+                          rgba(0,0,0,0.5) 100%
+                        )`,
+                      }}
+                    />
+                    <div 
+                      className="pointer-events-none absolute rounded-lg"
+                      style={{
+                        left: `${(crop.x / originalDimensions.width) * 100}%`,
+                        top: 0,
+                        width: `${(crop.width / originalDimensions.width) * 100}%`,
+                        height: `${(crop.y / originalDimensions.height) * 100}%`,
+                        background: "rgba(0,0,0,0.5)",
+                      }}
+                    />
+                    <div 
+                      className="pointer-events-none absolute rounded-lg"
+                      style={{
+                        left: `${(crop.x / originalDimensions.width) * 100}%`,
+                        top: `${((crop.y + crop.height) / originalDimensions.height) * 100}%`,
+                        width: `${(crop.width / originalDimensions.width) * 100}%`,
+                        height: `${((originalDimensions.height - crop.y - crop.height) / originalDimensions.height) * 100}%`,
+                        background: "rgba(0,0,0,0.5)",
+                      }}
+                    />
+
+                    {/* Crop Selection Box - Draggable */}
                     <div
-                      className="pointer-events-none absolute border-2 border-primary bg-primary/10 shadow-[0_0_0_9999px_rgba(0,0,0,0.45)]"
-                      style={overlayStyle}
+                      className="absolute border-2 border-white/90 cursor-move"
+                      style={{
+                        left: overlayStyle.left,
+                        top: overlayStyle.top,
+                        width: overlayStyle.width,
+                        height: overlayStyle.height,
+                      }}
+                      onMouseDown={(e) => handleDragStart(e, "move")}
+                      onTouchStart={(e) => handleDragStart(e, "move")}
                     >
-                      <div className="absolute -right-1.5 -top-1.5 h-3 w-3 rounded-full border border-white bg-primary" />
-                      <div className="absolute -bottom-1.5 -left-1.5 h-3 w-3 rounded-full border border-white bg-primary" />
+                      {/* Grid lines */}
+                      <div className="pointer-events-none absolute inset-0">
+                        <div className="absolute left-1/3 top-0 h-full w-px bg-white/40" />
+                        <div className="absolute left-2/3 top-0 h-full w-px bg-white/40" />
+                        <div className="absolute left-0 top-1/3 h-px w-full bg-white/40" />
+                        <div className="absolute left-0 top-2/3 h-px w-full bg-white/40" />
+                      </div>
+
+                      {/* Corner Handles */}
+                      <div
+                        className="absolute -left-2 -top-2 h-4 w-4 cursor-nwse-resize rounded-sm border-2 border-white bg-primary shadow-md"
+                        onMouseDown={(e) => handleDragStart(e, "nw")}
+                        onTouchStart={(e) => handleDragStart(e, "nw")}
+                      />
+                      <div
+                        className="absolute -right-2 -top-2 h-4 w-4 cursor-nesw-resize rounded-sm border-2 border-white bg-primary shadow-md"
+                        onMouseDown={(e) => handleDragStart(e, "ne")}
+                        onTouchStart={(e) => handleDragStart(e, "ne")}
+                      />
+                      <div
+                        className="absolute -bottom-2 -left-2 h-4 w-4 cursor-nesw-resize rounded-sm border-2 border-white bg-primary shadow-md"
+                        onMouseDown={(e) => handleDragStart(e, "sw")}
+                        onTouchStart={(e) => handleDragStart(e, "sw")}
+                      />
+                      <div
+                        className="absolute -bottom-2 -right-2 h-4 w-4 cursor-nwse-resize rounded-sm border-2 border-white bg-primary shadow-md"
+                        onMouseDown={(e) => handleDragStart(e, "se")}
+                        onTouchStart={(e) => handleDragStart(e, "se")}
+                      />
+
+                      {/* Edge Handles */}
+                      <div
+                        className="absolute -top-1.5 left-1/2 h-3 w-8 -translate-x-1/2 cursor-ns-resize rounded-sm border border-white bg-primary/80"
+                        onMouseDown={(e) => handleDragStart(e, "n")}
+                        onTouchStart={(e) => handleDragStart(e, "n")}
+                      />
+                      <div
+                        className="absolute -bottom-1.5 left-1/2 h-3 w-8 -translate-x-1/2 cursor-ns-resize rounded-sm border border-white bg-primary/80"
+                        onMouseDown={(e) => handleDragStart(e, "s")}
+                        onTouchStart={(e) => handleDragStart(e, "s")}
+                      />
+                      <div
+                        className="absolute -left-1.5 top-1/2 h-8 w-3 -translate-y-1/2 cursor-ew-resize rounded-sm border border-white bg-primary/80"
+                        onMouseDown={(e) => handleDragStart(e, "w")}
+                        onTouchStart={(e) => handleDragStart(e, "w")}
+                      />
+                      <div
+                        className="absolute -right-1.5 top-1/2 h-8 w-3 -translate-y-1/2 cursor-ew-resize rounded-sm border border-white bg-primary/80"
+                        onMouseDown={(e) => handleDragStart(e, "e")}
+                        onTouchStart={(e) => handleDragStart(e, "e")}
+                      />
                     </div>
                   </div>
                 </div>
 
-                <p className="mt-3 text-xs text-muted-foreground">
-                  Original: {originalDimensions.width} x {originalDimensions.height}px | Crop: {crop.width} x {crop.height}px
+                <div className="mt-3 flex items-center justify-between text-xs text-muted-foreground">
+                  <span>Original: {originalDimensions.width} × {originalDimensions.height}px</span>
+                  <span className="font-medium text-primary">Crop: {crop.width} × {crop.height}px</span>
+                </div>
+                <p className="mt-1 text-xs text-muted-foreground">
+                  Drag the crop area to move it. Drag corners or edges to resize.
                 </p>
               </section>
 
@@ -583,37 +834,6 @@ export default function ImageCropperPage() {
                     >
                       <Expand className="h-4 w-4" />
                       Full Image
-                    </button>
-                  </div>
-
-                  <div className="mt-4 grid grid-cols-4 gap-2">
-                    <button
-                      type="button"
-                      onClick={() => moveCrop("left", Math.max(1, Math.round(crop.width * 0.05)))}
-                      className="rounded-lg border border-border px-2 py-1.5 text-xs font-medium text-foreground transition hover:border-primary/40 hover:bg-primary/5"
-                    >
-                      Left
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => moveCrop("right", Math.max(1, Math.round(crop.width * 0.05)))}
-                      className="rounded-lg border border-border px-2 py-1.5 text-xs font-medium text-foreground transition hover:border-primary/40 hover:bg-primary/5"
-                    >
-                      Right
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => moveCrop("up", Math.max(1, Math.round(crop.height * 0.05)))}
-                      className="rounded-lg border border-border px-2 py-1.5 text-xs font-medium text-foreground transition hover:border-primary/40 hover:bg-primary/5"
-                    >
-                      Up
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => moveCrop("down", Math.max(1, Math.round(crop.height * 0.05)))}
-                      className="rounded-lg border border-border px-2 py-1.5 text-xs font-medium text-foreground transition hover:border-primary/40 hover:bg-primary/5"
-                    >
-                      Down
                     </button>
                   </div>
                 </div>

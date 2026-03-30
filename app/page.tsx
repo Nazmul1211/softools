@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import {
   Calculator,
   DollarSign,
@@ -14,9 +15,64 @@ import {
   ChevronRight,
   Image as ImageIcon,
 } from "lucide-react";
-import { categories } from "@/config/site";
+import { categories, siteConfig } from "@/config/site";
 import { tools } from "@/lib/tools";
 import { HomeSearch } from "@/components/ui/HomeSearch";
+
+export const metadata: Metadata = {
+  title: `${siteConfig.name} - Free Online Tools & Calculators`,
+  description:
+    "Explore 100+ free online calculators and tools for math, finance, health, conversions, and more. Fast, accurate, and privacy-focused. No signup required.",
+  keywords: [
+    "free online calculator",
+    "free online tools",
+    "calculator online",
+    "math calculator",
+    "percentage calculator",
+    "BMI calculator",
+    "loan calculator",
+    "unit converter",
+    "finance calculator",
+    "health calculator",
+    "scientific calculator",
+    "mortgage calculator",
+    "GPA calculator",
+    "calorie calculator",
+    "currency converter",
+    "date calculator",
+    "age calculator",
+    "time calculator",
+    "softzar",
+  ],
+  alternates: {
+    canonical: siteConfig.url,
+  },
+  openGraph: {
+    title: `${siteConfig.name} - Free Online Tools & Calculators `,
+    description:
+      "Explore 100+ free online calculators and tools for math, finance, health, conversions, and more. Fast, accurate, and privacy-focused.",
+    url: siteConfig.url,
+    siteName: siteConfig.name,
+    type: "website",
+    locale: "en_US",
+    images: [
+      {
+        url: siteConfig.ogImage,
+        width: 1200,
+        height: 630,
+        alt: `${siteConfig.name} - Free Online Tools & Calculators`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${siteConfig.name} - Free Online Tools & Calculators `,
+    description:
+      "Explore 100+ free online calculators and tools for math, finance, health, conversions, and more.",
+    images: [siteConfig.ogImage],
+    creator: "@softzar",
+  },
+};
 
 const categoryIcons: Record<string, React.ReactNode> = {
   math: <Calculator className="h-8 w-8" strokeWidth={1.5} />,

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Image Resizer - Resize Images Online Free | Softzar",
+  title: "Image Resizer - Resize Images Online Free",
   description:
     "Free online image resizer. Change image dimensions, scale by percentage, or use preset sizes for social media. No upload required - 100% private.",
   keywords: [

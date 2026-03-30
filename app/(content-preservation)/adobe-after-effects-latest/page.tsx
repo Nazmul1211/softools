@@ -3,13 +3,13 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Adobe After Effects Latest Review | Softzar",
+  title: "Adobe After Effects Latest Review",
   description: "Professional review of the latest Adobe After Effects release for motion graphics, compositing, and visual effects workflows.",
   alternates: {
     canonical: "https://softzar.com/adobe-after-effects-latest/",
   },
   openGraph: {
-    title: "Adobe After Effects Latest Review | Softzar",
+    title: "Adobe After Effects Latest Review",
     description: "Professional review of the latest Adobe After Effects release for motion graphics, compositing, and visual effects workflows.",
     url: "https://softzar.com/adobe-after-effects-latest/",
     type: "article",

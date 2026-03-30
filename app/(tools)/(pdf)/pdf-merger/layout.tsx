@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "PDF Merger - Merge PDF Files Online Free | Softzar",
+  title: "PDF Merger - Merge PDF Files Online Free",
   description:
     "Free online PDF merger. Combine multiple PDFs into one document instantly without uploading to server. Drag and drop to reorder pages. No sign-up required.",
   keywords: [

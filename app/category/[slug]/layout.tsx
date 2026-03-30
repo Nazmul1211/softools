@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const toolNames = categoryTools.slice(0, 5).map(t => t.name).join(", ");
 
   return {
-    title: `Free ${category.name} Online | Softzar`,
+    title: `Free ${category.name} Online`,
     description: `${category.description}. Use our ${categoryTools.length}+ free ${category.name.toLowerCase()} including ${toolNames} and more. 100% free, no registration required.`,
     keywords: [
       category.name.toLowerCase(),
@@ -28,14 +28,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       ...categoryTools.slice(0, 10).map(t => t.name.toLowerCase())
     ],
     openGraph: {
-      title: `Free ${category.name} Online | Softzar`,
+      title: `Free ${category.name} Online`,
       description: `${category.description}. Browse ${categoryTools.length}+ free tools.`,
       type: "website",
       url: `https://softzar.com/${slug}/`,
     },
     twitter: {
       card: "summary_large_image",
-      title: `Free ${category.name} Online | Softzar`,
+      title: `Free ${category.name} Online`,
       description: `${category.description}. Browse ${categoryTools.length}+ free tools.`,
     },
     alternates: {

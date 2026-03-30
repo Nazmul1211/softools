@@ -3,13 +3,13 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Adobe Illustrator 2025 Review | Softzar",
+  title: "Adobe Illustrator 2025 Review",
   description: "Professional review of Adobe Illustrator 2025 for creators evaluating current-generation vector workflows and productivity improvements.",
   alternates: {
     canonical: "https://softzar.com/adobe-illustrator-2025/",
   },
   openGraph: {
-    title: "Adobe Illustrator 2025 Review | Softzar",
+    title: "Adobe Illustrator 2025 Review",
     description: "Professional review of Adobe Illustrator 2025 for creators evaluating current-generation vector workflows and productivity improvements.",
     url: "https://softzar.com/adobe-illustrator-2025/",
     type: "article",

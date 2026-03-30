@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Image to Base64 Converter - Encode Images to Base64 Online | Softzar",
+  title: "Image to Base64 Converter - Encode Images to Base64 Online",
   description:
     "Free Image to Base64 converter. Encode JPG, PNG, WEBP, GIF, BMP, and SVG files as Base64 Data URIs directly in your browser.",
   keywords: [

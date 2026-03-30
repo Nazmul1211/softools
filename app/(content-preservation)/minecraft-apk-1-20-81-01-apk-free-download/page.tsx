@@ -3,13 +3,13 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Minecraft 1.20.81.01 APK Review | Softzar",
+  title: "Minecraft 1.20.81.01 APK Review",
   description: "Professional review of Minecraft 1.20.81.01 mobile gameplay update with practical notes on performance, compatibility, and play value.",
   alternates: {
     canonical: "https://softzar.com/minecraft-apk-1-20-81-01-apk-free-download/",
   },
   openGraph: {
-    title: "Minecraft 1.20.81.01 APK Review | Softzar",
+    title: "Minecraft 1.20.81.01 APK Review",
     description: "Professional review of Minecraft 1.20.81.01 mobile gameplay update with practical notes on performance, compatibility, and play value.",
     url: "https://softzar.com/minecraft-apk-1-20-81-01-apk-free-download/",
     type: "article",

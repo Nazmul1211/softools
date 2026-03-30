@@ -3,13 +3,13 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Adobe After Effects 2024 Review | Softzar",
+  title: "Adobe After Effects 2024 Review",
   description: "Professional review of Adobe After Effects 2024 with practical notes on animation workflows, compositing depth, and editing collaboration.",
   alternates: {
     canonical: "https://softzar.com/adobe-after-effects-2024/",
   },
   openGraph: {
-    title: "Adobe After Effects 2024 Review | Softzar",
+    title: "Adobe After Effects 2024 Review",
     description: "Professional review of Adobe After Effects 2024 with practical notes on animation workflows, compositing depth, and editing collaboration.",
     url: "https://softzar.com/adobe-after-effects-2024/",
     type: "article",

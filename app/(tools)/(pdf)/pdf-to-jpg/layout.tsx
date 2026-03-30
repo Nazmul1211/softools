@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "PDF to JPG Converter - Convert PDF to Image Free | Softzar",
+  title: "PDF to JPG Converter - Convert PDF to Image Free",
   description:
     "Free online PDF to JPG converter. Transform PDF pages into high-quality JPEG images instantly. No upload required - 100% private browser processing.",
   keywords: [

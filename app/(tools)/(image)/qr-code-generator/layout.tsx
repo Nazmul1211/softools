@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "QR Code Generator - Create QR Codes Online Free | Softzar",
+  title: "QR Code Generator - Create QR Codes Online Free",
   description:
     "Generate custom QR codes for URLs, text, email, and contact details. Adjust size, colors, error correction, and download PNG or SVG instantly.",
   keywords: [

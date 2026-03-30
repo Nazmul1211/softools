@@ -3,13 +3,13 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Adobe Premiere Pro 2025 Review | Softzar",
+  title: "Adobe Premiere Pro 2025 Review",
   description: "Professional review of Adobe Premiere Pro 2025, focused on current workflow improvements, AI-assisted editing, and overall production readiness.",
   alternates: {
     canonical: "https://softzar.com/adobe-premiere-pro-2025-free-download/",
   },
   openGraph: {
-    title: "Adobe Premiere Pro 2025 Review | Softzar",
+    title: "Adobe Premiere Pro 2025 Review",
     description: "Professional review of Adobe Premiere Pro 2025, focused on current workflow improvements, AI-assisted editing, and overall production readiness.",
     url: "https://softzar.com/adobe-premiere-pro-2025-free-download/",
     type: "article",

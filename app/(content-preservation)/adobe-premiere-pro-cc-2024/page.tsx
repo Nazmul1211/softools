@@ -3,13 +3,13 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Adobe Premiere Pro CC 2024 Review | Softzar",
+  title: "Adobe Premiere Pro CC 2024 Review",
   description: "Professional review of Adobe Premiere Pro CC 2024 for creators who need timeline performance, color tools, and modern workflow integration.",
   alternates: {
     canonical: "https://softzar.com/adobe-premiere-pro-cc-2024/",
   },
   openGraph: {
-    title: "Adobe Premiere Pro CC 2024 Review | Softzar",
+    title: "Adobe Premiere Pro CC 2024 Review",
     description: "Professional review of Adobe Premiere Pro CC 2024 for creators who need timeline performance, color tools, and modern workflow integration.",
     url: "https://softzar.com/adobe-premiere-pro-cc-2024/",
     type: "article",

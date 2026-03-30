@@ -3,13 +3,13 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Adobe Photoshop for macOS Review | Softzar",
+  title: "Adobe Photoshop for macOS Review",
   description: "Professional review of Adobe Photoshop on macOS, including workflow fit, performance expectations, and editing strengths.",
   alternates: {
     canonical: "https://softzar.com/adobe-photoshop-for-macos/",
   },
   openGraph: {
-    title: "Adobe Photoshop for macOS Review | Softzar",
+    title: "Adobe Photoshop for macOS Review",
     description: "Professional review of Adobe Photoshop on macOS, including workflow fit, performance expectations, and editing strengths.",
     url: "https://softzar.com/adobe-photoshop-for-macos/",
     type: "article",

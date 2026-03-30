@@ -3,13 +3,13 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Adobe Photoshop 2023 Review | Softzar",
+  title: "Adobe Photoshop 2023 Review",
   description: "Professional review of Adobe Photoshop 2023 for creators comparing older stable builds with newer AI-centric versions.",
   alternates: {
     canonical: "https://softzar.com/adobe-photoshop-2023-free-download/",
   },
   openGraph: {
-    title: "Adobe Photoshop 2023 Review | Softzar",
+    title: "Adobe Photoshop 2023 Review",
     description: "Professional review of Adobe Photoshop 2023 for creators comparing older stable builds with newer AI-centric versions.",
     url: "https://softzar.com/adobe-photoshop-2023-free-download/",
     type: "article",

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Character Counter - Count Characters, Letters & Limits | Softzar",
+  title: "Character Counter - Count Characters, Letters & Limits",
   description:
     "Count characters, letters, numbers, words, and line length instantly. Check writing against SEO titles, meta descriptions, social, and SMS limits.",
   keywords: [

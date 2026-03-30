@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "WEBP to PNG Converter - Convert WEBP to PNG Online | Softzar",
+  title: "WEBP to PNG Converter - Convert WEBP to PNG Online",
   description:
     "Free WEBP to PNG converter. Convert WEBP images to PNG format online without uploading files. Fast browser-side conversion with full privacy.",
   keywords: [

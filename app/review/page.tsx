@@ -125,14 +125,14 @@ const reviewPosts = [
 ];
 
 export const metadata: Metadata = {
-  title: "Software Review Category | Softzar",
+  title: "Software Review Category",
   description:
     "Browse all software review preservation posts on Softzar. Compare Adobe, Edius, and related software reviews in one clean category page.",
   alternates: {
     canonical: "https://softzar.com/review/",
   },
   openGraph: {
-    title: "Software Review Category | Softzar",
+    title: "Software Review Category",
     description:
       "Browse all software review preservation posts on Softzar in one organized review category.",
     url: "https://softzar.com/review/",

@@ -3,13 +3,13 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Edius Pro 9 Review | Softzar",
+  title: "Edius Pro 9 Review",
   description: "Professional review of Edius Pro 9 for users evaluating legacy Edius workflows and lightweight editing environments.",
   alternates: {
     canonical: "https://softzar.com/edius-pro-9-free-download-for-lifetime/",
   },
   openGraph: {
-    title: "Edius Pro 9 Review | Softzar",
+    title: "Edius Pro 9 Review",
     description: "Professional review of Edius Pro 9 for users evaluating legacy Edius workflows and lightweight editing environments.",
     url: "https://softzar.com/edius-pro-9-free-download-for-lifetime/",
     type: "article",

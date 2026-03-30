@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Image to PNG Converter - Convert Images to PNG Online | Softzar",
+  title: "Image to PNG Converter - Convert Images to PNG Online",
   description:
     "Free Image to PNG converter. Convert JPG, WEBP, GIF, and BMP files to high-quality PNG format in your browser. Fast, private, and no upload required.",
   keywords: [

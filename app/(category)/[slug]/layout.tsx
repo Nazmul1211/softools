@@ -11,7 +11,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!category) return {};
 
   return {
-    title: `${category.name} - Free Online ${category.name} | Softzar`,
+    title: `${category.name} - Free Online Tools`,
     description: `Browse all free ${category.name.toLowerCase()} on Softzar. ${category.description}. Fast, accurate, and easy to use.`,
   };
 }

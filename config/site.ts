@@ -1,9 +1,9 @@
 export const siteConfig = {
-  name: "Softzar",
+  name: "SoftZaR",
   description:
     "Free online tools and calculators for everyday tasks. Math, finance, health, conversion tools and more.",
-  url: "https://softzar.com/",
-  ogImage: "https://softzar.com/og.png",
+  url: "https://softzar.com",
+  ogImage: "https://softzar.com/softzar-og.png",
   links: {
     twitter: "https://twitter.com/softzar",
     github: "https://github.com/softzar",
