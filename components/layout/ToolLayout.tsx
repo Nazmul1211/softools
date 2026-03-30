@@ -189,8 +189,9 @@ export function ToolLayout({
           {/* Calculator Card - Above the fold, prominent */}
           <div 
             id="calculator"
-            className="rounded-2xl border border-border bg-white p-6 shadow-xl dark:border-border dark:bg-muted/50 sm:p-8 lg:p-10"
+            className="rounded-2xl border border-border bg-white p-4 shadow-xl dark:border-border dark:bg-muted/50 sm:p-6 lg:p-8"
           >
+            {/* rounded-2xl border border-border bg-white p-6 shadow-xl dark:border-border dark:bg-muted/50 sm:p-8 lg:p-10 */}
             {children}
           </div>
 

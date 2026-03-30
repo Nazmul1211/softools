@@ -527,6 +527,52 @@ export const tools: Tool[] = [
     category: "image",
     keywords: ["qr code generator", "create qr code", "qr png", "qr svg", "custom qr"],
   },
+  {
+    slug: "remove-background",
+    name: "Remove Background",
+    description:
+      "Remove backgrounds from images instantly using AI. Create transparent PNG images for free in your browser",
+    category: "image",
+    keywords: ["remove background", "background remover", "transparent background", "cutout", "ai background removal"],
+  },
+
+  // Additional Finance Tools
+  {
+    slug: "retirement-calculator",
+    name: "Retirement Calculator",
+    description:
+      "Plan your retirement by calculating future savings, required contributions, and retirement income using the 4% rule",
+    category: "finance",
+    keywords: ["retirement calculator", "retirement planning", "401k", "savings", "retirement income", "4% rule"],
+  },
+  {
+    slug: "investment-calculator",
+    name: "Investment Calculator",
+    description:
+      "Calculate investment growth with compound interest, various compounding frequencies, and monthly contributions",
+    category: "finance",
+    keywords: ["investment calculator", "compound growth", "investment returns", "portfolio growth", "compound interest"],
+  },
+
+  // Additional Health Tools
+  {
+    slug: "calories-burned-calculator",
+    name: "Calories Burned Calculator",
+    description:
+      "Calculate calories burned during exercise based on activity type, duration, and body weight using MET values",
+    category: "health",
+    keywords: ["calories burned", "exercise calculator", "workout calories", "MET", "activity calories"],
+  },
+
+  // Additional PDF Tools
+  {
+    slug: "pdf-to-word",
+    name: "PDF to Word Converter",
+    description:
+      "Convert PDF files to editable Word documents (DOCX) for free. Extract text from PDFs in your browser",
+    category: "pdf",
+    keywords: ["pdf to word", "pdf to docx", "convert pdf", "pdf converter", "extract text"],
+  },
 ];
 
 export function getToolsByCategory(category: string): Tool[] {
