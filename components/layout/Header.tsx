@@ -61,12 +61,58 @@ export function Header() {
   const [categoryDropdownOpen, setCategoryDropdownOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
+  const [mounted, setMounted] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
   const categoryDropdownRef = useRef<HTMLDivElement>(null);
   const searchRef = useRef<HTMLDivElement>(null);
   const searchInputRef = useRef<HTMLInputElement>(null);
+  const scrollStopTimeoutRef = useRef<number | null>(null);
   const router = useRouter();
   const { theme, resolvedTheme, setTheme } = useTheme();
   const isDarkTheme = (resolvedTheme ?? theme) === "dark";
+
+  // Prevent hydration mismatch by only rendering theme-dependent UI after mount
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  // Hide header while scrolling (up or down), show only after scrolling stops.
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY <= 10) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+        setCategoryDropdownOpen(false);
+        setSearchOpen(false);
+      }
+
+      if (scrollStopTimeoutRef.current) {
+        window.clearTimeout(scrollStopTimeoutRef.current);
+      }
+
+      scrollStopTimeoutRef.current = window.setTimeout(() => {
+        setIsVisible(true);
+      }, 80);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      if (scrollStopTimeoutRef.current) {
+        window.clearTimeout(scrollStopTimeoutRef.current);
+      }
+    };
+  }, []);
+
+  // Keep sidebar ads clear of header when header is visible.
+  useEffect(() => {
+    const root = document.documentElement;
+    root.style.setProperty("--sticky-sidebar-top", isVisible ? "80px" : "16px");
+  }, [isVisible]);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -125,7 +171,8 @@ export function Header() {
     setTheme(theme === "dark" ? "light" : "dark");
   };
 
-  const ThemeIcon = theme === "dark" ? Moon : Sun;
+  // Use Sun as default during SSR, then actual theme icon after hydration
+  const ThemeIcon = mounted ? (theme === "dark" ? Moon : Sun) : Sun;
 
   const searchItems = useMemo<SearchItem[]>(() => {
     const toolItems: SearchItem[] = tools.map((tool) => ({
@@ -162,6 +209,14 @@ export function Header() {
         href: "/tools/",
         type: "page",
         keywords: ["all tools", "search tools", "directory"],
+      },
+      {
+        id: "page-blog",
+        title: "Blog",
+        description: "Read guides, tutorials, and product insights.",
+        href: "/blog/",
+        type: "page",
+        keywords: ["blog", "articles", "guides", "tutorials"],
       },
       {
         id: "page-about",
@@ -285,7 +340,11 @@ export function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border bg-background/80 backdrop-blur-lg dark:border-border dark:bg-background/80">
+    <header 
+      className={`sticky top-0 z-50 w-full border-b border-border bg-background/80 backdrop-blur-lg dark:border-border dark:bg-background/80 transition-transform duration-300 ${
+        isVisible ? 'translate-y-0' : '-translate-y-full'
+      }`}
+    >
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Logo */}
         <Link
@@ -346,6 +405,13 @@ export function Header() {
             className={navigationItemClassName}
           >
             Reviews
+          </Link>
+
+          <Link
+            href="/blog/"
+            className={navigationItemClassName}
+          >
+            Blog
           </Link>
         </div>
 
@@ -531,6 +597,13 @@ export function Header() {
               onClick={() => setMobileMenuOpen(false)}
             >
               Reviews
+            </Link>
+            <Link
+              href="/blog/"
+              className={`block ${navigationItemClassName}`}
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Blog
             </Link>
           </div>
         </div>
