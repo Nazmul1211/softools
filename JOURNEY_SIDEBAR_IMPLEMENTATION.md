@@ -1,43 +1,139 @@
-# Journey / Mediavine Sidebar Implementation Guide
+# Journey / Mediavine Implementation Guide (Next.js & Softzar Pattern)
 
-This guide explains the exact pattern used in this project to ensure Journey by Mediavine sidebar ads load reliably and stay visible.
+This guide completely documents the exact, heavily-tested pattern used in the Softzar project. It ensures Journey by Mediavine sidebar ads, in-content ads, and SPA route refreshes work reliably while maintaining our custom custom sticky header UI. 
+
+Since this implementation currently works perfectly in the live Softzar site, this serves as the "ideal" template to replicate across other Next.js projects monetized by Journey.
 
 ## Goals
 
-- Keep sidebar ads loadable on all supported pages
-- Prevent ads from rendering under the sticky header
-- Keep layout width consistent with header/footer (`max-w-7xl`)
-- Reuse the same implementation across other websites
+- Keep sidebar ads loadable and visible on all supported pages.
+- Prevent ads from rendering under the sticky header (via dynamic CSS variables).
+- Keep layout width consistent with header/footer (`max-w-7xl`).
+- Allow Journey ads to automatically refresh on Next.js client-side route changes.
+- Enable Journey to inject in-content ads.
+- Reuse this exact same implementation architecture across other websites.
 
-## Required Sidebar Markup (Do Not Rename IDs)
+---
 
-Journey/Mediavine targets these IDs. Keep them exactly:
+## 1. Required Sidebar Markup (Do Not Rename IDs)
+
+Journey/Mediavine targets specific IDs and classes. Use this exact markup for your sidebars:
 
 ```tsx
 <aside id="secondary" className="hidden overflow-visible lg:block">
   <div className="sticky space-y-6" style={{ top: "var(--sticky-sidebar-top)", maxHeight: "500px" }}>
+    
+    {/* ATF Ad Target - Journey/Mediavine */}
     <div id="sidebar_atf" className="widget" />
+    
+    {/* (Optional) You can place actual sidebar widgets or links here */}
+    <div className="widget">...</div>
+    
+    {/* BTF Ad Target - Journey/Mediavine */}
     <div id="sidebar_btf" className="widget" />
+    
+    {/* Sidebar Stopper - Journey/Mediavine */}
     <div id="mv-sidebar-stopper" />
   </div>
 </aside>
 ```
 
-### Why these matter
+### Why these matter:
+- `id="secondary"`: Standard container target for the sidebar script.
+- `id="sidebar_atf"`: Above-the-fold ad slot injection point.
+- `id="sidebar_btf"`: Below-the-fold ad slot injection point.
+- `id="mv-sidebar-stopper"`: Mediavine stopper anchor so ads don't overlap the footer.
+- `className="widget"`: Wraps content blocks to define injection boundaries.
+- `className="sticky"`: We use our own sticky logic to manage the sidebar positioning relative to our intelligent header.
 
-- `secondary`: standard sidebar container target
-- `sidebar_atf`: above-the-fold ad slot
-- `sidebar_btf`: below-the-fold ad slot
-- `mv-sidebar-stopper`: Mediavine stopper anchor
-- `widget` class: ad styling/placement compatibility
+---
 
-## Header Behavior (Revenue-Optimized)
+## 2. In-Content Ads (Targeting Content Area)
 
-Header behavior implemented:
+To allow Journey to inject ads within the main body content, you must properly wrap your primary content area. Do this using the ID `#journey-content-target` or `#content`.
 
-- Header hides while user is actively scrolling (up or down)
-- Header reappears only after scrolling stops briefly
-- Header remains visible near top of page
+### Layout Wrapper Approach
+In a layout file (e.g., `app/(content-preservation)/layout.tsx`):
+```tsx
+<div id="journey-content-target" className="min-w-0">
+  {children}
+</div>
+```
+
+### Article Content Approach
+In a specific page or layout presenting heavy text (e.g., `ToolLayout.tsx`):
+```tsx
+<article id="content" className="prose ...">
+  {content}
+</article>
+```
+
+### Manual Placeholder Injection
+You can also manually place an internal placeholder for an in-content ad:
+```tsx
+{/* In-content Ad Placeholder */}
+<div id="mv-incontent-ad" className="mt-6" />
+```
+
+---
+
+## 3. SPA Navigation Support (Crucial for Next.js)
+
+Because Next.js uses client-side routing, page navigations don't cause a hard refresh. Journey's script must be explicitly told to refresh the ads on route changes. 
+
+### The `useJourneyRefresh` Hook
+Create this hook (`hooks/useJourneyRefresh.ts`):
+
+```typescript
+'use client';
+
+import { useEffect } from 'react';
+import { usePathname } from 'next/navigation';
+
+declare global {
+  interface Window {
+    Grow?: {
+      refresh?: () => void;
+    };
+  }
+}
+
+export function useJourneyRefresh() {
+  const pathname = usePathname();
+
+  useEffect(() => {
+    if (window.Grow && typeof window.Grow.refresh === 'function') {
+      window.Grow.refresh();
+    }
+  }, [pathname]);
+}
+```
+
+### The `JourneyRefreshProvider`
+Create a provider component (`components/JourneyRefreshProvider.tsx`):
+
+```tsx
+'use client';
+
+import { useJourneyRefresh } from '@/hooks/useJourneyRefresh';
+
+export default function JourneyRefreshProvider({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  useJourneyRefresh();
+  return <>{children}</>;
+}
+```
+
+**Implementation:** Wrap your root `layout.tsx` body with `<JourneyRefreshProvider>` so every route change safely triggers `window.Grow.refresh()`.
+
+---
+
+## 4. Header Behavior (Revenue-Optimized)
+
+To maximize Viewability without breaking UX, the header hides while the user is actively scrolling and reappears when scrolling stops.
 
 Core logic used in `components/layout/Header.tsx`:
 
@@ -49,6 +145,7 @@ useEffect(() => {
   const handleScroll = () => {
     const currentScrollY = window.scrollY;
 
+    // Show at top
     if (currentScrollY <= 10) {
       setIsVisible(true);
     } else {
@@ -57,13 +154,10 @@ useEffect(() => {
       setSearchOpen(false);
     }
 
-    if (scrollStopTimeoutRef.current) {
-      window.clearTimeout(scrollStopTimeoutRef.current);
-    }
+    if (scrollStopTimeoutRef.current) window.clearTimeout(scrollStopTimeoutRef.current);
 
-    scrollStopTimeoutRef.current = window.setTimeout(() => {
-      setIsVisible(true);
-    }, 80);
+    // Reappear when scrolling stops
+    scrollStopTimeoutRef.current = window.setTimeout(() => setIsVisible(true), 80);
   };
 
   window.addEventListener("scroll", handleScroll, { passive: true });
@@ -74,109 +168,52 @@ useEffect(() => {
 }, []);
 ```
 
-Header animation class:
-
+**Header Apperance Class:**
 ```tsx
 <header className={`sticky top-0 z-50 ... transition-transform duration-300 ${
   isVisible ? "translate-y-0" : "-translate-y-full"
 }`}>
 ```
 
-## Prevent Sidebar Ads from Going Under Header
+---
 
-A CSS variable controls sticky offset globally:
+## 5. Prevent Sidebar Ads from Going Under Header
 
-In `app/globals.css`:
+This defines how our sticky sidebar interoperates with our animated sticky header.
 
+In `app/globals.css`, set the baseline variable:
 ```css
 :root {
   --sticky-sidebar-top: 80px;
 }
 ```
 
-In header effect:
-
+In the header effect (`Header.tsx`), dynamically adjust this variable based on header visibility:
 ```tsx
 useEffect(() => {
   const root = document.documentElement;
+  // If header is visible, push sidebar down 80px. If hidden, let it rise to 16px.
   root.style.setProperty("--sticky-sidebar-top", isVisible ? "80px" : "16px");
 }, [isVisible]);
 ```
 
-Meaning:
+---
 
-- Header visible → sidebar stays below it (`80px`)
-- Header hidden → sidebar can rise higher (`16px`) for maximum ad visibility
+## 6. Copy / Replication Checklist for New Projects
 
-## Width Consistency Rule
+When copying this to a new Next.js project, execute these steps sequentially:
 
-Use this wrapper for listing/content pages to match header/footer width:
+1. **SPA Hook:** Copy `hooks/useJourneyRefresh.ts` & `components/JourneyRefreshProvider.tsx`.
+2. **Root Wrap:** Wrap the application in `layout.tsx` with `<JourneyRefreshProvider>`.
+3. **Sidebar Markup:** Implement the `secondary` aside exactly as structured above.
+4. **CSS Setup:** Add `--sticky-sidebar-top: 80px;` to global CSS.
+5. **Header Sync:** Implement the scroll-hide header and the dynamic CSS variable updater.
+6. **In-Content Wrappers:** Ensure the main content uses `id="journey-content-target"` or `id="content"`.
 
-```tsx
-<div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-  ...
-</div>
-```
+## 7. Validation Steps
 
-Avoid using plain `container` when exact width consistency is required.
-
-## Where this pattern is applied in this project
-
-- `components/layout/Sidebar.tsx`
-- `components/layout/ToolLayout.tsx`
-- `app/(category)/[slug]/page.tsx`
-- `app/(content-preservation)/layout.tsx`
-- `components/layout/Header.tsx`
-
-## Copy Checklist for Another Website
-
-1. Add the same sidebar IDs (`secondary`, `sidebar_atf`, `sidebar_btf`, `mv-sidebar-stopper`)
-2. Add `--sticky-sidebar-top` in global CSS
-3. Implement header hide-on-scroll + show-on-stop behavior
-4. Update sticky sidebar `top` to use `var(--sticky-sidebar-top)`
-5. Keep outer page wrappers aligned with `max-w-7xl`
-6. Validate with production build
-
-## Validation Steps
-
-1. Load any page with sidebar in desktop view
-2. Confirm ads appear in `sidebar_atf` / `sidebar_btf`
-3. Scroll continuously: header should stay hidden
-4. Stop scrolling: header should return smoothly
-5. Confirm ad slots never sit under header
-
-
-
-
-
-
-## full code example 
-
-<!-- import React from 'react'
-
-interface SidebarProps {
-  className?: string
-}
-
-export function Sidebar({ className = '' }: SidebarProps) {
-  return (
-    <aside id="secondary" className={`overflow-visible ${className}`}>
-      <div className="sticky top-24 space-y-6" style={{ maxHeight: '500px' }}>
-        {/* ATF Ad Target - Journey/Mediavine */}
-        <div id="sidebar_atf" className="widget" />
-
-        {/* Optional: Add a simple widget between ads for better UX */}
-        {/* You can uncomment this if needed */}
-        {/* <div className="widget rounded-xl border border-border bg-white p-5 dark:bg-muted/50">
-          <h3 className="font-semibold text-foreground">Advertisement</h3>
-        </div> */}
-
-        {/* BTF Ad Target - Journey/Mediavine */}
-        <div id="sidebar_btf" className="widget" />
-
-        {/* Sidebar Stopper - Journey/Mediavine */}
-        <div id="mv-sidebar-stopper" />
-      </div>
-    </aside>
-  )
-}  -->
+1. Load any page with a sidebar on Desktop.
+2. Confirm ads populate in `sidebar_atf` and `sidebar_btf`.
+3. Scroll down continuously: the header should hide, and the sidebar should slide closer to the top of the monitor (`16px`).
+4. Stop scrolling: the header should slide down gracefully, and the sidebar should smoothly shift down (`80px`) so no ad is hidden.
+5. Click a navigation link: Validate that advertisements refresh without a hard page reload.
