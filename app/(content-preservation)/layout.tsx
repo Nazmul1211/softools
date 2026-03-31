@@ -29,7 +29,7 @@ export default function ContentPreservationLayout({
 
         {/* Sidebar - Journey/Mediavine compatible */}
         <aside id="secondary" className="mb-12 hidden overflow-visible lg:block">
-          <div className="sticky top-24 space-y-6">
+          <div className="sticky space-y-6" style={{ top: "var(--sticky-sidebar-top)" }}>
             {/* ATF Ad Target - Mediavine/Journey */}
             <div id="sidebar_atf" className="widget" />
 

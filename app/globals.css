@@ -31,6 +31,7 @@
   --search-border: #cbd5e1;
   --search-text: #1e293b;
   --search-placeholder: #94a3b8;
+  --sticky-sidebar-top: 80px;
 }
 
 /* Dark mode via class */
