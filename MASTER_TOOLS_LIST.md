@@ -110,23 +110,23 @@
 
 | # | Tool Name | Competitor | Status |
 |---|-----------|------------|--------|
-| 51 | Auto Loan Calculator | Calculator.net | ⬜ Todo |
-| 52 | Investment Calculator | Calculator.net, Omni | ⬜ Todo |
-| 53 | Retirement Calculator | Calculator.net, Omni | ⬜ Todo |
-| 54 | 401k Calculator | Calculator.net | ⬜ Todo |
-| 55 | Credit Card Payoff Calculator | Calculator.net | ⬜ Todo |
-| 56 | Savings Calculator | Calculator.net, Omni | ⬜ Todo |
-| 57 | Currency Converter | Calculator.net | ⬜ Todo |
+| 51 | Auto Loan Calculator | Calculator.net | ✅ Done |
+| 52 | Investment Calculator | Calculator.net, Omni | ✅ Done |
+| 53 | Retirement Calculator | Calculator.net, Omni | ✅ Done |
+| 54 | 401k Calculator | Calculator.net | ✅ Done |
+| 55 | Credit Card Payoff Calculator | Calculator.net | ✅ Done |
+| 56 | Savings Calculator | Calculator.net, Omni | ✅ Done |
+| 57 | Currency Converter | Calculator.net | ✅ Done |
 | 58 | Inflation Calculator | Calculator.net | ⬜ Todo |
-| 59 | Amortization Calculator | Calculator.net | ⬜ Todo |
-| 60 | Simple Interest Calculator | Calculator.net | ⬜ Todo |
+| 59 | Amortization Calculator | Calculator.net | ✅ Done |
+| 60 | Simple Interest Calculator | Calculator.net | ✅ Done |
 | 61 | APR Calculator | Calculator.net | ⬜ Todo |
-| 62 | Margin Calculator | Calculator.net, Omni | ⬜ Todo |
-| 63 | Markup Calculator | Omni | ⬜ Todo |
-| 64 | Profit Calculator | Omni | ⬜ Todo |
-| 65 | Break-Even Calculator | Omni | ⬜ Todo |
+| 62 | Margin Calculator | Calculator.net, Omni | ✅ Done |
+| 63 | Markup Calculator | Omni | ✅ Done |
+| 64 | Profit Calculator | Omni | ✅ Done |
+| 65 | Break-Even Calculator | Omni | ✅ Done |
 | 66 | Payroll Calculator | Omni | ⬜ Todo |
-| 67 | Sales Tax Calculator | Calculator.net | ⬜ Todo |
+| 67 | Sales Tax Calculator | Calculator.net | ✅ Done |
 | 68 | VAT Calculator | Calculator.net | ⬜ Todo |
 | 69 | Down Payment Calculator | Calculator.net, Omni | ⬜ Todo |
 | 70 | Rent vs Buy Calculator | Calculator.net | ⬜ Todo |
@@ -155,18 +155,18 @@
 
 | # | Tool Name | Competitor | Status |
 |---|-----------|------------|--------|
-| 86 | Quadratic Formula Calculator | Calculator.net, Omni | ⬜ Todo |
-| 87 | Slope Calculator | Calculator.net, Omni | ⬜ Todo |
-| 88 | Pythagorean Theorem Calculator | Calculator.net, Omni | ⬜ Todo |
-| 89 | Triangle Calculator | Calculator.net, Omni | ⬜ Todo |
+| 86 | Quadratic Formula Calculator | Calculator.net, Omni | ✅ Done |
+| 87 | Slope Calculator | Calculator.net, Omni | ✅ Done |
+| 88 | Pythagorean Theorem Calculator | Calculator.net, Omni | ✅ Done |
+| 89 | Triangle Calculator | Calculator.net, Omni | ✅ Done |
 | 90 | Circle Calculator | Calculator.net, Omni | ⬜ Todo |
-| 91 | Area Calculator | Calculator.net, Omni | ⬜ Todo |
-| 92 | Volume Calculator | Calculator.net, Omni | ⬜ Todo |
+| 91 | Area Calculator | Calculator.net, Omni | ✅ Done |
+| 92 | Volume Calculator | Calculator.net, Omni | ✅ Done |
 | 93 | Surface Area Calculator | Calculator.net, Omni | ⬜ Todo |
-| 94 | Probability Calculator | Calculator.net, Omni | ⬜ Todo |
+| 94 | Probability Calculator | Calculator.net, Omni | ✅ Done |
 | 95 | Permutation Calculator | Calculator.net, Omni | ⬜ Todo |
 | 96 | Combination Calculator | Calculator.net, Omni | ⬜ Todo |
-| 97 | LCM Calculator | Calculator.net, Omni | ⬜ Todo |
+| 97 | LCM Calculator | Calculator.net, Omni | ✅ Done |
 | 98 | GCF Calculator | Calculator.net, Omni | ⬜ Todo |
 | 99 | Factor Calculator | Calculator.net | ⬜ Todo |
 | 100 | Prime Factorization Calculator | Calculator.net | ⬜ Todo |
@@ -181,7 +181,7 @@
 | # | Tool Name | Competitor | Status |
 |---|-----------|------------|--------|
 | 106 | Date Calculator | Calculator.net, Omni | ✅ Done |
-| 107 | Time Calculator | Calculator.net, Omni | ⬜ Todo |
+| 107 | Time Calculator | Calculator.net, Omni | ✅ Done |
 | 108 | Hours Calculator | Calculator.net | ⬜ Todo |
 | 109 | Time Zone Converter | Calculator.net, Omni | ✅ Done |
 | 110 | Day Counter | Calculator.net | ⬜ Todo |

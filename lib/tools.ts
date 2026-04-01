@@ -89,6 +89,70 @@ export const tools: Tool[] = [
     category: "math",
     keywords: ["grade calculator", "weighted grade", "final grade", "what grade do I need"],
   },
+  {
+    slug: "quadratic-calculator",
+    name: "Quadratic Formula Calculator",
+    description:
+      "Solve quadratic equations ax² + bx + c = 0 using the quadratic formula. Get roots, discriminant, vertex, and step-by-step solutions.",
+    category: "math",
+    keywords: ["quadratic formula", "quadratic equation", "solve quadratic", "roots", "discriminant", "parabola"],
+  },
+  {
+    slug: "area-calculator",
+    name: "Area Calculator",
+    description:
+      "Calculate the area of any geometric shape: circles, rectangles, triangles, trapezoids, and more with instant formula breakdowns.",
+    category: "math",
+    keywords: ["area calculator", "calculate area", "area of circle", "area of rectangle", "geometry"],
+  },
+  {
+    slug: "volume-calculator",
+    name: "Volume Calculator",
+    description:
+      "Calculate the volume of 3D shapes: cubes, spheres, cylinders, cones, pyramids, and more with step-by-step formulas.",
+    category: "math",
+    keywords: ["volume calculator", "calculate volume", "volume of sphere", "volume of cylinder", "3D shapes"],
+  },
+  {
+    slug: "probability-calculator",
+    name: "Probability Calculator",
+    description:
+      "Calculate probability for single and multiple events, conditional probability, complements, and at least one success scenarios.",
+    category: "math",
+    keywords: ["probability calculator", "calculate probability", "odds", "statistics", "conditional probability"],
+  },
+  {
+    slug: "lcm-calculator",
+    name: "LCM Calculator",
+    description:
+      "Find the Least Common Multiple of two or more numbers with step-by-step prime factorization and listing methods.",
+    category: "math",
+    keywords: ["lcm calculator", "least common multiple", "find lcm", "common multiple", "math"],
+  },
+  {
+    slug: "slope-calculator",
+    name: "Slope Calculator",
+    description:
+      "Calculate slope from two points, rise and run, or equation form. Get slope-intercept, point-slope, and standard form equations.",
+    category: "math",
+    keywords: ["slope calculator", "find slope", "rise over run", "slope formula", "line equation", "gradient"],
+  },
+  {
+    slug: "pythagorean-theorem-calculator",
+    name: "Pythagorean Theorem Calculator",
+    description:
+      "Calculate the missing side of a right triangle using a² + b² = c². Find hypotenuse or legs with angles and triangle properties.",
+    category: "math",
+    keywords: ["pythagorean theorem", "right triangle", "hypotenuse", "a2 + b2 = c2", "geometry"],
+  },
+  {
+    slug: "triangle-calculator",
+    name: "Triangle Calculator",
+    description:
+      "Solve any triangle using SSS, SAS, ASA, or AAS methods. Calculate area, perimeter, angles, altitudes, medians, and more.",
+    category: "math",
+    keywords: ["triangle calculator", "solve triangle", "triangle area", "law of cosines", "law of sines"],
+  },
 
   // Finance Calculators
   {
@@ -283,6 +347,14 @@ export const tools: Tool[] = [
       "Create countdown timers for events, deadlines, holidays, and special occasions",
     category: "date-time",
     keywords: ["countdown", "timer", "event", "deadline"],
+  },
+  {
+    slug: "time-calculator",
+    name: "Time Calculator",
+    description:
+      "Add and subtract time durations easily. Calculate hours, minutes, seconds and convert between time units for work hours and scheduling.",
+    category: "date-time",
+    keywords: ["time calculator", "add time", "subtract time", "hours calculator", "time duration"],
   },
 
   // Random Generators
@@ -552,6 +624,94 @@ export const tools: Tool[] = [
       "Calculate investment growth with compound interest, various compounding frequencies, and monthly contributions",
     category: "finance",
     keywords: ["investment calculator", "compound growth", "investment returns", "portfolio growth", "compound interest"],
+  },
+  {
+    slug: "auto-loan-calculator",
+    name: "Auto Loan Calculator",
+    description:
+      "Calculate monthly car payments, total interest, and view amortization schedule for auto loans",
+    category: "finance",
+    keywords: ["auto loan", "car loan", "car payment", "vehicle financing", "auto financing", "car loan calculator"],
+  },
+  {
+    slug: "savings-calculator",
+    name: "Savings Calculator",
+    description:
+      "Project how your savings will grow over time with compound interest and regular deposits",
+    category: "finance",
+    keywords: ["savings calculator", "savings growth", "compound interest", "savings account", "future savings"],
+  },
+  {
+    slug: "simple-interest-calculator",
+    name: "Simple Interest Calculator",
+    description:
+      "Calculate simple interest on loans, savings, and investments using the I = P × R × T formula",
+    category: "finance",
+    keywords: ["simple interest", "interest calculator", "loan interest", "basic interest", "interest formula"],
+  },
+  {
+    slug: "margin-calculator",
+    name: "Margin Calculator",
+    description:
+      "Calculate profit margin, gross margin, and markup percentage for business pricing decisions",
+    category: "finance",
+    keywords: ["margin calculator", "profit margin", "gross margin", "markup", "business calculator", "pricing"],
+  },
+  {
+    slug: "markup-calculator",
+    name: "Markup Calculator",
+    description:
+      "Calculate selling price from cost and markup percentage for retail and wholesale pricing",
+    category: "finance",
+    keywords: ["markup calculator", "price markup", "retail markup", "selling price", "cost plus pricing"],
+  },
+  {
+    slug: "amortization-calculator",
+    name: "Amortization Calculator",
+    description:
+      "Generate complete loan amortization schedules showing monthly payments, interest, and principal breakdown over the life of your loan",
+    category: "finance",
+    keywords: ["amortization calculator", "amortization schedule", "loan amortization", "payment breakdown", "interest schedule"],
+  },
+  {
+    slug: "sales-tax-calculator",
+    name: "Sales Tax Calculator",
+    description:
+      "Calculate sales tax and total cost including tax. Includes US state tax rates and reverse tax calculation to find pre-tax price",
+    category: "finance",
+    keywords: ["sales tax calculator", "tax calculator", "state sales tax", "calculate tax", "reverse sales tax"],
+  },
+  {
+    slug: "profit-calculator",
+    name: "Profit Calculator",
+    description:
+      "Calculate gross profit, operating profit, and net profit margins for your business with visual profit breakdown analysis",
+    category: "finance",
+    keywords: ["profit calculator", "gross profit", "net profit", "operating profit", "profit margin", "business profit"],
+  },
+  {
+    slug: "break-even-calculator",
+    name: "Break-Even Calculator",
+    description:
+      "Calculate your break-even point in units and revenue. Determine how many sales you need to cover costs and start making profit",
+    category: "finance",
+    keywords: ["break-even calculator", "break-even point", "break-even analysis", "business calculator", "fixed costs"],
+  },
+  {
+    slug: "credit-card-payoff-calculator",
+    name: "Credit Card Payoff Calculator",
+    description:
+      "Calculate how long to pay off credit card debt and total interest cost. Find the optimal payment strategy to become debt-free faster.",
+    category: "finance",
+    keywords: ["credit card payoff", "debt calculator", "pay off credit card", "interest calculator", "debt free"],
+  },
+  {
+    slug: "401k-calculator",
+    name: "401k Calculator",
+    description:
+      "Project your 401k retirement savings growth with employer matching, contribution limits, and year-by-year projections",
+    category: "finance",
+    keywords: ["401k calculator", "retirement calculator", "401k contribution", "employer match", "retirement savings"],
   },
 
   // Additional Health Tools

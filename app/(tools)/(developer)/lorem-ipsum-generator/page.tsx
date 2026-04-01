@@ -205,15 +205,15 @@ export default function LoremIpsumGenerator() {
 
         {/* Output */}
         <div className="relative">
-          <div className="rounded-xl border border-border bg-muted/30 p-4">
+          <div className="rounded-xl border border-border bg-muted/30 p-4 overflow-hidden">
             <div className="flex justify-between items-center mb-3">
               <span className="text-sm font-medium text-foreground">Generated Text</span>
               <Button onClick={copyToClipboard} variant="outline" size="sm">
                 {copied ? "✓ Copied!" : "Copy to Clipboard"}
               </Button>
             </div>
-            <div className="max-h-96 overflow-y-auto">
-              <p className="text-foreground whitespace-pre-wrap leading-relaxed">
+            <div className="max-h-96 overflow-y-auto overflow-x-hidden">
+              <p className="text-foreground whitespace-pre-wrap break-words leading-relaxed">
                 {generatedText}
               </p>
             </div>
@@ -239,7 +239,7 @@ export default function LoremIpsumGenerator() {
               Copy HTML
             </Button>
           </div>
-          <pre className="text-xs text-muted-foreground font-mono bg-background/50 p-3 rounded-lg overflow-x-auto max-h-32">
+          <pre className="text-xs text-muted-foreground font-mono bg-background/50 p-3 rounded-lg overflow-x-auto max-h-32 whitespace-pre-wrap break-all">
             {outputType === "paragraphs" 
               ? generatedText.split("\n\n").map(p => `<p>${p}</p>`).join("\n")
               : `<p>${generatedText}</p>`
