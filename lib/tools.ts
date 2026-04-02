@@ -713,6 +713,46 @@ export const tools: Tool[] = [
     category: "finance",
     keywords: ["401k calculator", "retirement calculator", "401k contribution", "employer match", "retirement savings"],
   },
+  {
+    slug: "inflation-calculator",
+    name: "Inflation Calculator",
+    description:
+      "Estimate how inflation impacts purchasing power and future prices over time using annual inflation assumptions",
+    category: "finance",
+    keywords: ["inflation calculator", "purchasing power", "future value", "cost over time", "inflation rate"],
+  },
+  {
+    slug: "apr-calculator",
+    name: "APR Calculator",
+    description:
+      "Estimate annual percentage rate by including interest and upfront fees to compare true borrowing cost",
+    category: "finance",
+    keywords: ["apr calculator", "annual percentage rate", "loan fees", "borrow cost", "loan comparison"],
+  },
+  {
+    slug: "payroll-calculator",
+    name: "Payroll Calculator",
+    description:
+      "Calculate gross pay, estimated taxes, deductions, and take-home pay for common payroll schedules",
+    category: "finance",
+    keywords: ["payroll calculator", "take-home pay", "gross to net", "paycheck estimator", "salary payroll"],
+  },
+  {
+    slug: "vat-calculator",
+    name: "VAT Calculator",
+    description:
+      "Add or remove value-added tax from prices and calculate net, VAT amount, and gross totals instantly",
+    category: "finance",
+    keywords: ["vat calculator", "value added tax", "add vat", "remove vat", "vat inclusive"],
+  },
+  {
+    slug: "down-payment-calculator",
+    name: "Down Payment Calculator",
+    description:
+      "Estimate down payment amount, loan principal, and monthly housing costs for home purchase planning",
+    category: "finance",
+    keywords: ["down payment calculator", "mortgage down payment", "home loan", "pmi", "house affordability"],
+  },
 
   // Additional Health Tools
   {

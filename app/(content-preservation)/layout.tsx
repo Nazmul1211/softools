@@ -9,10 +9,6 @@ const reviewLinks = [
   { href: "/adobe-photoshop-for-macos/", name: "Adobe Photoshop for macOS Review" },
   { href: "/adobe-photoshop-2025/", name: "Adobe Photoshop 2025 Review" },
   { href: "/adobe-illustrator-2025/", name: "Adobe Illustrator 2025 Review" },
-  { href: "/adobe-acrobat-pro-dc-free-download/", name: "Adobe Acrobat Pro DC Review" },
-  { href: "/edius-free-download/", name: "Edius Pro 11 Review" },
-  { href: "/edius-pro-9-free-download-for-lifetime/", name: "Edius Pro 9 Review" },
-  { href: "/minecraft-apk-1-20-81-01-apk-free-download/", name: "Minecraft 1.20.81.01 Review" },
 ];
 
 export default function ContentPreservationLayout({

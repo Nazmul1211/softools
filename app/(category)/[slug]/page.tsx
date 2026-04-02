@@ -156,26 +156,19 @@ export default async function CategoryOrSanityPage({ params }: Props) {
               <div id="sidebar_atf" className="widget" />
 
               <div className="widget rounded-xl border border-border bg-white p-5 dark:bg-muted/50">
-                <h3 className="font-semibold text-foreground">Popular In {category.name}</h3>
-                <ul className="mt-4 space-y-3">
-                  {categoryTools.slice(0, 5).map((tool) => (
-                    <li key={tool.slug}>
-                      <Link
-                        href={`/${tool.slug}/`}
-                        className="text-sm text-muted-foreground transition-colors hover:text-primary"
-                      >
-                        {tool.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="widget rounded-xl border border-border bg-white p-5 dark:bg-muted/50">
                 <h3 className="font-semibold text-foreground">Explore More Categories</h3>
                 <ul className="mt-4 space-y-3">
                   {categories
                     .filter((c) => c.id !== category.id)
+                    .sort((a, b) => {
+                      const priority: Record<string, number> = {
+                        math: 1,
+                        finance: 2,
+                        image: 3,
+                        pdf: 4,
+                      };
+                      return (priority[a.id] ?? 99) - (priority[b.id] ?? 99);
+                    })
                     .slice(0, 6)
                     .map((c) => (
                       <li key={c.id}>

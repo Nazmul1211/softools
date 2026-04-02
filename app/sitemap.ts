@@ -39,21 +39,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "/adobe-after-effects-2024/",
     "/adobe-photoshop-for-macos/",
     "/adobe-after-effects-cc-2023/",
-    "/adobe-illustrator-cc-2022/",
-    "/adobe-premiere-pro-2025-free-download/",
-    "/adobe-photoshop-2023-free-download/",
     "/adobe-premiere-pro-cc-2023/",
     "/adobe-illustrator-cc-2023/",
-    "/adobe-photoshop-2024-free-download/",
-    "/adobe-illustrator-2024-free-download/",
     "/adobe-photoshop-2025/",
-    "/adobe-acrobat-pro-dc-free-download/",
-    "/edius-free-download/",
-    "/adobe-photoshop-cc-2021/",
-    "/edius-pro-9-free-download-for-lifetime/",
-    "/minecraft-apk-1-20-81-01-apk-free-download/",
     "/adobe-illustrator-2025/",
-    "/adobe-indesign-free-download/",
   ];
 
   const toolPages = tools.map((tool) => ({

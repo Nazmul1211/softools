@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState, useEffect, useMemo, useRef } from "react";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useTheme } from "next-themes";
 import {
   ArrowLeftRight,
@@ -39,13 +39,19 @@ const categoryIconMap: Record<string, LucideIcon> = {
 };
 
 const navigationItemClassName =
-  "rounded-lg px-3 py-2 text-sm font-medium text-black transition-colors hover:bg-slate-100 hover:text-black dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-slate-50";
+  "rounded-lg px-3 py-2 text-sm font-medium text-foreground/90 transition-colors hover:bg-muted hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring";
+
+const activeNavigationItemClassName =
+  "bg-primary/15 text-primary hover:bg-primary/20 hover:text-primary";
 
 const dropdownItemClassName =
-  "flex items-center gap-2 rounded-lg px-3 py-2.5 text-sm text-black transition-colors hover:bg-slate-100 hover:text-black dark:text-white dark:hover:bg-slate-800 dark:hover:text-white";
+  "flex items-center gap-2 rounded-lg px-3 py-2.5 text-sm text-foreground/90 transition-colors hover:bg-muted hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring";
+
+const activeDropdownItemClassName =
+  "bg-primary/10 text-primary hover:bg-primary/15 hover:text-primary";
 
 const iconButtonClassName =
-  "flex h-9 w-9 items-center justify-center rounded-lg text-slate-600 transition-colors hover:bg-slate-200/90 hover:text-slate-950 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-slate-50";
+  "flex h-9 w-9 items-center justify-center rounded-lg border border-transparent text-muted-foreground transition-colors hover:border-border hover:bg-muted hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring";
 
 type SearchItem = {
   id: string;
@@ -61,20 +67,14 @@ export function Header() {
   const [categoryDropdownOpen, setCategoryDropdownOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
-  const [mounted, setMounted] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const categoryDropdownRef = useRef<HTMLDivElement>(null);
   const searchRef = useRef<HTMLDivElement>(null);
   const searchInputRef = useRef<HTMLInputElement>(null);
   const scrollStopTimeoutRef = useRef<number | null>(null);
   const router = useRouter();
+  const pathname = usePathname();
   const { theme, resolvedTheme, setTheme } = useTheme();
-  const isDarkTheme = (resolvedTheme ?? theme) === "dark";
-
-  // Prevent hydration mismatch by only rendering theme-dependent UI after mount
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   // Hide header while scrolling (up or down), show only after scrolling stops.
   useEffect(() => {
@@ -168,11 +168,10 @@ export function Header() {
   }, []);
 
   const cycleTheme = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
+    setTheme((resolvedTheme ?? theme) === "dark" ? "light" : "dark");
   };
 
-  // Use Sun as default during SSR, then actual theme icon after hydration
-  const ThemeIcon = mounted ? (theme === "dark" ? Moon : Sun) : Sun;
+  const isDarkTheme = (resolvedTheme ?? theme) === "dark";
 
   const searchItems = useMemo<SearchItem[]>(() => {
     const toolItems: SearchItem[] = tools.map((tool) => ({
@@ -339,6 +338,12 @@ export function Header() {
     setMobileMenuOpen(false);
   };
 
+  const isActivePath = (href: string) => {
+    if (!pathname) return false;
+    if (href === "/") return pathname === "/";
+    return pathname === href || pathname.startsWith(`${href}/`);
+  };
+
   return (
     <header 
       className={`sticky top-0 z-50 w-full border-b border-border bg-background/80 backdrop-blur-lg dark:border-border dark:bg-background/80 transition-transform duration-300 ${
@@ -357,35 +362,38 @@ export function Header() {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden text-black items-center gap-1 md:flex">
+        <div className="hidden items-center gap-1 md:flex">
           {/* Categories Dropdown */}
           <div className="relative" ref={categoryDropdownRef}>
-            <button
-              onClick={() => setCategoryDropdownOpen(!categoryDropdownOpen)}
-              className={`${navigationItemClassName} flex items-center gap-1`}
-            >
-              Categories
+              <button
+                onClick={() => setCategoryDropdownOpen(!categoryDropdownOpen)}
+                className={`${navigationItemClassName} ${
+                  categoryDropdownOpen ? activeNavigationItemClassName : ""
+                } flex items-center gap-1`}
+              >
+                Categories
               <ChevronDown
                 className={`h-4 w-4 transition-transform ${categoryDropdownOpen ? "rotate-180" : ""}`}
               />
             </button>
 
             {categoryDropdownOpen && (
-              <div className="absolute left-0 top-full z-[60] mt-2 w-64 rounded-xl border border-border bg-white p-2 shadow-xl dark:bg-background">
+              <div className="absolute left-0 top-full z-[60] mt-2 w-64 rounded-xl border border-border bg-background p-2 shadow-xl">
                 {categories.map((category) => {
                   const CategoryIcon = categoryIconMap[category.id] ?? Menu;
+                  const categoryHref = `/${category.slug}/`;
 
                   return (
                     <Link
                       key={category.id}
-                      href={`/${category.slug}/`}
-                      className={dropdownItemClassName}
+                      href={categoryHref}
+                      className={`${dropdownItemClassName} ${
+                        isActivePath(categoryHref) ? activeDropdownItemClassName : ""
+                      }`}
                       onClick={() => setCategoryDropdownOpen(false)}
                     >
                       <CategoryIcon className="h-4 w-4 text-primary" strokeWidth={1.7} />
-                      <span style={{ color: isDarkTheme ? "#ffffff" : "#000000" }}>
-                        {category.name}
-                      </span>
+                      <span>{category.name}</span>
                     </Link>
                   );
                 })}
@@ -395,28 +403,34 @@ export function Header() {
 
           <Link
             href="/tools/"
-            className={navigationItemClassName}
+            className={`${navigationItemClassName} ${
+              isActivePath("/tools") ? activeNavigationItemClassName : ""
+            }`}
           >
             All Tools
           </Link>
 
           <Link
             href="/review/"
-            className={navigationItemClassName}
+            className={`${navigationItemClassName} ${
+              isActivePath("/review") ? activeNavigationItemClassName : ""
+            }`}
           >
             Reviews
           </Link>
 
           <Link
             href="/blog/"
-            className={navigationItemClassName}
+            className={`${navigationItemClassName} ${
+              isActivePath("/blog") ? activeNavigationItemClassName : ""
+            }`}
           >
             Blog
           </Link>
         </div>
 
         {/* Right Side - Search & Theme */}
-        <div className="flex text-black items-center gap-2">
+        <div className="flex items-center gap-2">
           {/* Search Button */}
           <div className="relative" ref={searchRef}>
             <button
@@ -466,10 +480,10 @@ export function Header() {
                             <Link
                               href={item.href}
                               onClick={() => setSearchOpen(false)}
-                              className="block rounded-xl px-3 py-2.5 transition-colors hover:bg-slate-200/90 dark:hover:bg-slate-800"
+                              className="block rounded-xl px-3 py-2.5 transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                             >
                               <div className="flex items-center justify-between gap-2">
-                                <p className="text-sm font-medium text-slate-900 dark:text-slate-100">
+                                <p className="text-sm font-medium text-foreground">
                                   {item.title}
                                 </p>
                                 <span className="rounded-md border border-border px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-muted-foreground">
@@ -499,10 +513,10 @@ export function Header() {
                             <Link
                               href={item.href}
                               onClick={() => setSearchOpen(false)}
-                              className="block rounded-xl px-3 py-2.5 transition-colors hover:bg-slate-200/90 dark:hover:bg-slate-800"
+                              className="block rounded-xl px-3 py-2.5 transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                             >
                               <div className="flex items-center justify-between gap-2">
-                                <p className="text-sm font-medium text-slate-900 dark:text-slate-100">
+                                <p className="text-sm font-medium text-foreground">
                                   {item.title}
                                 </p>
                                 <span className="rounded-md border border-border px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-muted-foreground">
@@ -523,7 +537,7 @@ export function Header() {
                 <div className="border-t border-border p-2">
                   <button
                     onClick={() => submitSearch(searchQuery)}
-                    className="w-full rounded-lg border border-border px-3 py-2 text-sm text-slate-700 transition-colors hover:bg-slate-200/90 hover:text-slate-950 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-slate-50"
+                    className="w-full rounded-lg border border-border bg-background px-3 py-2 text-sm text-foreground transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                   >
                     {searchQuery.trim()
                       ? `Search all results for "${searchQuery.trim()}"`
@@ -540,7 +554,11 @@ export function Header() {
             className={iconButtonClassName}
             aria-label="Toggle theme"
           >
-            <ThemeIcon className="h-5 w-5" strokeWidth={1.5} />
+            {isDarkTheme ? (
+              <Moon className="h-5 w-5" strokeWidth={1.5} />
+            ) : (
+              <Sun className="h-5 w-5" strokeWidth={1.5} />
+            )}
           </button>
 
           {/* Mobile Menu Button */}
@@ -560,11 +578,13 @@ export function Header() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="border-t border-border bg-background px-4 py-4 dark:border-border dark:bg-background md:hidden">
+        <div className="border-t border-border bg-background px-4 py-4 md:hidden">
           <div className="space-y-1">
             <Link
               href="/tools/"
-              className={`block ${navigationItemClassName}`}
+              className={`block ${navigationItemClassName} ${
+                isActivePath("/tools") ? activeNavigationItemClassName : ""
+              }`}
               onClick={() => setMobileMenuOpen(false)}
             >
               All Tools
@@ -580,27 +600,31 @@ export function Header() {
                   <Link
                     key={category.id}
                     href={`/${category.slug}/`}
-                    className={dropdownItemClassName}
+                    className={`${dropdownItemClassName} ${
+                      isActivePath(`/${category.slug}/`) ? activeDropdownItemClassName : ""
+                    }`}
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     <CategoryIcon className="h-4 w-4 text-primary" strokeWidth={1.7} />
-                    <span style={{ color: isDarkTheme ? "#ffffff" : "#000000" }}>
-                      {category.name}
-                    </span>
+                    <span>{category.name}</span>
                   </Link>
                 );
               })}
             </div>
             <Link
               href="/review/"
-              className={`block ${navigationItemClassName}`}
+              className={`block ${navigationItemClassName} ${
+                isActivePath("/review") ? activeNavigationItemClassName : ""
+              }`}
               onClick={() => setMobileMenuOpen(false)}
             >
               Reviews
             </Link>
             <Link
               href="/blog/"
-              className={`block ${navigationItemClassName}`}
+              className={`block ${navigationItemClassName} ${
+                isActivePath("/blog") ? activeNavigationItemClassName : ""
+              }`}
               onClick={() => setMobileMenuOpen(false)}
             >
               Blog

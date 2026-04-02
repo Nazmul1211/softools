@@ -117,18 +117,18 @@
 | 55 | Credit Card Payoff Calculator | Calculator.net | ✅ Done |
 | 56 | Savings Calculator | Calculator.net, Omni | ✅ Done |
 | 57 | Currency Converter | Calculator.net | ✅ Done |
-| 58 | Inflation Calculator | Calculator.net | ⬜ Todo |
+| 58 | Inflation Calculator | Calculator.net | ✅ Done |
 | 59 | Amortization Calculator | Calculator.net | ✅ Done |
 | 60 | Simple Interest Calculator | Calculator.net | ✅ Done |
-| 61 | APR Calculator | Calculator.net | ⬜ Todo |
+| 61 | APR Calculator | Calculator.net | ✅ Done |
 | 62 | Margin Calculator | Calculator.net, Omni | ✅ Done |
 | 63 | Markup Calculator | Omni | ✅ Done |
 | 64 | Profit Calculator | Omni | ✅ Done |
 | 65 | Break-Even Calculator | Omni | ✅ Done |
-| 66 | Payroll Calculator | Omni | ⬜ Todo |
+| 66 | Payroll Calculator | Omni | ✅ Done |
 | 67 | Sales Tax Calculator | Calculator.net | ✅ Done |
-| 68 | VAT Calculator | Calculator.net | ⬜ Todo |
-| 69 | Down Payment Calculator | Calculator.net, Omni | ⬜ Todo |
+| 68 | VAT Calculator | Calculator.net | ✅ Done |
+| 69 | Down Payment Calculator | Calculator.net, Omni | ✅ Done |
 | 70 | Rent vs Buy Calculator | Calculator.net | ⬜ Todo |
 
 ## 🏃 Health & Fitness - Extended

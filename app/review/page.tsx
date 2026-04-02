@@ -33,24 +33,6 @@ const reviewPosts = [
       "Whether this version still makes sense for legacy setups and lower-spec motion workflows.",
   },
   {
-    href: "/adobe-illustrator-cc-2022/",
-    title: "Adobe Illustrator CC 2022 Review",
-    snippet:
-      "A stability-first Illustrator option for users with older assets, presets, and hardware profiles.",
-  },
-  {
-    href: "/adobe-premiere-pro-2025-free-download/",
-    title: "Adobe Premiere Pro 2025 Review",
-    snippet:
-      "How the 2025 cycle improves speed, automation, and day-to-day editing comfort for teams.",
-  },
-  {
-    href: "/adobe-photoshop-2023-free-download/",
-    title: "Adobe Photoshop 2023 Review",
-    snippet:
-      "A balanced version with broad compatibility and enough modern features for many creators.",
-  },
-  {
     href: "/adobe-premiere-pro-cc-2023/",
     title: "Adobe Premiere Pro CC 2023 Review",
     snippet:
@@ -63,64 +45,16 @@ const reviewPosts = [
       "Solid vector design workflow quality for branding, social content, and print production.",
   },
   {
-    href: "/adobe-photoshop-2024-free-download/",
-    title: "Adobe Photoshop 2024 Review",
-    snippet:
-      "A modern Photoshop release focused on faster selection, retouching, and AI-assisted work.",
-  },
-  {
-    href: "/adobe-illustrator-2024-free-download/",
-    title: "Adobe Illustrator 2024 Review",
-    snippet:
-      "A refined Illustrator release for vector-heavy work where consistency matters most.",
-  },
-  {
     href: "/adobe-photoshop-2025/",
     title: "Adobe Photoshop 2025 Review",
     snippet:
       "Our verdict on the latest Photoshop generation for production editing and campaign design.",
   },
   {
-    href: "/adobe-acrobat-pro-dc-free-download/",
-    title: "Adobe Acrobat Pro DC Review",
-    snippet:
-      "Editing, organizing, and securing PDF workflows for business and document-heavy teams.",
-  },
-  {
-    href: "/edius-free-download/",
-    title: "Edius Pro 11 Review",
-    snippet:
-      "A fast NLE option for editors who value stability, low-latency playback, and fast turnaround.",
-  },
-  {
-    href: "/adobe-photoshop-cc-2021/",
-    title: "Adobe Photoshop CC 2021 Review",
-    snippet:
-      "Legacy Photoshop coverage for users balancing familiarity, plugin support, and hardware limits.",
-  },
-  {
-    href: "/edius-pro-9-free-download-for-lifetime/",
-    title: "Edius Pro 9 Review",
-    snippet:
-      "A legacy Edius release still useful for certain archive-first and compatibility-first workflows.",
-  },
-  {
-    href: "/minecraft-apk-1-20-81-01-apk-free-download/",
-    title: "Minecraft 1.20.81.01 Review",
-    snippet:
-      "Compatibility and gameplay experience notes for users searching this specific Android build.",
-  },
-  {
     href: "/adobe-illustrator-2025/",
     title: "Adobe Illustrator 2025 Review",
     snippet:
       "What changed in Illustrator 2025 and whether it is worth upgrading right now.",
-  },
-  {
-    href: "/adobe-indesign-free-download/",
-    title: "Adobe InDesign Review",
-    snippet:
-      "Layout and publishing workflow analysis for magazines, reports, and print-ready documents.",
   },
 ];
 
@@ -168,9 +102,7 @@ export default function ReviewCategoryPage() {
 
       <section className="rounded-2xl border border-border bg-card-bg p-6 mb-12 sm:p-8">
         <h2 className="text-xl font-semibold text-foreground">All Review Posts</h2>
-        <p className="mt-2 text-sm text-muted-foreground">
-          20 content-preservation review posts are listed below.
-        </p>
+ 
 
         <ul className="mt-6 list-disc space-y-4 pl-5 marker:text-primary">
           {reviewPosts.map((post) => (
