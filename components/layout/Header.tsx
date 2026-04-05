@@ -20,6 +20,7 @@ import {
   ChevronDown,
   Search,
   Shuffle,
+  Gamepad2,
   type LucideIcon,
 } from "lucide-react";
 import { categories } from "@/config/site";
@@ -36,6 +37,7 @@ const categoryIconMap: Record<string, LucideIcon> = {
   developer: Code,
   pdf: FileText,
   image: Image,
+  gaming: Gamepad2,
 };
 
 const navigationItemClassName =

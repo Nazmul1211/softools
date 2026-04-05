@@ -82,4 +82,11 @@ export const categories = [
     description: "Compress, resize and optimize images",
     icon: "image",
   },
+  {
+    id: "gaming" as const,
+    slug: "gaming-tools",
+    name: "Gaming Tools",
+    description: "Calculators and tools for gamers",
+    icon: "gamepad-2",
+  },
 ];

@@ -17,7 +17,8 @@ export type ToolCategory =
   | "pdf"
   | "date-time"
   | "random"
-  | "developer";
+  | "developer"
+  | "gaming";
 
 export interface ToolCategoryInfo {
   id: ToolCategory;

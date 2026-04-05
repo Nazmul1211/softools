@@ -18,7 +18,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
               variant === "primary",
             "bg-muted text-foreground hover:bg-zinc-200 focus:ring-zinc-500 dark:bg-muted dark:text-foreground dark:hover:bg-zinc-700":
               variant === "secondary",
-            "border border-border bg-transparent text-foreground hover:bg-muted/50 focus:ring-zinc-500 dark:border-border dark:text-zinc-300 dark:hover:bg-muted":
+            "border border-slate-300 bg-transparent text-slate-700 hover:bg-slate-100 focus:ring-slate-500 dark:border-zinc-600 dark:text-zinc-300 dark:hover:bg-zinc-800":
               variant === "outline",
             "px-3 py-1.5 text-sm": size === "sm",
             "px-4 py-2.5 text-sm": size === "md",

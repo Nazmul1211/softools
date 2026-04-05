@@ -14,6 +14,7 @@ import {
   Shield,
   ChevronRight,
   Image as ImageIcon,
+  Gamepad2,
 } from "lucide-react";
 import { categories, siteConfig } from "@/config/site";
 import { tools } from "@/lib/tools";
@@ -85,6 +86,7 @@ const categoryIcons: Record<string, React.ReactNode> = {
   developer: <Code className="h-8 w-8" strokeWidth={1.5} />,
   pdf: <FileText className="h-8 w-8" strokeWidth={1.5} />,
   image: <ImageIcon className="h-8 w-8" strokeWidth={1.5} />,
+  gaming: <Gamepad2 className="h-8 w-8" strokeWidth={1.5} />,
 };
 
 const categorySmallIcons: Record<string, React.ReactNode> = {
@@ -98,6 +100,7 @@ const categorySmallIcons: Record<string, React.ReactNode> = {
   developer: <Code className="h-5 w-5" strokeWidth={1.5} />,
   pdf: <FileText className="h-5 w-5" strokeWidth={1.5} />,
   image: <ImageIcon className="h-5 w-5" strokeWidth={1.5} />,
+  gaming: <Gamepad2 className="h-5 w-5" strokeWidth={1.5} />,
 };
 
 export default function Home() {

@@ -773,6 +773,26 @@ export const tools: Tool[] = [
     category: "pdf",
     keywords: ["pdf to word", "pdf to docx", "convert pdf", "pdf converter", "extract text"],
   },
+
+  // Gaming Tools
+  {
+    slug: "atlas-earth-calculator",
+    name: "Atlas Earth Calculator",
+    description:
+      "Calculate Atlas Earth earnings, badge boosts, parcel ROI, and optimize your virtual land investment strategy. Also known as AE Calculator.",
+    category: "gaming",
+    keywords: [
+      "atlas earth calculator",
+      "ae calculator",
+      "atlas earth earnings",
+      "atlas earth roi",
+      "atlas earth rent",
+      "atlas earth badges",
+      "atlas earth parcels",
+      "atlas bucks",
+      "virtual land calculator",
+    ],
+  },
 ];
 
 export function getToolsByCategory(category: string): Tool[] {
