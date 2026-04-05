@@ -36,6 +36,8 @@ interface ToolLayoutProps {
   lastUpdated?: string;
   datePublished?: string;
   author?: string;
+  // Layout options
+  fullWidth?: boolean;
 }
 
 // FAQ Accordion Component with Schema.org structured data
@@ -102,6 +104,7 @@ export function ToolLayout({
   lastUpdated,
   datePublished,
   author = "Softzar Team",
+  fullWidth = false,
 }: ToolLayoutProps) {
   // Generate slug from title for URLs
   const toolSlug = title.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
@@ -156,8 +159,8 @@ export function ToolLayout({
         </ol>
       </nav>
 
-      <div className="grid gap-8 lg:grid-cols-[1fr_336px]">
-        <main>
+      <div className={fullWidth ? "" : "grid gap-8 lg:grid-cols-[1fr_336px]"}>
+        <main className={fullWidth ? "max-w-4xl mx-auto" : ""}>
           {/* Hero Section - Compact, engaging */}
           <header className="mb-6">
             <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:gap-8">
@@ -248,67 +251,69 @@ export function ToolLayout({
         </main>
 
         {/* Sidebar - Sticky, ad-optimized */}
-        <aside id="secondary" className="hidden overflow-visible lg:block">
-          <div className="sticky space-y-6" style={{ top: "var(--sticky-sidebar-top)" }}>
-            {/* ATF Ad Target - Mediavine */}
-            <div id="sidebar_atf" className="widget" />
+        {!fullWidth && (
+          <aside id="secondary" className="hidden overflow-visible lg:block">
+            <div className="sticky space-y-6" style={{ top: "var(--sticky-sidebar-top)" }}>
+              {/* ATF Ad Target - Mediavine */}
+              <div id="sidebar_atf" className="widget" />
 
-            {/* Related Tools */}
-            {relatedTools && relatedTools.length > 0 && (
+              {/* Related Tools */}
+              {relatedTools && relatedTools.length > 0 && (
+                <div className="widget rounded-xl border border-border bg-white p-5 dark:border-border dark:bg-muted/50">
+                  <h3 className="font-semibold text-foreground">
+                    Related Tools
+                  </h3>
+                  <ul className="mt-4 space-y-3">
+                    {relatedTools.map((tool) => (
+                      <li key={tool.href}>
+                        <Link
+                          href={tool.href}
+                          className="group flex items-center justify-between text-sm text-muted-foreground transition-colors hover:text-primary"
+                        >
+                          <span>{tool.name}</span>
+                          <ArrowRight className="h-4 w-4 opacity-0 transition-opacity group-hover:opacity-100" />
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {/* Quick Links */}
               <div className="widget rounded-xl border border-border bg-white p-5 dark:border-border dark:bg-muted/50">
                 <h3 className="font-semibold text-foreground">
-                  Related Tools
+                  Popular Categories
                 </h3>
                 <ul className="mt-4 space-y-3">
-                  {relatedTools.map((tool) => (
-                    <li key={tool.href}>
+                  {categories.slice(0, 5).map((cat) => (
+                    <li key={cat.id}>
                       <Link
-                        href={tool.href}
-                        className="group flex items-center justify-between text-sm text-muted-foreground transition-colors hover:text-primary"
+                        href={`/${cat.slug}`}
+                        className="text-sm text-muted-foreground transition-colors hover:text-primary"
                       >
-                        <span>{tool.name}</span>
-                        <ArrowRight className="h-4 w-4 opacity-0 transition-opacity group-hover:opacity-100" />
+                        {cat.name}
                       </Link>
                     </li>
                   ))}
-                </ul>
-              </div>
-            )}
-
-            {/* Quick Links */}
-            <div className="widget rounded-xl border border-border bg-white p-5 dark:border-border dark:bg-muted/50">
-              <h3 className="font-semibold text-foreground">
-                Popular Categories
-              </h3>
-              <ul className="mt-4 space-y-3">
-                {categories.slice(0, 5).map((cat) => (
-                  <li key={cat.id}>
+                  <li>
                     <Link
-                      href={`/${cat.slug}`}
-                      className="text-sm text-muted-foreground transition-colors hover:text-primary"
+                      href="/tools"
+                      className="text-sm font-medium text-primary hover:underline"
                     >
-                      {cat.name}
+                      View All Tools →
                     </Link>
                   </li>
-                ))}
-                <li>
-                  <Link
-                    href="/tools"
-                    className="text-sm font-medium text-primary hover:underline"
-                  >
-                    View All Tools →
-                  </Link>
-                </li>
-              </ul>
+                </ul>
+              </div>
+
+              {/* BTF Ad Target - Mediavine */}
+              <div id="sidebar_btf" className="widget" />
+
+              {/* Sidebar Stopper - Mediavine */}
+              <div id="mv-sidebar-stopper" />
             </div>
-
-            {/* BTF Ad Target - Mediavine */}
-            <div id="sidebar_btf" className="widget" />
-
-            {/* Sidebar Stopper - Mediavine */}
-            <div id="mv-sidebar-stopper" />
-          </div>
-        </aside>
+          </aside>
+        )}
       </div>
 
       {/* WebApplication Schema with enhanced dateModified */}
