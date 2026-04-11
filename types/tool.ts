@@ -18,7 +18,8 @@ export type ToolCategory =
   | "date-time"
   | "random"
   | "developer"
-  | "gaming";
+  | "gaming"
+  | "construction";
 
 export interface ToolCategoryInfo {
   id: ToolCategory;
