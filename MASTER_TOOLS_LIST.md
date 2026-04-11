@@ -15,7 +15,7 @@
 | Financial Calculators | 50 | 32 | 18 |
 | Health & Fitness | 30 | 17 | 13 |
 | Math Calculators | 35 | 20 | 15 |
-| Statistics Calculators | 15 | 1 | 14 |
+| Statistics Calculators | 15 | 6 | 9 |
 | Date & Time Tools | 15 | 6 | 9 |
 | Unit Converters | 15 | 1 | 14 |
 | Text Tools | 20 | 5 | 15 |
@@ -30,7 +30,7 @@
 | Food & Cooking | 8 | 0 | 8 |
 | Fun & Lifestyle | 12 | 0 | 12 |
 | Weather & Environment | 8 | 0 | 8 |
-| **TOTAL** | **~354** | **~113** | **~241** |
+| **TOTAL** | **~354** | **~118** | **~236** |
 
 ---
 
@@ -230,16 +230,16 @@
 
 ## 📊 Statistics Calculators (NEW — High-Value Cluster)
 
-> **Rationale:** Both Calculator.net and Omni rank heavily for statistics queries. This is an entirely unbuilt cluster with massive keyword potential.
+> **Rationale:** Both Calculator.net and Omni rank heavily for statistics queries. This remains a high-opportunity cluster with strong keyword and topical authority potential.
 
 | # | Tool Name | Competitor | Status |
 |---|-----------|------------|--------|
-| 149 | Z-Score Calculator | Calculator.net, Omni, Calculator.io | ⬜ Todo |
-| 150 | P-Value Calculator | Calculator.net, Omni | ⬜ Todo |
-| 151 | Sample Size Calculator | Calculator.net, Omni, Calculator.io | ⬜ Todo |
-| 152 | Margin of Error Calculator | Omni | ⬜ Todo |
+| 149 | Z-Score Calculator | Calculator.net, Omni, Calculator.io | ✅ Done |
+| 150 | P-Value Calculator | Calculator.net, Omni | ✅ Done |
+| 151 | Sample Size Calculator | Calculator.net, Omni, Calculator.io | ✅ Done |
+| 152 | Margin of Error Calculator | Omni | ✅ Done |
 | 153 | Mean, Median, Mode Calculator | Calculator.net, Omni, Calculator.io | ⬜ Todo |
-| 154 | Variance Calculator | Omni, Calculator.io | ⬜ Todo |
+| 154 | Variance Calculator | Omni, Calculator.io | ✅ Done |
 | 155 | Quartile Calculator | Omni, Calculator.io | ⬜ Todo |
 | 156 | Percentile Calculator | Omni, Calculator.io | ⬜ Todo |
 | 157 | Chi-Square Calculator | Omni | ⬜ Todo |
@@ -585,8 +585,8 @@
 | 43 | Pace Calculator | Health | ⭐⭐⭐ | ✅ |
 | 44 | Hours Calculator | Date/Time | ⭐⭐⭐ | ✅ |
 | 45 | Density Calculator | Science | ⭐⭐⭐ | ⬜ |
-| 46 | Z-Score Calculator | Statistics | ⭐⭐⭐ | ⬜ |
-| 47 | P-Value Calculator | Statistics | ⭐⭐⭐ | ⬜ |
+| 46 | Z-Score Calculator | Statistics | ⭐⭐⭐ | ✅ |
+| 47 | P-Value Calculator | Statistics | ⭐⭐⭐ | ✅ |
 | 48 | Speed Calculator | Science | ⭐⭐⭐ | ⬜ |
 | 49 | Ovulation Calculator | Health | ⭐⭐⭐ | ✅ |
 | 50 | Rent vs Buy Calculator | Finance | ⭐⭐⭐ | ✅ |
@@ -651,11 +651,11 @@
 - High-traffic calculators + core image/PDF tools
 
 ## Phase 2: Growth (Tools 51-193)
-**Status:** 55/143 done (38%)
+**Status:** 60/143 done (42%)
 - Extended finance, health, math calculators
 - **NEW: Statistics cluster** (15 tools — top priority gap)
 - Date/Time tools + Unit converters
-- **Next batch targets:** Z-Score, P-Value, Future Value, Present Value, Ovulation
+- **Next batch targets:** Quartile, Percentile, Chi-Square, T-Test, Linear Regression
 
 ## Phase 3: Developer & Text (Tools 194-258)
 **Status:** 16/65 done (25%)
@@ -688,5 +688,5 @@
 
 *Last Updated: April 2026*  
 *Total Tools Planned: 357*  
-*Total Tools Complete: ~105*  
-*Completion: ~29%*
+*Total Tools Complete: ~110*  
+*Completion: ~31%*

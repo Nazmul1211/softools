@@ -284,6 +284,7 @@ export default function ResizeImagePage() {
         { name: "Image to PNG Converter", href: "/image-to-png-converter/" },
         { name: "Image to JPG Converter", href: "/image-to-jpg-converter/" },
         { name: "Image to Base64", href: "/image-to-base64/" },
+        { name: "WEBP to PNG Converter", href: "/webp-to-png-converter/" },
       ]}
       howToSteps={[
         { name: "Upload an Image", text: "Drag your image into the upload area or click to browse." },
@@ -295,25 +296,79 @@ export default function ResizeImagePage() {
         {
           question: "Are my images uploaded to your server?",
           answer:
-            "No. All resizing happens locally in your browser. Your image files do not leave your device.",
+            "No. Resizing is processed locally in your browser session, so your files are not uploaded to a remote resizing service. This setup helps protect private content and reduces processing latency. It is especially useful for agency workflows, client previews, and internal media assets where privacy and speed are both important.",
         },
         {
           question: "Will resizing reduce quality?",
           answer:
-            "Reducing dimensions usually keeps visual quality high. Increasing dimensions can make images look softer because pixels are interpolated.",
+            "Downscaling often preserves excellent visual quality while reducing file size and layout weight. Upscaling can soften detail because missing pixels must be interpolated. For best results, export near final display dimensions and avoid repeated up/down cycles. If you need both quality and performance, resize once from the highest-quality source and keep that output as your new master.",
         },
         {
           question: "Which output formats are supported?",
           answer:
-            "You can keep the original format or export as JPG, PNG, or WEBP.",
+            "You can keep the original file type or export as JPG, PNG, or WEBP. JPG is typically better for photographs and smaller files, PNG is useful for transparency and edit-safe graphics, and WEBP is often best for modern web delivery where compression efficiency matters.",
+        },
+        {
+          question: "What is the best size for website images?",
+          answer:
+            "The best size is the real rendered size in your layout, not the original camera resolution. If a card image renders at 800×450, exporting 4000-pixel files wastes bandwidth and slows loading. Use responsive image strategy with sensible breakpoints and generate only the dimensions your templates actually display.",
+        },
+        {
+          question: "Should I resize before compressing?",
+          answer:
+            "In most workflows, yes. Resizing first removes unnecessary pixels, then compression works on a smaller data target and usually achieves better efficiency. A practical sequence is: crop if needed, resize to display dimensions, choose output format, then apply final compression settings for deployment.",
+        },
+        {
+          question: "How does aspect ratio lock help?",
+          answer:
+            "Aspect ratio lock preserves the original width-to-height relationship so images do not stretch unnaturally. This is important for product photos, portraits, and branded visuals where distortion reduces perceived quality. Unlock ratio only when exact target dimensions are mandatory and you accept potential shape changes.",
         },
       ]}
       content={
         <>
-          <h2>Resize Images Online with Precision</h2>
+          <h2>What This Image Resizer Does</h2>
           <p>
-            This image resizer supports custom dimensions, percentage scaling, and social-media presets. It is optimized for speed, clean output, and privacy-first browser processing.
+            This image resizer helps you prepare images at exact dimensions for web, social media, documentation, and product catalogs. You can resize by pixels, percentage scaling, or common social presets, then export in JPG, PNG, or WEBP. The goal is practical production control: correct dimensions, predictable quality, and faster final pages.
           </p>
+
+          <h2>How Image Resizing Works</h2>
+          <p>
+            Resizing recalculates an image to a new pixel grid. When reducing size, multiple source pixels are merged into fewer target pixels; when increasing size, interpolation estimates new pixel values between existing points. This tool uses browser canvas rendering and high-quality smoothing options to provide clean results for typical publishing and design workflows.
+          </p>
+
+          <h2>Format Strategy After Resizing</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Output Format</th>
+                <th>Main Advantage</th>
+                <th>Typical Use</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>JPG</td>
+                <td>Smaller files for photo-heavy content</td>
+                <td>Blog images, article covers, product photos</td>
+              </tr>
+              <tr>
+                <td>PNG</td>
+                <td>Lossless detail and transparency</td>
+                <td>UI assets, logos, screenshots, overlays</td>
+              </tr>
+              <tr>
+                <td>WEBP</td>
+                <td>Strong web compression efficiency</td>
+                <td>Performance-oriented production delivery</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h2>Quality vs Size Tradeoff</h2>
+          <p>
+            Size optimization comes from two levers: pixel dimensions and encoding settings. Reducing dimensions often creates the largest practical savings before compression is even applied. Quality settings then fine-tune output weight. For SEO and UX, the best result is usually the smallest file that still appears crisp at real display size on both desktop and mobile screens.
+          </p>
+
           <h2>Why Use This Image Resizer?</h2>
           <ul>
             <li>Fast image upload and instant local processing</li>
@@ -321,6 +376,32 @@ export default function ResizeImagePage() {
             <li>Preset dimensions for common social media platforms</li>
             <li>JPG, PNG, and WEBP export options</li>
             <li>Optional target size control for lighter files</li>
+          </ul>
+
+          <h2>Privacy and Browser-Only Processing</h2>
+          <p>
+            All operations are performed client-side in your browser. This reduces exposure risk for sensitive visuals and removes upload bottlenecks that can slow high-volume production. For teams handling confidential launch materials or client-only assets, local processing is often a preferred default.
+          </p>
+
+          <h2>High-Impact Use Cases</h2>
+          <ul>
+            <li>Preparing responsive hero images for faster landing pages</li>
+            <li>Standardizing ecommerce thumbnails to a consistent ratio</li>
+            <li>Generating platform-specific social dimensions from one source file</li>
+            <li>Reducing oversized screenshots for documentation and help centers</li>
+            <li>Producing lighter assets to improve Core Web Vitals</li>
+          </ul>
+
+          <h2>Resize Workflow Recommendations</h2>
+          <p>
+            A reliable workflow is: choose crop/aspect first, resize to layout dimensions, export in the right format, then compress if necessary. Keep a high-quality original file in your asset library and generate platform-specific derivatives from that source. This minimizes quality drift and keeps your media pipeline predictable over time.
+          </p>
+
+          <h2>Sources and References</h2>
+          <ul>
+            <li>MDN Web Docs — Canvas image processing and export behavior.</li>
+            <li>W3C guidance on responsive images and performance-aware delivery.</li>
+            <li>Google web performance recommendations for image optimization workflows.</li>
           </ul>
         </>
       }

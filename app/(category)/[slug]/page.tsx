@@ -9,6 +9,21 @@ import { PortableText } from "@/components/sanity/PortableText";
 import type { Page } from "@/sanity/types";
 import { Sidebar } from "@/components/layout/Sidebar";
 
+const categoryImages: Record<string, string> = {
+  math: "math_abstract",
+  finance: "finance_growth",
+  health: "health_wellness",
+  construction: "construction_blueprint",
+  conversion: "conversion_exchange",
+  text: "text_tools",
+  "date-time": "datetime_clock",
+  random: "random_generators",
+  developer: "developer_tools",
+  gaming: "gaming_gear",
+  pdf: "pdf_document",
+  image: "image_processing"
+};
+
 type Props = {
   params: Promise<{ slug: string }>;
 };
@@ -36,6 +51,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return {
       title: `${category.name} - Free Online Tools | Softzar`,
       description: `${category.description}. Browse all free ${category.name.toLowerCase()} available on Softzar.`,
+      openGraph: {
+        title: `${category.name} - Free Online Tools | Softzar`,
+        description: `${category.description}. Browse all free ${category.name.toLowerCase()} available on Softzar.`,
+        images: [`/images/categories/${categoryImages[category.id] || "math_abstract"}.webp`],
+      },
     };
   }
   
@@ -99,16 +119,32 @@ export default async function CategoryOrSanityPage({ params }: Props) {
 
             {/* Header */}
             <header className="mb-8 rounded-2xl border border-border bg-card-bg p-6 sm:p-8">
-              <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-                {category.name}
-              </h1>
-              <p className="mt-2 text-sm text-muted-foreground">
-                {categoryTools.length} tools in this category
-              </p>
-              <p className="mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground">
-                {category.description}. Browse all free {category.name.toLowerCase()} available on
-                Softzar. Every tool runs in your browser for instant results and complete privacy.
-              </p>
+              <div className="flex flex-col-reverse gap-8 md:flex-row md:items-center md:justify-between">
+                <div className="flex-1">
+                  <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+                    {category.name}
+                  </h1>
+                  <p className="mt-2 text-sm text-muted-foreground">
+                    {categoryTools.length} tools in this category
+                  </p>
+                  <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">
+                    {category.description}. Browse all free {category.name.toLowerCase()} available on
+                    Softzar. Every tool runs in your browser for instant results and complete privacy.
+                  </p>
+                </div>
+                {/* Category Image */}
+                <div className="flex w-full shrink-0 justify-center md:w-[240px] lg:w-[280px]">
+                  <div className="relative aspect-[4/3] w-full max-w-[320px] overflow-hidden rounded-xl border border-border/50 shadow-md">
+                    <Image
+                      src={`/images/categories/${categoryImages[category.id] || "math_abstract"}.webp`}
+                      alt={`${category.name} illustration`}
+                      fill
+                      className="object-cover transition-transform duration-500 hover:scale-105"
+                      priority
+                    />
+                  </div>
+                </div>
+              </div>
             </header>
 
             {/* Tool List */}

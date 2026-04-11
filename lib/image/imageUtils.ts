@@ -166,6 +166,7 @@ export async function convertImage(
 ): Promise<Blob> {
   return new Promise((resolve, reject) => {
     const img = new Image();
+    const imageUrl = URL.createObjectURL(file);
     img.onload = () => {
       const canvas = document.createElement("canvas");
       canvas.width = img.width;
@@ -187,6 +188,7 @@ export async function convertImage(
 
       canvas.toBlob(
         (blob) => {
+          URL.revokeObjectURL(imageUrl);
           if (blob) {
             resolve(blob);
           } else {
@@ -197,8 +199,11 @@ export async function convertImage(
         quality
       );
     };
-    img.onerror = () => reject(new Error("Failed to load image"));
-    img.src = URL.createObjectURL(file);
+    img.onerror = () => {
+      URL.revokeObjectURL(imageUrl);
+      reject(new Error("Failed to load image"));
+    };
+    img.src = imageUrl;
   });
 }
 

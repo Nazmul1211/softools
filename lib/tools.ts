@@ -940,6 +940,46 @@ export const tools: Tool[] = [
     category: "math",
     keywords: ["GCF calculator", "greatest common factor", "GCD", "greatest common divisor", "HCF", "Euclidean algorithm"],
   },
+  {
+    slug: "z-score-calculator",
+    name: "Z-Score Calculator",
+    description:
+      "Convert raw values to z-scores and percentiles, or convert z-scores back to raw values with normal-distribution probability context",
+    category: "math",
+    keywords: ["z-score calculator", "z score", "standard score", "percentile", "normal distribution", "statistics"],
+  },
+  {
+    slug: "p-value-calculator",
+    name: "P-Value Calculator",
+    description:
+      "Calculate p-values from z-test statistics for left-tailed, right-tailed, and two-tailed hypothesis tests with alpha-based decisions",
+    category: "math",
+    keywords: ["p-value calculator", "hypothesis test", "statistical significance", "two-tailed test", "z test", "alpha level"],
+  },
+  {
+    slug: "sample-size-calculator",
+    name: "Sample Size Calculator",
+    description:
+      "Estimate required sample size for surveys and studies using confidence level, margin of error, expected proportion, and finite population correction",
+    category: "math",
+    keywords: ["sample size calculator", "survey sample size", "research design", "margin of error", "confidence level", "statistics"],
+  },
+  {
+    slug: "margin-of-error-calculator",
+    name: "Margin of Error Calculator",
+    description:
+      "Compute margin of error for proportions and means from sample size, confidence level, and variability assumptions",
+    category: "math",
+    keywords: ["margin of error calculator", "survey error", "polling margin", "confidence interval", "sample precision", "statistics"],
+  },
+  {
+    slug: "variance-calculator",
+    name: "Variance Calculator",
+    description:
+      "Calculate sample or population variance from datasets with standard deviation, mean, and squared deviation breakdown",
+    category: "math",
+    keywords: ["variance calculator", "sample variance", "population variance", "dispersion", "standard deviation", "statistics"],
+  },
 ];
 
 export function getToolsByCategory(category: string): Tool[] {
