@@ -4,7 +4,15 @@ export {
   splitPDF,
   extractPages,
   rotatePDF,
+  rotateSpecificPages,
   getPDFInfo,
+  imagesToPDF,
+  addPageNumbers,
 } from "./pdfUtils";
 
-export type { CompressionResult, CompressionOptions } from "./pdfUtils";
+export type {
+  CompressionResult,
+  CompressionOptions,
+  PageNumberPosition,
+  AddPageNumbersOptions,
+} from "./pdfUtils";

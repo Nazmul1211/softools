@@ -89,4 +89,11 @@ export const categories = [
     description: "Calculators and tools for gamers",
     icon: "gamepad-2",
   },
+  {
+    id: "construction" as const,
+    slug: "construction-calculators",
+    name: "Construction & Home",
+    description: "Construction, building, and home improvement calculators",
+    icon: "hard-hat",
+  },
 ];

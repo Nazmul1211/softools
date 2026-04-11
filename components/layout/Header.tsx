@@ -21,6 +21,7 @@ import {
   Search,
   Shuffle,
   Gamepad2,
+  HardHat,
   type LucideIcon,
 } from "lucide-react";
 import { categories } from "@/config/site";
@@ -38,6 +39,7 @@ const categoryIconMap: Record<string, LucideIcon> = {
   pdf: FileText,
   image: Image,
   gaming: Gamepad2,
+  construction: HardHat,
 };
 
 const navigationItemClassName =

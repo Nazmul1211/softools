@@ -11,6 +11,7 @@ import {
   Mail,
   Image,
   Gamepad2,
+  HardHat,
 } from "lucide-react";
 import { siteConfig, categories } from "@/config/site";
 import { tools } from "@/lib/tools";
@@ -27,6 +28,7 @@ const categoryIcons: Record<string, React.ReactNode> = {
   pdf: <FileText className="h-4 w-4" strokeWidth={1.5} />,
   image: <Image className="h-4 w-4" strokeWidth={1.5} />,
   gaming: <Gamepad2 className="h-4 w-4" strokeWidth={1.5} />,
+  construction: <HardHat className="h-4 w-4" strokeWidth={1.5} />,
 };
 
 export function Footer() {

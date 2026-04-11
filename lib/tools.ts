@@ -153,6 +153,22 @@ export const tools: Tool[] = [
     category: "math",
     keywords: ["triangle calculator", "solve triangle", "triangle area", "law of cosines", "law of sines"],
   },
+  {
+    slug: "concrete-calculator",
+    name: "Concrete Calculator",
+    description:
+      "Calculate how much concrete you need for slabs, footings, columns, and walls. Get results in cubic yards, bags, and estimated cost",
+    category: "construction",
+    keywords: ["concrete calculator", "concrete estimator", "cubic yards", "concrete bags", "concrete cost"],
+  },
+  {
+    slug: "square-footage-calculator",
+    name: "Square Footage Calculator",
+    description:
+      "Calculate the square footage of rooms, flooring, walls, and land. Supports rectangles, triangles, circles, and trapezoids",
+    category: "construction",
+    keywords: ["square footage", "area calculator", "sq ft", "room size", "flooring calculator"],
+  },
 
   // Finance Calculators
   {
@@ -234,6 +250,22 @@ export const tools: Tool[] = [
     category: "finance",
     keywords: ["tax", "income tax", "federal tax", "tax brackets", "take home pay", "FICA"],
   },
+  {
+    slug: "future-value-calculator",
+    name: "Future Value Calculator",
+    description:
+      "Calculate the future value of investments with compound interest. Enter present value, interest rate, and time period to project growth",
+    category: "finance",
+    keywords: ["future value", "FV calculator", "investment growth", "compound interest", "time value of money"],
+  },
+  {
+    slug: "present-value-calculator",
+    name: "Present Value Calculator",
+    description:
+      "Calculate the present value of future money using discount rates. Determine how much future cash flows are worth today",
+    category: "finance",
+    keywords: ["present value", "PV calculator", "discount rate", "time value of money", "NPV"],
+  },
 
   // Health & Fitness Calculators
   {
@@ -314,6 +346,14 @@ export const tools: Tool[] = [
       "Calculate how much water you should drink daily based on your weight and activity level",
     category: "health",
     keywords: ["water intake", "hydration", "daily water", "water calculator"],
+  },
+  {
+    slug: "ovulation-calculator",
+    name: "Ovulation Calculator",
+    description:
+      "Predict your most fertile days and ovulation date based on your menstrual cycle. Track fertility windows across multiple cycles",
+    category: "health",
+    keywords: ["ovulation calculator", "fertility calculator", "fertile days", "ovulation predictor", "conception"],
   },
 
   // Date & Time
@@ -524,6 +564,30 @@ export const tools: Tool[] = [
       "Convert PDF pages to high-quality JPG images. Extract images from PDF files easily",
     category: "pdf",
     keywords: ["pdf to jpg", "pdf to image", "convert pdf", "pdf converter"],
+  },
+  {
+    slug: "rotate-pdf",
+    name: "Rotate PDF",
+    description:
+      "Rotate PDF pages 90°, 180°, or 270° online. Rotate all pages or select individual pages to fix orientation instantly",
+    category: "pdf",
+    keywords: ["rotate pdf", "rotate pdf pages", "pdf rotation", "fix pdf orientation", "turn pdf sideways"],
+  },
+  {
+    slug: "image-to-pdf",
+    name: "Image to PDF Converter",
+    description:
+      "Convert JPG, PNG, and WebP images to PDF. Combine multiple images into one PDF document with custom page size and margins",
+    category: "pdf",
+    keywords: ["image to pdf", "jpg to pdf", "png to pdf", "convert image to pdf", "photo to pdf"],
+  },
+  {
+    slug: "add-page-numbers-to-pdf",
+    name: "Add Page Numbers to PDF",
+    description:
+      "Add page numbers to PDF files online. Choose position, format (Arabic, Roman, Page X of Y), and starting page. Free and private",
+    category: "pdf",
+    keywords: ["add page numbers to pdf", "pdf page numbers", "number pdf pages", "pdf page numbering"],
   },
 
   // Image Tools
@@ -792,6 +856,89 @@ export const tools: Tool[] = [
       "atlas bucks",
       "virtual land calculator",
     ],
+  },
+
+  // Phase 1 — New High-ROI Tools (April 2026)
+  {
+    slug: "protein-intake-calculator",
+    name: "Protein Intake Calculator",
+    description:
+      "Calculate your optimal daily protein intake based on body weight, activity level, and fitness goals using evidence-based ISSN guidelines",
+    category: "health",
+    keywords: ["protein intake calculator", "daily protein", "protein per day", "protein for muscle", "how much protein"],
+  },
+  {
+    slug: "heart-rate-zones-calculator",
+    name: "Heart Rate Zones Calculator",
+    description:
+      "Calculate your 5 heart rate training zones based on age and resting heart rate using the Karvonen or standard percentage method",
+    category: "health",
+    keywords: ["heart rate zones", "training zones", "karvonen formula", "max heart rate", "zone 2 training", "target heart rate"],
+  },
+  {
+    slug: "reading-time-calculator",
+    name: "Reading Time Calculator",
+    description:
+      "Estimate reading time, speaking time, and readability score for any text. Perfect for bloggers, content creators, and presenters",
+    category: "text",
+    keywords: ["reading time calculator", "reading time estimator", "words to minutes", "speaking time", "article reading time"],
+  },
+  {
+    slug: "freelance-rate-calculator",
+    name: "Freelance Rate Calculator",
+    description:
+      "Calculate your ideal freelance hourly rate based on desired income, expenses, and billable hours with tax-adjusted estimates",
+    category: "finance",
+    keywords: ["freelance rate calculator", "freelance hourly rate", "contractor rate", "consulting rate", "freelance pricing"],
+  },
+  {
+    slug: "password-strength-checker",
+    name: "Password Strength Checker",
+    description:
+      "Check password strength with entropy analysis, crack time estimation, and improvement suggestions. 100% private — runs in your browser",
+    category: "developer",
+    keywords: ["password strength checker", "password tester", "how strong is my password", "password entropy", "password security"],
+  },
+  // Phase 2 — Batch 2
+  {
+    slug: "pace-calculator",
+    name: "Pace Calculator",
+    description:
+      "Calculate running pace, finish time, or distance for any race. Supports miles and kilometers with 5K, 10K, half marathon, and marathon predictions",
+    category: "health",
+    keywords: ["pace calculator", "running pace", "race pace calculator", "marathon pace", "5k pace", "km per mile"],
+  },
+  {
+    slug: "confidence-interval-calculator",
+    name: "Confidence Interval Calculator",
+    description:
+      "Calculate confidence intervals for population means and proportions at 90%, 95%, or 99% confidence levels with step-by-step solutions",
+    category: "math",
+    keywords: ["confidence interval calculator", "margin of error", "z-score", "t-distribution", "statistics", "confidence level"],
+  },
+  {
+    slug: "rent-vs-buy-calculator",
+    name: "Rent vs Buy Calculator",
+    description:
+      "Compare the total cost of renting vs buying a home over 5–30 years including mortgage, taxes, maintenance, appreciation, and opportunity cost",
+    category: "finance",
+    keywords: ["rent vs buy calculator", "rent or buy", "should I rent or buy", "home buying calculator", "rent vs mortgage"],
+  },
+  {
+    slug: "hours-calculator",
+    name: "Hours Calculator",
+    description:
+      "Add, subtract, and calculate total hours, minutes, and seconds. Find duration between times and convert to decimal hours for payroll",
+    category: "date-time",
+    keywords: ["hours calculator", "add hours and minutes", "hours between times", "time calculator", "decimal hours", "work hours"],
+  },
+  {
+    slug: "gcf-calculator",
+    name: "GCF Calculator",
+    description:
+      "Find the Greatest Common Factor (GCF/GCD/HCF) of two or more numbers with step-by-step prime factorization and Euclidean algorithm solutions",
+    category: "math",
+    keywords: ["GCF calculator", "greatest common factor", "GCD", "greatest common divisor", "HCF", "Euclidean algorithm"],
   },
 ];
 
