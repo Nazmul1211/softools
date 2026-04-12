@@ -20,6 +20,19 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Public image optimization
+
+`npm run images:convert` scans `public/` for `.png`, `.jpg`, and `.jpeg` files
+and creates `.webp` versions at quality 75.
+
+`npm run build` runs this conversion automatically.
+
+`npm run dev` now starts an image watcher, so newly added or updated
+`.png/.jpg/.jpeg` files in `public/` get converted to `.webp` while the dev
+server is running. For files under `public/images/` and `public/legacy-images/`,
+the watcher then removes the original raster source and keeps the generated
+`.webp` file.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

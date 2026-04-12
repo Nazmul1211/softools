@@ -28,9 +28,9 @@
 | Automotive & Travel | 12 | 0 | 12 |
 | Sports & Fitness Tracking | 12 | 0 | 12 |
 | Food & Cooking | 8 | 0 | 8 |
-| Fun & Lifestyle | 12 | 0 | 12 |
+| Fun & Lifestyle | 12 | 3 | 9 |
 | Weather & Environment | 8 | 0 | 8 |
-| **TOTAL** | **~354** | **~118** | **~236** |
+| **TOTAL** | **~354** | **~121** | **~233** |
 
 ---
 
@@ -511,14 +511,14 @@
 | 338 | Atlas Earth Calculator | Various | ✅ Done |
 | 339 | Dice Roller | Calculator.net, Omni, Calculator.io | ⬜ Todo |
 | 340 | Coin Flip | Omni, Calculator.io | ⬜ Todo |
-| 341 | Dog Age Calculator | Omni, Calculator.io | ⬜ Todo |
-| 342 | Cat Age Calculator | Omni | ⬜ Todo |
+| 341 | Dog Age Calculator | Omni, Calculator.io | ✅ Done |
+| 342 | Cat Age Calculator | Omni | ✅ Done |
 | 343 | Love Calculator | Calculator.net | ⬜ Todo |
 | 344 | Shoe Size Converter | Calculator.net, Omni | ⬜ Todo |
 | 345 | Ring Size Calculator | Omni | ⬜ Todo |
 | 346 | Bra Size Calculator | Calculator.net, Omni, Calculator.io | ⬜ Todo |
 | 347 | Golf Handicap Calculator | Calculator.net | ⬜ Todo |
-| 348 | Pet Age Calculator | Omni | ⬜ Todo |
+| 348 | Pet Age Calculator | Omni | ✅ Done |
 | 349 | Random Name Picker | Various | ⬜ Todo |
 
 ## 🌤️ Weather & Environment

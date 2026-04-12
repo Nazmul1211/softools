@@ -36,7 +36,7 @@ export default function ReviewPage() {
 
         <figure className="border-b border-border p-6 sm:p-8">
           <Image
-            src="/legacy-images/adobe-premiere-pro-cc-2024.png"
+            src="/legacy-images/adobe-premiere-pro-cc-2024.webp"
             alt="Adobe Premiere Pro CC 2024 Review screenshot"
             width={1200}
             height={630}

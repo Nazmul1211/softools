@@ -44,14 +44,14 @@ interface ToolLayoutProps {
 function FAQSection({ faqs }: { faqs: FAQItem[] }) {
   return (
     <section className="mt-12" aria-labelledby="faq-heading">
-      <h2 
+      <h2
         id="faq-heading"
         className="text-2xl font-bold text-foreground mb-6 flex items-center gap-2"
       >
         <HelpCircle className="h-6 w-6 text-primary" />
         Frequently Asked Questions
       </h2>
-      
+
       <div className="space-y-4">
         {faqs.map((faq, index) => (
           <details
@@ -68,7 +68,7 @@ function FAQSection({ faqs }: { faqs: FAQItem[] }) {
           </details>
         ))}
       </div>
-      
+
       {/* FAQ Schema.org JSON-LD */}
       <script
         type="application/ld+json"
@@ -117,7 +117,7 @@ export function ToolLayout({
     <div className="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
       {/* Breadcrumb with Schema.org */}
       <nav className="mb-6" aria-label="Breadcrumb">
-        <ol 
+        <ol
           className="flex flex-wrap items-center gap-1 text-sm text-muted-foreground"
           itemScope
           itemType="https://schema.org/BreadcrumbList"
@@ -147,10 +147,10 @@ export function ToolLayout({
             </>
           )}
           <ChevronRight className="h-4 w-4" />
-          <li 
+          <li
             className="text-foreground font-medium"
-            itemProp="itemListElement" 
-            itemScope 
+            itemProp="itemListElement"
+            itemScope
             itemType="https://schema.org/ListItem"
           >
             <span itemProp="name">{title}</span>
@@ -162,21 +162,8 @@ export function ToolLayout({
       <div className={fullWidth ? "" : "grid gap-8 lg:grid-cols-[1fr_336px]"}>
         <main className={fullWidth ? "max-w-4xl mx-auto" : ""}>
           {/* Hero Section - Compact, engaging */}
-          <header className="mb-6">
-            <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:gap-8">
-              {/* Hero Image Placeholder */}
-              {heroImage && (
-                <div className="relative flex-shrink-0 w-full lg:w-48 h-32 lg:h-36 rounded-xl overflow-hidden bg-gradient-to-br from-primary/10 to-primary/5 border border-border">
-                  <Image
-                    src={heroImage.src}
-                    alt={heroImage.alt}
-                    fill
-                    className="object-cover"
-                    priority
-                  />
-                </div>
-              )}
-              
+          <header className="mb-8">
+            <div className="flex flex-col-reverse gap-6 lg:flex-row lg:items-center lg:gap-8 lg:justify-between">
               {/* Title & Description */}
               <div className="flex-1">
                 <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-[2.5rem] leading-tight">
@@ -186,11 +173,25 @@ export function ToolLayout({
                   {description}
                 </p>
               </div>
+
+              {/* Hero Image Placeholder */}
+              {heroImage && (
+                <div className="relative flex-shrink-0 w-full sm:w-[280px] h-[160px] sm:h-[180px] rounded-2xl overflow-hidden bg-gradient-to-br from-primary/10 to-primary/5 border border-border shadow-sm lg:order-last order-first">
+                  <Image
+                    src={heroImage.src}
+                    alt={heroImage.alt}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 280px"
+                    className="object-cover"
+                    priority
+                  />
+                </div>
+              )}
             </div>
           </header>
 
           {/* Calculator Card - Above the fold, prominent */}
-          <div 
+          <div
             id="calculator"
             className="rounded-2xl border border-border bg-white p-4 shadow-xl dark:border-border dark:bg-muted/50 sm:p-6 lg:p-8"
           >
@@ -214,7 +215,7 @@ export function ToolLayout({
               <meta itemProp="datePublished" content={publishedDate} />
               <meta itemProp="dateModified" content={modifiedDate} />
               <meta itemProp="publisher" content="Softzar" />
-              
+
               <div className="text-foreground [&>h2]:text-2xl [&>h2]:font-bold [&>h2]:mt-10 [&>h2]:mb-4 [&>h2]:text-foreground [&>h3]:text-xl [&>h3]:font-semibold [&>h3]:mt-8 [&>h3]:mb-3 [&>h3]:text-foreground [&>h4]:text-lg [&>h4]:font-semibold [&>h4]:mt-6 [&>h4]:mb-2 [&>p]:mt-4 [&>p]:leading-relaxed [&>p]:text-muted-foreground [&>ul]:mt-4 [&>ul]:space-y-2 [&>ul]:list-disc [&>ul]:pl-5 [&>ul>li]:leading-relaxed [&>ul>li]:text-muted-foreground [&>ol]:mt-4 [&>ol]:space-y-2 [&>ol]:list-decimal [&>ol]:pl-5 [&>ol>li]:leading-relaxed [&>ol>li]:text-muted-foreground [&>strong]:font-semibold [&>strong]:text-foreground [&>table]:mt-6 [&>table]:w-full [&>table]:border-collapse [&>table>thead>tr>th]:border [&>table>thead>tr>th]:border-border [&>table>thead>tr>th]:bg-muted/50 [&>table>thead>tr>th]:px-4 [&>table>thead>tr>th]:py-2 [&>table>thead>tr>th]:text-left [&>table>thead>tr>th]:font-semibold [&>table>tbody>tr>td]:border [&>table>tbody>tr>td]:border-border [&>table>tbody>tr>td]:px-4 [&>table>tbody>tr>td]:py-2 [&>blockquote]:border-l-4 [&>blockquote]:border-primary [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-muted-foreground">
                 {content}
               </div>

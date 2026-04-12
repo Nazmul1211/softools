@@ -3,10 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "node scripts/dev-with-image-watch.mjs",
+    "dev:next": "next dev",
+    "build": "npm run images:convert && next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "images:convert": "node scripts/convert-public-images.mjs",
+    "images:watch": "node scripts/convert-public-images.mjs --watch --remove-source"
   },
   "dependencies": {
     "@imgly/background-removal": "^1.7.0",
@@ -33,6 +36,7 @@
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "sanity": "^5.18.0",
+    "sharp": "^0.34.5",
     "styled-components": "^6.3.12",
     "tailwind-merge": "^3.5.0"
   },

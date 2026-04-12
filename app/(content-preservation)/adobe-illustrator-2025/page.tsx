@@ -36,7 +36,7 @@ export default function ReviewPage() {
 
         <figure className="border-b border-border p-6 sm:p-8">
           <Image
-            src="/legacy-images/adobe-illustrator-2025.png"
+            src="/legacy-images/adobe-illustrator-2025.webp"
             alt="Adobe Illustrator 2025 Review screenshot"
             width={1200}
             height={630}

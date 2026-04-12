@@ -36,7 +36,7 @@ export default function ReviewPage() {
 
         <figure className="border-b border-border p-6 sm:p-8">
           <Image
-            src="/legacy-images/adobe-after-effects-cc-2023.png"
+            src="/legacy-images/adobe-after-effects-cc-2023.webp"
             alt="Adobe After Effects CC 2023 Review screenshot"
             width={1200}
             height={630}

@@ -355,6 +355,30 @@ export const tools: Tool[] = [
     category: "health",
     keywords: ["ovulation calculator", "fertility calculator", "fertile days", "ovulation predictor", "conception"],
   },
+  {
+    slug: "pet-age-calculator",
+    name: "Pet Age Calculator",
+    description:
+      "Convert dog and cat ages to human-equivalent years with species-specific formulas and life-stage guidance",
+    category: "health",
+    keywords: ["pet age calculator", "pet years to human years", "dog and cat age", "pet life stage", "pet age chart"],
+  },
+  {
+    slug: "cat-age-calculator",
+    name: "Cat Age Calculator",
+    description:
+      "Convert cat years to human years with feline life-stage context and practical care planning guidance",
+    category: "health",
+    keywords: ["cat age calculator", "cat years to human years", "feline age chart", "how old is my cat", "cat life stage"],
+  },
+  {
+    slug: "dog-age-calculator",
+    name: "Dog Age Calculator",
+    description:
+      "Convert dog years to human years using size-aware formulas, stage interpretation, and healthy aging guidance",
+    category: "health",
+    keywords: ["dog age calculator", "dog years to human years", "dog age chart by size", "senior dog age", "dog life stage"],
+  },
 
   // Date & Time
   {
