@@ -1248,4 +1248,4 @@ With Next.js SSG, tool pages are static HTML files served from Cloudflare's edge
 
 ---
 
-*Build tools worth using. Write content worth reading. Ship quality worth trusting.*
+*Build tools worth using. Write content worth reading. Ship quality is worth trusting.*
