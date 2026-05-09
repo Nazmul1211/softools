@@ -377,6 +377,7 @@ Whether you're solving geometry homework, designing structures, or analyzing spa
   return (
     <ToolLayout
       title="Triangle Calculator"
+      slug="triangle-calculator"
       description="Solve any triangle by entering sides and/or angles. Calculate area, perimeter, altitudes, medians, inradius, circumradius, and determine triangle type."
       category={{ name: "Math Calculators", slug: "math-calculators" }}
       faqs={faqs}

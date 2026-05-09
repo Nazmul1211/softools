@@ -175,6 +175,7 @@ export default function ImageToPDFPage() {
   return (
     <ToolLayout
       title="Image to PDF Converter"
+      slug="image-to-pdf"
       description="Convert JPG, PNG, and WebP images to PDF online. Combine multiple images into a single PDF document with custom page size, orientation, and margins. 100% free, private, and secure."
       category={{ name: "PDF Tools", slug: "pdf-tools" }}
       lastUpdated="April 2026"

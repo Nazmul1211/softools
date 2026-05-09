@@ -84,6 +84,7 @@ export default function MergePDFPage() {
   return (
     <ToolLayout
       title="PDF Merger"
+      slug="pdf-merger"
       description="Combine multiple PDF files into one document instantly. Drag and drop to reorder pages. 100% free, private, and secure."
       category={{ name: "PDF Tools", slug: "pdf-tools" }}
       relatedTools={[

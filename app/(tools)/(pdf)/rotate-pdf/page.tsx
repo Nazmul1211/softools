@@ -199,6 +199,7 @@ export default function RotatePDFPage() {
   return (
     <ToolLayout
       title="Rotate PDF"
+      slug="rotate-pdf"
       description="Rotate PDF pages 90°, 180°, or 270° instantly. Select specific pages or rotate them all at once. 100% client-side — your files never leave your device."
       category={{ name: "PDF Tools", slug: "pdf-tools" }}
       lastUpdated="April 2026"

@@ -12,6 +12,9 @@ export const metadata: Metadata = {
     "date of birth calculator",
     "age in days",
   ],
+  alternates: {
+    canonical: "https://softzar.com/age-calculator/",
+  },
 };
 
 export default function AgeCalculatorLayout({

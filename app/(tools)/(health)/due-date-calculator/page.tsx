@@ -333,6 +333,7 @@ export default function DueDateCalculator() {
   return (
     <ToolLayout
       title="Due Date Calculator"
+      slug="due-date-calculator"
       description="Calculate your pregnancy due date based on your last menstrual period (LMP) or conception date. Track your pregnancy week by week and discover important milestones."
       category={{ name: "Health & Fitness", slug: "health-fitness" }}
       lastUpdated="January 2025"

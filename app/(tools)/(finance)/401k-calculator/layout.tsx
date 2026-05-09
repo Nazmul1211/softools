@@ -20,6 +20,9 @@ export const metadata: Metadata = {
       "Calculate your 401k growth with employer match and tax benefits. Free 401k retirement calculator.",
     type: "website",
   },
+  alternates: {
+    canonical: "https://softzar.com/401k-calculator/",
+  },
 };
 
 export default function Calculator401kLayout({

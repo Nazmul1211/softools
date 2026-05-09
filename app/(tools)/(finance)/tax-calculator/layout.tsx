@@ -13,6 +13,9 @@ export const metadata: Metadata = {
     "take home pay",
     "effective tax rate",
   ],
+  alternates: {
+    canonical: "https://softzar.com/tax-calculator/",
+  },
 };
 
 export default function TaxCalculatorLayout({

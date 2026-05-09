@@ -19,6 +19,9 @@ export const metadata: Metadata = {
     description: "Calculate days between dates, add or subtract days. Find business days, weekends, and precise time differences instantly.",
     type: "website",
   },
+  alternates: {
+    canonical: "https://softzar.com/date-calculator/",
+  },
 };
 
 export default function DateCalculatorLayout({

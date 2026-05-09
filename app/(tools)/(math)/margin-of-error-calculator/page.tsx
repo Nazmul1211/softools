@@ -135,6 +135,7 @@ export default function MarginOfErrorCalculatorPage() {
   return (
     <ToolLayout
       title="Margin of Error Calculator"
+      slug="margin-of-error-calculator"
       description="Compute margin of error for survey percentages and mean estimates. Set confidence level, sample size, and variability assumptions to measure estimate precision."
       category={{ name: "Math Calculators", slug: "math-calculators" }}
       lastUpdated="April 2026"

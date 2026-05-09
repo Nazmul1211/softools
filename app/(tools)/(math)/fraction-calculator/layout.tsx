@@ -19,6 +19,9 @@ export const metadata: Metadata = {
     description: "Calculate fractions with step-by-step solutions. Add, subtract, multiply, divide, and simplify fractions instantly.",
     type: "website",
   },
+  alternates: {
+    canonical: "https://softzar.com/fraction-calculator/",
+  },
 };
 
 export default function FractionCalculatorLayout({

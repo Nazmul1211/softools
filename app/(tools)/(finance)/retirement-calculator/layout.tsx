@@ -14,6 +14,9 @@ export const metadata: Metadata = {
     "retirement fund",
     "pension calculator",
   ],
+  alternates: {
+    canonical: "https://softzar.com/retirement-calculator/",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

@@ -18,6 +18,9 @@ export const metadata: Metadata = {
       "Estimate payroll outcomes including gross wages, taxes, deductions, and net pay for common pay schedules.",
     type: "website",
   },
+  alternates: {
+    canonical: "https://softzar.com/payroll-calculator/",
+  },
 };
 
 export default function PayrollCalculatorLayout({

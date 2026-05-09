@@ -16,6 +16,9 @@ export const metadata: Metadata = {
     description: "Calculate standard deviation, variance, and other statistical measures.",
     type: "website",
   },
+  alternates: {
+    canonical: "https://softzar.com/standard-deviation-calculator/",
+  },
 };
 
 export default function StandardDeviationCalculatorLayout({

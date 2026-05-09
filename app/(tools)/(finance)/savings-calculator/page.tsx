@@ -112,6 +112,7 @@ export default function SavingsCalculatorPage() {
   return (
     <ToolLayout
       title="Savings Calculator"
+      slug="savings-calculator"
       description="Calculate how your savings will grow over time with compound interest. Enter your initial deposit, monthly contributions, and interest rate to project your future balance."
       category={{ name: "Finance Tools", slug: "finance-tools" }}
       relatedTools={[

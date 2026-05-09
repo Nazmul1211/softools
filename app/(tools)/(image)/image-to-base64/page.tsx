@@ -7,6 +7,7 @@ export default function ImageToBase64Page() {
   return (
     <ToolLayout
       title="Image to Base64 Converter"
+      slug="image-to-base64"
       description="Encode image files into Base64 Data URIs for web development, API payloads, and inline embeds. Secure browser-based conversion with no server upload."
       category={{ name: "Image Tools", slug: "image-tools" }}
       relatedTools={[

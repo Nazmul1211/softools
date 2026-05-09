@@ -147,6 +147,7 @@ export default function OvulationCalculator() {
   return (
     <ToolLayout
       title="Ovulation Calculator"
+      slug="ovulation-calculator"
       description="Predict your most fertile days and estimated ovulation date based on your last menstrual period and cycle length. Track your fertility window across multiple cycles with our free, science-based ovulation calculator."
       category={{ name: "Health & Fitness", slug: "health-fitness" }}
       lastUpdated="April 2026"

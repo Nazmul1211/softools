@@ -18,6 +18,9 @@ export const metadata: Metadata = {
     description: "Generate random UUIDs instantly. Support for UUID v1 (timestamp) and v4 (random). Generate single or bulk UUIDs.",
     type: "website",
   },
+  alternates: {
+    canonical: "https://softzar.com/uuid-generator/",
+  },
 };
 
 export default function UUIDGeneratorLayout({

@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     description: "Combine multiple PDFs into one. Free and secure.",
   },
   alternates: {
-    canonical: "https://softzar.com/merge-pdf/",
+    canonical: "https://softzar.com/pdf-merger/",
   },
 };
 

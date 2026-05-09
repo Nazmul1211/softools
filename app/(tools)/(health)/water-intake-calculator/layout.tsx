@@ -18,6 +18,9 @@ export const metadata: Metadata = {
       "Calculate how much water you should drink daily based on your weight and activity level.",
     type: "website",
   },
+  alternates: {
+    canonical: "https://softzar.com/water-intake-calculator/",
+  },
 };
 
 export default function WaterIntakeCalculatorLayout({

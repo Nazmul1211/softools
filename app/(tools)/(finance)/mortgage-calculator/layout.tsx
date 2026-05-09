@@ -19,6 +19,9 @@ export const metadata: Metadata = {
     description: "Calculate your monthly mortgage payments, total interest, and view a complete amortization schedule. Plan your home purchase with confidence.",
     type: "website",
   },
+  alternates: {
+    canonical: "https://softzar.com/mortgage-calculator/",
+  },
 };
 
 export default function MortgageCalculatorLayout({

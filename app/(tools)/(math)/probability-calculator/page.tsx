@@ -202,6 +202,7 @@ export default function ProbabilityCalculatorPage() {
   return (
     <ToolLayout
       title="Probability Calculator"
+      slug="probability-calculator"
       description="Calculate probability for single events, multiple events (AND/OR), conditional probability, complements, and the probability of at least one success in multiple trials."
       category={{ name: "Math Calculators", slug: "math-calculators" }}
       relatedTools={[

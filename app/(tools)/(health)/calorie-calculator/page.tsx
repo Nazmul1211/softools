@@ -154,6 +154,7 @@ export default function CalorieCalculator() {
   return (
     <ToolLayout
       title="Calorie Calculator"
+      slug="calorie-calculator"
       description="Calculate your daily calorie needs based on your body metrics and activity level. Get personalized recommendations for weight loss, maintenance, or muscle gain with macro breakdowns."
       category={{ name: "Health & Fitness", slug: "health-fitness" }}
       lastUpdated="March 2026"

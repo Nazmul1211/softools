@@ -12,6 +12,9 @@ export const metadata: Metadata = {
     "random picker",
     "dice roller",
   ],
+  alternates: {
+    canonical: "https://softzar.com/random-number-generator/",
+  },
 };
 
 export default function RandomNumberGeneratorLayout({

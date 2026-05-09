@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     description: "Compress PDF files up to 90%. Free, fast, and secure.",
   },
   alternates: {
-    canonical: "https://softzar.com/compress-pdf/",
+    canonical: "https://softzar.com/pdf-compressor/",
   },
 };
 

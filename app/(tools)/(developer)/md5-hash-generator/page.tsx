@@ -213,6 +213,7 @@ export default function MD5HashGenerator() {
   return (
     <ToolLayout
       title="MD5 Hash Generator"
+      slug="md5-hash-generator"
       description="Generate MD5 hash values for any text string. Compare hashes and verify data integrity with this free online tool."
       category={{ name: "Developer Tools", slug: "developer-tools" }}
       relatedTools={[

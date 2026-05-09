@@ -18,6 +18,9 @@ export const metadata: Metadata = {
     description: "Encode text to Base64 or decode Base64 strings. Free online tool with UTF-8 support and instant conversion.",
     type: "website",
   },
+  alternates: {
+    canonical: "https://softzar.com/base64-encoder/",
+  },
 };
 
 export default function Base64EncoderLayout({

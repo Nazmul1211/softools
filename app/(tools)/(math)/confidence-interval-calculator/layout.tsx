@@ -27,6 +27,9 @@ export const metadata: Metadata = {
     description:
       "Free confidence interval calculator with z-scores and t-scores for population means and proportions.",
   },
+  alternates: {
+    canonical: "https://softzar.com/confidence-interval-calculator/",
+  },
 };
 
 export default function ConfidenceIntervalLayout({

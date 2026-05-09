@@ -169,6 +169,7 @@ export default function ProteinIntakeCalculator() {
   return (
     <ToolLayout
       title="Protein Intake Calculator"
+      slug="protein-intake-calculator"
       description="Calculate your optimal daily protein intake based on body weight, activity level, and fitness goals. Evidence-based recommendations backed by ISSN, WHO, and ESPEN research guidelines."
       category={{ name: "Health & Fitness", slug: "health-fitness" }}
       lastUpdated="April 2026"

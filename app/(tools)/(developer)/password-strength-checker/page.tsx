@@ -245,6 +245,7 @@ export default function PasswordStrengthChecker() {
   return (
     <ToolLayout
       title="Password Strength Checker"
+      slug="password-strength-checker"
       description="Test how strong your password is with real-time entropy analysis, estimated crack time, and actionable improvement suggestions. Your password never leaves your browser — all analysis is performed locally using client-side JavaScript."
       category={{ name: "Developer Tools", slug: "developer-tools" }}
       lastUpdated="April 2026"

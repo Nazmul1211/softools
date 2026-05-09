@@ -26,6 +26,9 @@ export const metadata: Metadata = {
     description:
       "Find your 5 heart rate training zones based on age and fitness level. Free online calculator.",
   },
+  alternates: {
+    canonical: "https://softzar.com/heart-rate-zones-calculator/",
+  },
 };
 
 export default function HeartRateZonesCalculatorLayout({

@@ -20,6 +20,9 @@ export const metadata: Metadata = {
       "Calculate your loan amortization schedule with monthly payment breakdown. Free amortization calculator.",
     type: "website",
   },
+  alternates: {
+    canonical: "https://softzar.com/amortization-calculator/",
+  },
 };
 
 export default function AmortizationCalculatorLayout({

@@ -19,6 +19,9 @@ export const metadata: Metadata = {
       "Test and debug regular expressions with real-time matching and highlighting. Perfect for developers.",
     url: "https://softzar.com/regex-tester/",
   },
+  alternates: {
+    canonical: "https://softzar.com/regex-tester/",
+  },
 };
 
 export default function RegexTesterLayout({

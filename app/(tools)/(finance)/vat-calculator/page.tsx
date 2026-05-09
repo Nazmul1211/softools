@@ -34,6 +34,7 @@ export default function VatCalculatorPage() {
   return (
     <ToolLayout
       title="VAT Calculator"
+      slug="vat-calculator"
       description="Add VAT to net prices or remove VAT from gross prices instantly. Perfect for invoicing, pricing, and tax-inclusive or tax-exclusive comparisons."
       category={{ name: "Finance Tools", slug: "finance-tools" }}
       relatedTools={[

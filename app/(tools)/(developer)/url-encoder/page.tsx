@@ -101,6 +101,7 @@ export default function URLEncoder() {
   return (
     <ToolLayout
       title="URL Encoder/Decoder"
+      slug="url-encoder"
       description="Encode or decode URLs and query strings. Convert special characters to percent-encoded format for safe use in URLs."
       category={{ name: "Developer Tools", slug: "developer-tools" }}
       relatedTools={[

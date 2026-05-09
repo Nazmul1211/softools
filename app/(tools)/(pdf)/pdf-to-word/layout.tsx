@@ -14,6 +14,9 @@ export const metadata: Metadata = {
     "extract text from pdf",
     "pdf to editable word",
   ],
+  alternates: {
+    canonical: "https://softzar.com/pdf-to-word/",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

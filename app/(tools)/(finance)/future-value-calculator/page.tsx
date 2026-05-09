@@ -150,6 +150,7 @@ export default function FutureValueCalculator() {
   return (
     <ToolLayout
       title="Future Value Calculator"
+      slug="future-value-calculator"
       description="Calculate the future value of your investments with compound interest. Enter your starting amount, interest rate, time period, and optional monthly contributions to see how your money grows."
       category={{ name: "Finance Tools", slug: "finance-tools" }}
       lastUpdated="April 2026"

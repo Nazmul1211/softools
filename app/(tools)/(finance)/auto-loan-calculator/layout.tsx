@@ -20,6 +20,9 @@ export const metadata: Metadata = {
       "Calculate your monthly car payment, total interest, and view amortization schedule. Free auto loan calculator for car buyers.",
     type: "website",
   },
+  alternates: {
+    canonical: "https://softzar.com/auto-loan-calculator/",
+  },
 };
 
 export default function AutoLoanCalculatorLayout({

@@ -181,6 +181,7 @@ export default function UnitConverter() {
   return (
     <ToolLayout
       title="Unit Converter"
+      slug="unit-converter"
       description="Convert between different units of measurement. Support for length, weight, temperature, volume, area, speed, and time conversions."
       category={{ name: "Unit Converters", slug: "unit-converters" }}
       relatedTools={[

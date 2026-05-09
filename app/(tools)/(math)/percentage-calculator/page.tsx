@@ -50,6 +50,7 @@ export default function PercentageCalculator() {
   return (
     <ToolLayout
       title="Percentage Calculator"
+      slug="percentage-calculator"
       description="Calculate percentages easily. Find what percent a number is of another, calculate percentage increase/decrease, and more."
       category={{ name: "Math Calculators", slug: "math-calculators" }}
       relatedTools={[

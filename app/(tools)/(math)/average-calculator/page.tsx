@@ -87,6 +87,7 @@ export default function AverageCalculator() {
   return (
     <ToolLayout
       title="Average Calculator"
+      slug="average-calculator"
       description="Calculate the mean, median, mode, and range of any set of numbers. Perfect for statistics homework, data analysis, and quick calculations."
       category={{ name: "Math Calculators", slug: "math-calculators" }}
       relatedTools={[

@@ -14,6 +14,9 @@ export const metadata: Metadata = {
     "photo background eraser",
     "AI background removal",
   ],
+  alternates: {
+    canonical: "https://softzar.com/remove-background/",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

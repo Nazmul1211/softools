@@ -20,6 +20,9 @@ export const metadata: Metadata = {
       "Calculate how long to pay off credit card debt and total interest cost. Find the optimal payment strategy to become debt-free faster.",
     type: "website",
   },
+  alternates: {
+    canonical: "https://softzar.com/credit-card-payoff-calculator/",
+  },
 };
 
 export default function CreditCardPayoffCalculatorLayout({

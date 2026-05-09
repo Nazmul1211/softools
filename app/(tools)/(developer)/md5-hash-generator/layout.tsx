@@ -19,6 +19,9 @@ export const metadata: Metadata = {
       "Generate MD5 hash values for text strings. Compare hashes and verify data integrity.",
     url: "https://softzar.com/md5-hash-generator/",
   },
+  alternates: {
+    canonical: "https://softzar.com/md5-hash-generator/",
+  },
 };
 
 export default function MD5HashGeneratorLayout({

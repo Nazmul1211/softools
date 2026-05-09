@@ -116,6 +116,7 @@ export default function FreelanceRateCalculator() {
   return (
     <ToolLayout
       title="Freelance Rate Calculator"
+      slug="freelance-rate-calculator"
       description="Calculate your ideal freelance hourly rate based on desired income, business expenses, billable hours, and tax obligations. Get daily, weekly, and monthly rate equivalents to price your services confidently."
       category={{ name: "Finance Tools", slug: "finance-tools" }}
       lastUpdated="April 2026"

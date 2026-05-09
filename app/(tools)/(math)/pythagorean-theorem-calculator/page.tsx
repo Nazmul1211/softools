@@ -338,6 +338,7 @@ Whether you're a student learning geometry, a carpenter checking measurements, o
   return (
     <ToolLayout
       title="Pythagorean Theorem Calculator"
+      slug="pythagorean-theorem-calculator"
       description="Calculate the missing side of a right triangle using the Pythagorean theorem (a² + b² = c²). Find the hypotenuse or legs instantly with full triangle analysis."
       category={{ name: "Math Calculators", slug: "math-calculators" }}
       faqs={faqs}

@@ -124,6 +124,7 @@ export default function PresentValueCalculator() {
   return (
     <ToolLayout
       title="Present Value Calculator"
+      slug="present-value-calculator"
       description="Calculate the present value of future money using a discount rate. Determine how much a future sum is worth in today's dollars. Supports lump sum and annuity calculations."
       category={{ name: "Finance Tools", slug: "finance-tools" }}
       lastUpdated="April 2026"

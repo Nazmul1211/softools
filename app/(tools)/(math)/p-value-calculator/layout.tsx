@@ -26,6 +26,9 @@ export const metadata: Metadata = {
     description:
       "Compute p-values and significance decisions from z-statistics instantly.",
   },
+  alternates: {
+    canonical: "https://softzar.com/p-value-calculator/",
+  },
 };
 
 export default function PValueCalculatorLayout({

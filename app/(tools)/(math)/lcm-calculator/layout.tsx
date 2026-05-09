@@ -20,6 +20,9 @@ export const metadata: Metadata = {
       "Calculate the Least Common Multiple (LCM) of two or more numbers with step-by-step solutions.",
     type: "website",
   },
+  alternates: {
+    canonical: "https://softzar.com/lcm-calculator/",
+  },
 };
 
 export default function LcmCalculatorLayout({

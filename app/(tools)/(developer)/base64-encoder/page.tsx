@@ -156,6 +156,7 @@ export default function Base64Encoder() {
   return (
     <ToolLayout
       title="Base64 Encoder/Decoder"
+      slug="base64-encoder"
       description="Encode text to Base64 or decode Base64 strings instantly. Our free online tool supports UTF-8 encoding and URL-safe Base64 variants. All processing happens locally in your browser for privacy."
       category={{ name: "Developer Tools", slug: "developer-tools" }}
       lastUpdated="March 2026"

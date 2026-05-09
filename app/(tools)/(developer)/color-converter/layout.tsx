@@ -17,6 +17,9 @@ export const metadata: Metadata = {
     description: "Convert colors between HEX, RGB, HSL formats with live preview.",
     type: "website",
   },
+  alternates: {
+    canonical: "https://softzar.com/color-converter/",
+  },
 };
 
 export default function ColorConverterLayout({

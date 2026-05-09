@@ -126,6 +126,7 @@ export default function PValueCalculatorPage() {
   return (
     <ToolLayout
       title="P-Value Calculator"
+      slug="p-value-calculator"
       description="Compute p-values from z-test statistics for left-tailed, right-tailed, and two-tailed hypothesis tests. Compare against alpha and get a clear significance decision."
       category={{ name: "Math Calculators", slug: "math-calculators" }}
       lastUpdated="April 2026"

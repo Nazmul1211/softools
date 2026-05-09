@@ -105,6 +105,7 @@ export default function IdealWeightCalculator() {
   return (
     <ToolLayout
       title="Ideal Weight Calculator"
+      slug="ideal-weight-calculator"
       description="Calculate your ideal body weight using multiple scientifically validated formulas. Find the healthy weight range that's right for you based on your height and gender."
       category={{ name: "Health & Fitness", slug: "health-fitness" }}
       relatedTools={[

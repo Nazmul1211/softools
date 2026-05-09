@@ -26,6 +26,9 @@ export const metadata: Metadata = {
     description:
       "Convert raw scores to z-scores and percentiles with this free statistics tool.",
   },
+  alternates: {
+    canonical: "https://softzar.com/z-score-calculator/",
+  },
 };
 
 export default function ZScoreCalculatorLayout({

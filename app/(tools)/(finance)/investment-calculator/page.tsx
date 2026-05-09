@@ -109,6 +109,7 @@ export default function InvestmentCalculatorPage() {
   return (
     <ToolLayout
       title="Investment Calculator"
+      slug="investment-calculator"
       description="Calculate how your investments will grow over time with compound interest. Enter your initial investment, monthly contributions, and expected returns to see projections."
       category={{ name: "Finance Tools", slug: "finance-tools" }}
       relatedTools={[

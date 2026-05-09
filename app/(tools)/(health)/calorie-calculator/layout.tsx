@@ -19,6 +19,9 @@ export const metadata: Metadata = {
     description: "Calculate your daily calorie needs for weight loss, maintenance, or muscle gain. Get personalized recommendations based on your body and goals.",
     type: "website",
   },
+  alternates: {
+    canonical: "https://softzar.com/calorie-calculator/",
+  },
 };
 
 export default function CalorieCalculatorLayout({

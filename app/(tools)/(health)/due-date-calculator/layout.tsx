@@ -19,6 +19,9 @@ export const metadata: Metadata = {
     description: "Calculate your baby's due date based on your last period or conception date. Track pregnancy progress week by week.",
     type: "website",
   },
+  alternates: {
+    canonical: "https://softzar.com/due-date-calculator/",
+  },
 };
 
 export default function DueDateCalculatorLayout({

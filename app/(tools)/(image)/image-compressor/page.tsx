@@ -96,6 +96,7 @@ export default function CompressImagePage() {
   return (
     <ToolLayout
       title="Image Compressor"
+      slug="image-compressor"
       description="Compress JPG, PNG, and WebP images instantly without uploading to any server. Reduce file size while maintaining quality. 100% free and private."
       category={{ name: "Image Tools", slug: "image-tools" }}
       relatedTools={[

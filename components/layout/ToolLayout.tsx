@@ -19,6 +19,7 @@ export interface HowToStep {
 
 interface ToolLayoutProps {
   title: string;
+  slug?: string;
   description: string;
   children: ReactNode;
   category?: { name: string; slug: string };
@@ -93,6 +94,7 @@ function FAQSection({ faqs }: { faqs: FAQItem[] }) {
 
 export function ToolLayout({
   title,
+  slug,
   description,
   children,
   category,
@@ -106,9 +108,9 @@ export function ToolLayout({
   author = "Softzar Team",
   fullWidth = false,
 }: ToolLayoutProps) {
-  // Generate slug from title for URLs
-  const toolSlug = title.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
-  const toolUrl = `https://softzar.com/${toolSlug}`;
+  const normalizedSlug = (slug ?? title.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, ""))
+    .replace(/^\/+|\/+$/g, "");
+  const toolUrl = `https://softzar.com/${normalizedSlug}/`;
   const currentDate = new Date().toISOString().split('T')[0];
   const modifiedDate = lastUpdated || currentDate;
   const publishedDate = datePublished || "2024-01-01";
@@ -339,7 +341,7 @@ export function ToolLayout({
               "@type": "Organization",
               name: "Softzar",
               url: "https://softzar.com",
-              logo: "https://softzar.com/logo.png",
+              logo: "https://softzar.com/softzar-logo.png",
             },
             datePublished: publishedDate,
             dateModified: modifiedDate,
@@ -385,7 +387,7 @@ export function ToolLayout({
             "@type": "Organization",
             name: "Softzar",
             url: "https://softzar.com",
-            logo: "https://softzar.com/logo.png",
+            logo: "https://softzar.com/softzar-logo.png",
             description: "Free online calculators, converters, and utility tools for everyone.",
             sameAs: [
               "https://twitter.com/softzar",

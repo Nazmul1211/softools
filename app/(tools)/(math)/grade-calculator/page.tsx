@@ -161,6 +161,7 @@ export default function GradeCalculator() {
   return (
     <ToolLayout
       title="Grade Calculator"
+      slug="grade-calculator"
       description="Calculate your weighted grade, current class grade, or determine what score you need on your final exam to reach your target grade."
       category={{ name: "Math Calculators", slug: "math-calculators" }}
       relatedTools={[

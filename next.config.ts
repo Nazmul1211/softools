@@ -43,6 +43,61 @@ const nextConfig: NextConfig = {
         destination: "/pdf-splitter/",
         permanent: true,
       },
+      {
+        source: "/adobe-premiere-pro-cc-2024",
+        destination: "/review/",
+        permanent: true,
+      },
+      {
+        source: "/adobe-after-effects-latest",
+        destination: "/review/",
+        permanent: true,
+      },
+      {
+        source: "/adobe-after-effects-2024",
+        destination: "/review/",
+        permanent: true,
+      },
+      {
+        source: "/adobe-photoshop-for-macos",
+        destination: "/review/",
+        permanent: true,
+      },
+      {
+        source: "/adobe-after-effects-cc-2023",
+        destination: "/review/",
+        permanent: true,
+      },
+      {
+        source: "/adobe-premiere-pro-cc-2023",
+        destination: "/review/",
+        permanent: true,
+      },
+      {
+        source: "/adobe-illustrator-cc-2023",
+        destination: "/review/",
+        permanent: true,
+      },
+      {
+        source: "/adobe-photoshop-2025",
+        destination: "/review/",
+        permanent: true,
+      },
+      {
+        source: "/adobe-illustrator-2025",
+        destination: "/review/",
+        permanent: true,
+      },
+      {
+        source: "/adobe-illustrator-cc-2022",
+        destination: "/review/",
+        permanent: true,
+      },
+      {
+        source: "/edius-free-download",
+        destination: "/review/",
+        permanent: true,
+      },
     ];
   },
 };

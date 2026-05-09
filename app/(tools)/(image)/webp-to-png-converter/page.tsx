@@ -7,6 +7,7 @@ export default function WebpToPngConverterPage() {
   return (
     <ToolLayout
       title="WEBP to PNG Converter"
+      slug="webp-to-png-converter"
       description="Convert WEBP images to PNG format online in seconds for editing workflows, transparency reliability, and broad software compatibility."
       category={{ name: "Image Tools", slug: "image-tools" }}
       relatedTools={[

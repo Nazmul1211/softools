@@ -141,6 +141,7 @@ export default function BodyFatCalculator() {
   return (
     <ToolLayout
       title="Body Fat Calculator"
+      slug="body-fat-calculator"
       description="Estimate your body fat percentage using multiple methods including the US Navy formula and BMI-based calculation. Get personalized results for men and women."
       category={{ name: "Health & Fitness", slug: "health-fitness" }}
       relatedTools={[

@@ -33,18 +33,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Fetch Sanity content
   const { blogPosts, reviews, softwareReviews, comparisons, pages } = await getSanityContent();
 
-  const reviewPaths = [
-    "/adobe-premiere-pro-cc-2024/",
-    "/adobe-after-effects-latest/",
-    "/adobe-after-effects-2024/",
-    "/adobe-photoshop-for-macos/",
-    "/adobe-after-effects-cc-2023/",
-    "/adobe-premiere-pro-cc-2023/",
-    "/adobe-illustrator-cc-2023/",
-    "/adobe-photoshop-2025/",
-    "/adobe-illustrator-2025/",
-  ];
-
   const toolPages = tools.map((tool) => ({
     url: absoluteUrl(`/${tool.slug}/`),
     lastModified: new Date(),
@@ -75,13 +63,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     lastModified: new Date(),
     changeFrequency: "monthly" as const,
     priority: page.priority,
-  }));
-
-  const legacyReviewPages = reviewPaths.map((path) => ({
-    url: absoluteUrl(path),
-    lastModified: new Date(),
-    changeFrequency: "monthly" as const,
-    priority: 0.65,
   }));
 
   // Sanity CMS content pages
@@ -136,7 +117,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...categoryPages,
     ...toolPages,
     ...staticPages,
-    ...legacyReviewPages,
     // Sanity CMS content
     ...sanityBlogPages,
     ...sanityReviewPages,

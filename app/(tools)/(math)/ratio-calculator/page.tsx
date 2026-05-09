@@ -148,6 +148,7 @@ export default function RatioCalculator() {
   return (
     <ToolLayout
       title="Ratio Calculator"
+      slug="ratio-calculator"
       description="Solve ratio and proportion problems easily. Find missing values, simplify ratios, and scale proportionally for cooking, DIY projects, and math homework."
       category={{ name: "Math Calculators", slug: "math-calculators" }}
       relatedTools={[

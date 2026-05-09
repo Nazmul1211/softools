@@ -34,6 +34,7 @@ export default function InflationCalculatorPage() {
   return (
     <ToolLayout
       title="Inflation Calculator"
+      slug="inflation-calculator"
       description="Estimate how inflation affects prices and purchasing power over time. Quickly see future cost, buying power erosion, and total inflation impact."
       category={{ name: "Finance Tools", slug: "finance-tools" }}
       relatedTools={[

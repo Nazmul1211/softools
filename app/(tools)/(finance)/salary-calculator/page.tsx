@@ -98,6 +98,7 @@ export default function SalaryCalculator() {
   return (
     <ToolLayout
       title="Salary Calculator"
+      slug="salary-calculator"
       description="Convert your salary between hourly, daily, weekly, bi-weekly, semi-monthly, monthly, and annual rates. Understand your true earning potential."
       category={{ name: "Finance", slug: "finance" }}
       relatedTools={[

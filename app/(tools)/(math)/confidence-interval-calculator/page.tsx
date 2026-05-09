@@ -170,6 +170,7 @@ export default function ConfidenceIntervalCalculator() {
   return (
     <ToolLayout
       title="Confidence Interval Calculator"
+      slug="confidence-interval-calculator"
       description="Calculate confidence intervals for population means and proportions. Enter your sample data and choose a confidence level (90%, 95%, or 99%) to get the confidence interval, margin of error, and critical values with step-by-step explanations."
       category={{ name: "Math Calculators", slug: "math-calculators" }}
       lastUpdated="April 2026"

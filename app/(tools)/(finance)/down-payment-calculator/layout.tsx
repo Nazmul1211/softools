@@ -18,6 +18,9 @@ export const metadata: Metadata = {
       "Calculate down payment amount, financing needed, and estimated monthly mortgage outcomes for different percentages.",
     type: "website",
   },
+  alternates: {
+    canonical: "https://softzar.com/down-payment-calculator/",
+  },
 };
 
 export default function DownPaymentCalculatorLayout({

@@ -14,6 +14,9 @@ export const metadata: Metadata = {
     "investment projection",
     "future value calculator",
   ],
+  alternates: {
+    canonical: "https://softzar.com/investment-calculator/",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

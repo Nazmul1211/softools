@@ -20,6 +20,9 @@ export const metadata: Metadata = {
       "Add and subtract time durations easily. Calculate hours, minutes, seconds and convert between time units.",
     type: "website",
   },
+  alternates: {
+    canonical: "https://softzar.com/time-calculator/",
+  },
 };
 
 export default function TimeCalculatorLayout({

@@ -137,6 +137,7 @@ export default function HoursCalculator() {
   return (
     <ToolLayout
       title="Hours Calculator"
+      slug="hours-calculator"
       description="Add, subtract, and calculate total hours, minutes, and seconds. Find the duration between two times, convert to decimal hours for payroll, and compute work hour totals. Supports multiple time entries with instant results."
       category={{ name: "Date & Time", slug: "date-time" }}
       lastUpdated="April 2026"

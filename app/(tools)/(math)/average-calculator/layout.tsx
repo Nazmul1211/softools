@@ -17,6 +17,9 @@ export const metadata: Metadata = {
     description: "Calculate mean, median, mode, and range from any set of numbers.",
     type: "website",
   },
+  alternates: {
+    canonical: "https://softzar.com/average-calculator/",
+  },
 };
 
 export default function AverageCalculatorLayout({

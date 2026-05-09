@@ -3,7 +3,10 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Bank Statement Converter - PDF to Excel & CSV Free Online",
   description:
-    "Convert PDF bank statements to Excel (XLSX) and CSV format instantly. Free online tool with AI-powered transaction extraction. No signup required, 100% secure.",
+    "Convert PDF bank statements to Excel (XLSX) and CSV format instantly. Free online tool with smart transaction extraction. No signup required, 100% secure.",
+  alternates: {
+    canonical: "https://softzar.com/bank-statement-converter/",
+  },
   keywords: [
     "bank statement converter",
     "pdf to excel",

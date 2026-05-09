@@ -60,6 +60,7 @@ export default function LoanCalculator() {
   return (
     <ToolLayout
       title="Loan Calculator"
+      slug="loan-calculator"
       description="Calculate your monthly loan payments, total interest, and total amount payable. Works for mortgages, auto loans, personal loans, and more."
       category={{ name: "Finance Tools", slug: "finance-tools" }}
       relatedTools={[

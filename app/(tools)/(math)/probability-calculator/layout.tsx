@@ -20,6 +20,9 @@ export const metadata: Metadata = {
       "Calculate probabilities for single and multiple events with step-by-step solutions.",
     type: "website",
   },
+  alternates: {
+    canonical: "https://softzar.com/probability-calculator/",
+  },
 };
 
 export default function ProbabilityCalculatorLayout({

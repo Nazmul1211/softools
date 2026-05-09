@@ -132,6 +132,7 @@ export default function ZScoreCalculatorPage() {
   return (
     <ToolLayout
       title="Z-Score Calculator"
+      slug="z-score-calculator"
       description="Convert raw values into z-scores, or convert z-scores back to raw values. Instantly see percentile rank, lower-tail probability, upper-tail probability, and interpretation."
       category={{ name: "Math Calculators", slug: "math-calculators" }}
       lastUpdated="April 2026"

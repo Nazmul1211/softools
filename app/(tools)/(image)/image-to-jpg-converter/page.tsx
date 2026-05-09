@@ -7,6 +7,7 @@ export default function ImageToJPGConverterPage() {
   return (
     <ToolLayout
       title="Image to JPG Converter"
+      slug="image-to-jpg-converter"
       description="Convert PNG, WEBP, GIF, and BMP images to JPG format online with adjustable quality and private browser-side processing for faster image delivery."
       category={{ name: "Image Tools", slug: "image-tools" }}
       relatedTools={[

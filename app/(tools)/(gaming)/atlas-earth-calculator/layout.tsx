@@ -22,6 +22,9 @@ export const metadata: Metadata = {
       "Calculate your Atlas Earth earnings, badge boosts, and ROI. Free online tool to plan your virtual land investment strategy.",
     type: "website",
   },
+  alternates: {
+    canonical: "https://softzar.com/atlas-earth-calculator/",
+  },
 };
 
 export default function AtlasEarthCalculatorLayout({

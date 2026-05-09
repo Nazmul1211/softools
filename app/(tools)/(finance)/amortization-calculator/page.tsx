@@ -141,6 +141,7 @@ export default function AmortizationCalculatorPage() {
   return (
     <ToolLayout
       title="Amortization Calculator"
+      slug="amortization-calculator"
       description="View your complete loan amortization schedule showing how each payment is split between principal and interest. Understand exactly how your mortgage or loan is paid off over time."
       category={{ name: "Finance Tools", slug: "finance-tools" }}
       relatedTools={[

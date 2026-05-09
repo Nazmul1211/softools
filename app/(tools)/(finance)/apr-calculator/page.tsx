@@ -52,6 +52,7 @@ export default function AprCalculatorPage() {
   return (
     <ToolLayout
       title="APR Calculator"
+      slug="apr-calculator"
       description="Estimate annual percentage rate by accounting for both interest and upfront loan fees. Compare loans using a clearer total borrowing cost metric."
       category={{ name: "Finance Tools", slug: "finance-tools" }}
       relatedTools={[

@@ -277,6 +277,7 @@ export default function ResizeImagePage() {
   return (
     <ToolLayout
       title="Image Resizer"
+      slug="image-resizer"
       description="Resize images by exact dimensions, percentage, or social presets. Upload instantly and export in JPG, PNG, or WEBP with full browser-side privacy."
       category={{ name: "Image Tools", slug: "image-tools" }}
       relatedTools={[

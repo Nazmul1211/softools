@@ -91,6 +91,7 @@ export default function CountdownTimer() {
   return (
     <ToolLayout
       title="Countdown Timer"
+      slug="countdown-timer"
       description="Create countdown timers for events, deadlines, holidays, and special occasions. Track time remaining in days, hours, minutes, and seconds with our free countdown clock."
       category={{ name: "Date & Time", slug: "date-time" }}
       relatedTools={[

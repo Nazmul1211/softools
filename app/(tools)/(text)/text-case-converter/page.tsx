@@ -182,6 +182,7 @@ export default function TextCaseConverter() {
   return (
     <ToolLayout
       title="Text Case Converter"
+      slug="text-case-converter"
       description="Convert text between different cases instantly. Support for uppercase, lowercase, title case, sentence case, camelCase, PascalCase, snake_case, kebab-case, and more. Perfect for writers, developers, and content creators."
       category={{ name: "Text Tools", slug: "text-tools" }}
       lastUpdated="March 2026"

@@ -168,6 +168,7 @@ export default function ConcreteCalculator() {
   return (
     <ToolLayout
       title="Concrete Calculator"
+      slug="concrete-calculator"
       description="Calculate exactly how much concrete you need for slabs, footings, columns, and walls. Get results in cubic yards, cubic meters, number of bags, and estimated cost — with built-in waste factor."
       category={{ name: "Construction & Home", slug: "construction-calculators" }}
       lastUpdated="April 2026"

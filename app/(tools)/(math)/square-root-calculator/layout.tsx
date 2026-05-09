@@ -17,6 +17,9 @@ export const metadata: Metadata = {
     description: "Calculate square roots, cube roots, and any nth root with step-by-step solutions.",
     type: "website",
   },
+  alternates: {
+    canonical: "https://softzar.com/square-root-calculator/",
+  },
 };
 
 export default function SquareRootCalculatorLayout({

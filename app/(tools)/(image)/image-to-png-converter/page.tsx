@@ -7,6 +7,7 @@ export default function ImageToPNGConverterPage() {
   return (
     <ToolLayout
       title="Image to PNG Converter"
+      slug="image-to-png-converter"
       description="Convert one or multiple JPG, WEBP, GIF, and BMP images into high-quality PNG format instantly. Browser-based processing keeps files private and output consistent."
       category={{ name: "Image Tools", slug: "image-tools" }}
       relatedTools={[

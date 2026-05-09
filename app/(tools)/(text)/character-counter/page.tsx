@@ -136,6 +136,7 @@ export default function CharacterCounterPage() {
   return (
     <ToolLayout
       title="Character Counter"
+      slug="character-counter"
       description="Count characters, words, lines, and punctuation instantly. Optimize writing for SEO metadata, social posts, and messaging limits with live feedback."
       category={{ name: "Text Tools", slug: "text-tools" }}
       relatedTools={[

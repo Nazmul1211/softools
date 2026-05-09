@@ -93,6 +93,7 @@ export default function CollegeGPACalculator() {
   return (
     <ToolLayout
       title="College GPA Calculator"
+      slug="college-gpa-calculator"
       description="Calculate your college GPA by entering your courses, credit hours, and grades. Instantly see your weighted grade point average on the standard 4.0 scale."
       category={{ name: "Math Calculators", slug: "math-calculators" }}
       relatedTools={[

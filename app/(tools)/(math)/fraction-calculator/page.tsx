@@ -247,6 +247,7 @@ export default function FractionCalculator() {
   return (
     <ToolLayout
       title="Fraction Calculator"
+      slug="fraction-calculator"
       description="Calculate fractions with step-by-step solutions. Add, subtract, multiply, and divide fractions. Supports mixed numbers and automatically simplifies results. Convert between fractions, decimals, and mixed numbers."
       category={{ name: "Math", slug: "math-calculators" }}
       lastUpdated="March 2026"

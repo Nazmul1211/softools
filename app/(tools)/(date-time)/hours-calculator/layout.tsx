@@ -27,6 +27,9 @@ export const metadata: Metadata = {
     description:
       "Add or subtract hours and minutes. Calculate duration between times. Free hours calculator.",
   },
+  alternates: {
+    canonical: "https://softzar.com/hours-calculator/",
+  },
 };
 
 export default function HoursCalculatorLayout({

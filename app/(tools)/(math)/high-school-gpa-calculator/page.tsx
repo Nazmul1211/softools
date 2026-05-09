@@ -107,6 +107,7 @@ export default function HighSchoolGPACalculator() {
   return (
     <ToolLayout
       title="High School GPA Calculator"
+      slug="high-school-gpa-calculator"
       description="Calculate your weighted and unweighted high school GPA. Supports Regular, Honors, and AP/IB course weighting on the 4.0 and 5.0 scales."
       category={{ name: "Math Calculators", slug: "math-calculators" }}
       relatedTools={[

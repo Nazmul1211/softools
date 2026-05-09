@@ -160,6 +160,7 @@ export default function LcmCalculatorPage() {
   return (
     <ToolLayout
       title="LCM Calculator"
+      slug="lcm-calculator"
       description="Calculate the Least Common Multiple (LCM) of two or more numbers. See step-by-step solutions using prime factorization and listing methods to understand how LCM is found."
       category={{ name: "Math Calculators", slug: "math-calculators" }}
       relatedTools={[

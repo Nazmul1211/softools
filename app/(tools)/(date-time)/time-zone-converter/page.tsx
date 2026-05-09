@@ -139,6 +139,7 @@ export default function TimeZoneConverter() {
   return (
     <ToolLayout
       title="Time Zone Converter"
+      slug="time-zone-converter"
       description="Convert times between different time zones worldwide. Perfect for scheduling international meetings, planning travel, or coordinating with remote teams."
       category={{ name: "Date & Time", slug: "date-time" }}
       relatedTools={[

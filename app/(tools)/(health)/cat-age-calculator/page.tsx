@@ -161,6 +161,7 @@ export default function CatAgeCalculator() {
   return (
     <ToolLayout
       title="Cat Age Calculator"
+      slug="cat-age-calculator"
       description="Convert your cat's age into human years with a feline-specific formula, life-stage interpretation, and practical wellness guidance for indoor and outdoor lifestyles."
       category={{ name: "Health & Fitness", slug: "health-fitness" }}
       lastUpdated="April 2026"

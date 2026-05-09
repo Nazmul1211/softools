@@ -196,6 +196,7 @@ export default function PdfToWordPage() {
   return (
     <ToolLayout
       title="PDF to Word Converter"
+      slug="pdf-to-word"
       description="Convert PDF files to editable Word documents (DOCX) for free. Extract text from PDFs while preserving basic formatting. All processing happens in your browser - your files never leave your device."
       category={{ name: "PDF Tools", slug: "pdf-tools" }}
       relatedTools={[

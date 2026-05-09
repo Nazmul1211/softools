@@ -73,6 +73,7 @@ export default function ProfitCalculatorPage() {
   return (
     <ToolLayout
       title="Profit Calculator"
+      slug="profit-calculator"
       description="Calculate gross profit, operating profit, and net profit for your business. Understand your profit margins at every level and analyze your business profitability."
       category={{ name: "Finance Tools", slug: "finance-tools" }}
       relatedTools={[

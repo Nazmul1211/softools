@@ -20,6 +20,9 @@ export const metadata: Metadata = {
       "Calculate gross profit, net profit, and profit margins for your business. Free profit calculator.",
     type: "website",
   },
+  alternates: {
+    canonical: "https://softzar.com/profit-calculator/",
+  },
 };
 
 export default function ProfitCalculatorLayout({

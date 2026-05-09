@@ -152,6 +152,7 @@ export default function PetAgeCalculator() {
   return (
     <ToolLayout
       title="Pet Age Calculator"
+      slug="pet-age-calculator"
       description="Convert your dog or cat age into human years with species-specific formulas, size-aware dog logic, and clear life-stage guidance for smarter daily care."
       category={{ name: "Health & Fitness", slug: "health-fitness" }}
       lastUpdated="April 2026"

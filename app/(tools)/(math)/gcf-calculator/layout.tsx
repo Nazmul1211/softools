@@ -27,6 +27,9 @@ export const metadata: Metadata = {
     description:
       "Calculate the greatest common factor of two or more numbers with step-by-step solutions.",
   },
+  alternates: {
+    canonical: "https://softzar.com/gcf-calculator/",
+  },
 };
 
 export default function GCFCalculatorLayout({

@@ -79,6 +79,7 @@ export default function SquareRootCalculator() {
   return (
     <ToolLayout
       title="Square Root Calculator"
+      slug="square-root-calculator"
       description="Calculate square roots, cube roots, and any nth root of a number. Find perfect squares, simplify radicals, and learn step-by-step solutions."
       category={{ name: "Math Calculators", slug: "math-calculators" }}
       relatedTools={[

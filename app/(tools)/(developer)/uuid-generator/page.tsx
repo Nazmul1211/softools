@@ -111,6 +111,7 @@ export default function UUIDGenerator() {
   return (
     <ToolLayout
       title="UUID Generator"
+      slug="uuid-generator"
       description="Generate random UUIDs (Universally Unique Identifiers) instantly. Create single or bulk UUID v4 identifiers with customizable formatting options. All UUIDs are generated locally using cryptographically secure random numbers."
       category={{ name: "Developer Tools", slug: "developer-tools" }}
       lastUpdated="March 2026"

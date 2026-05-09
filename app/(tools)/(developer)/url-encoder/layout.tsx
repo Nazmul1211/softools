@@ -20,6 +20,9 @@ export const metadata: Metadata = {
       "Encode special characters for URLs or decode percent-encoded strings. Essential tool for web developers.",
     url: "https://softzar.com/url-encoder/",
   },
+  alternates: {
+    canonical: "https://softzar.com/url-encoder/",
+  },
 };
 
 export default function URLEncoderLayout({

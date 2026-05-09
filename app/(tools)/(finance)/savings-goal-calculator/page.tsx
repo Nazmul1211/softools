@@ -69,6 +69,7 @@ export default function SavingsGoalCalculator() {
   return (
     <ToolLayout
       title="Savings Goal Calculator"
+      slug="savings-goal-calculator"
       description="Find out exactly how much you need to save each month to reach your financial goal. Factor in your current savings, expected interest rate, and timeline to get a personalized monthly savings target."
       category={{ name: "Finance Tools", slug: "finance-tools" }}
       relatedTools={[

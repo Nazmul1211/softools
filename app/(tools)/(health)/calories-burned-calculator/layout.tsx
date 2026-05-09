@@ -14,6 +14,9 @@ export const metadata: Metadata = {
     "activity calories",
     "fitness calculator",
   ],
+  alternates: {
+    canonical: "https://softzar.com/calories-burned-calculator/",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

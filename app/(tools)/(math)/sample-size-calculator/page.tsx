@@ -149,6 +149,7 @@ export default function SampleSizeCalculatorPage() {
   return (
     <ToolLayout
       title="Sample Size Calculator"
+      slug="sample-size-calculator"
       description="Estimate the minimum sample size for surveys and studies. Choose proportion or mean mode, set confidence level and margin of error, then apply finite population correction when needed."
       category={{ name: "Math Calculators", slug: "math-calculators" }}
       lastUpdated="April 2026"

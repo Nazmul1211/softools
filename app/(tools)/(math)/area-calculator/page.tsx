@@ -160,6 +160,7 @@ export default function AreaCalculatorPage() {
   return (
     <ToolLayout
       title="Area Calculator"
+      slug="area-calculator"
       description="Calculate the area of any geometric shape including rectangles, circles, triangles, trapezoids, ellipses, and more. Get instant results with step-by-step formula breakdowns."
       category={{ name: "Math Calculators", slug: "math-calculators" }}
       relatedTools={[

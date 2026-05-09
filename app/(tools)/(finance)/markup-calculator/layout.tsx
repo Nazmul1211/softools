@@ -20,6 +20,9 @@ export const metadata: Metadata = {
       "Calculate selling price from cost and markup percentage. Free markup calculator for retail and business pricing.",
     type: "website",
   },
+  alternates: {
+    canonical: "https://softzar.com/markup-calculator/",
+  },
 };
 
 export default function MarkupCalculatorLayout({

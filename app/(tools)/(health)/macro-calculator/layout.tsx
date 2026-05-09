@@ -18,6 +18,9 @@ export const metadata: Metadata = {
       "Calculate your optimal daily macros (protein, carbs, fat) based on your fitness goals.",
     type: "website",
   },
+  alternates: {
+    canonical: "https://softzar.com/macro-calculator/",
+  },
 };
 
 export default function MacroCalculatorLayout({

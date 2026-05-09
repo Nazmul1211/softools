@@ -126,6 +126,7 @@ export default function QuadraticCalculatorPage() {
   return (
     <ToolLayout
       title="Quadratic Formula Calculator"
+      slug="quadratic-calculator"
       description="Solve any quadratic equation of the form ax² + bx + c = 0 using the quadratic formula. Get the roots, discriminant, vertex, and axis of symmetry with step-by-step explanation."
       category={{ name: "Math Calculators", slug: "math-calculators" }}
       relatedTools={[

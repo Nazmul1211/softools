@@ -19,6 +19,9 @@ export const metadata: Metadata = {
     description: "Calculate tips and split bills in seconds. Works for restaurants, delivery, salons, and any service. Free and easy to use.",
     type: "website",
   },
+  alternates: {
+    canonical: "https://softzar.com/tip-calculator/",
+  },
 };
 
 export default function TipCalculatorLayout({

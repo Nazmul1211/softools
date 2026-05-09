@@ -20,6 +20,9 @@ export const metadata: Metadata = {
       "Calculate the volume of any 3D shape instantly. Includes spheres, cubes, cylinders, cones, and more.",
     type: "website",
   },
+  alternates: {
+    canonical: "https://softzar.com/volume-calculator/",
+  },
 };
 
 export default function VolumeCalculatorLayout({

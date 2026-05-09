@@ -26,6 +26,9 @@ export const metadata: Metadata = {
     description:
       "Paste your text and instantly see reading time, speaking time, word count, and readability stats.",
   },
+  alternates: {
+    canonical: "https://softzar.com/reading-time-calculator/",
+  },
 };
 
 export default function ReadingTimeCalculatorLayout({

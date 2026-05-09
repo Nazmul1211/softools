@@ -12,6 +12,9 @@ export const metadata: Metadata = {
     "weight calculator",
     "BMI chart",
   ],
+  alternates: {
+    canonical: "https://softzar.com/bmi-calculator/",
+  },
 };
 
 export default function BMICalculatorLayout({

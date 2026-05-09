@@ -89,6 +89,7 @@ export default function MarginCalculatorPage() {
   return (
     <ToolLayout
       title="Margin Calculator"
+      slug="margin-calculator"
       description="Calculate profit margin, markup percentage, and profit from cost and selling price. Essential for business pricing decisions, understanding profitability, and financial planning."
       category={{ name: "Finance Tools", slug: "finance-tools" }}
       relatedTools={[

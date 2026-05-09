@@ -123,6 +123,7 @@ export default function SplitPDFPage() {
   return (
     <ToolLayout
       title="PDF Splitter"
+      slug="pdf-splitter"
       description="Split PDF into individual pages or extract specific pages. All processing happens in your browser - 100% private and secure."
       category={{ name: "PDF Tools", slug: "pdf-tools" }}
       relatedTools={[

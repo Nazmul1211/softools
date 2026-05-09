@@ -90,6 +90,7 @@ export default function AgeCalculator() {
   return (
     <ToolLayout
       title="Age Calculator"
+      slug="age-calculator"
       description="Calculate your exact age in years, months, and days. Also find out how many days until your next birthday."
       category={{ name: "Date & Time", slug: "date-time" }}
       relatedTools={[

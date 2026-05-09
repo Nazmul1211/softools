@@ -132,6 +132,7 @@ export default function QRCodeGeneratorPage() {
   return (
     <ToolLayout
       title="QR Code Generator"
+      slug="qr-code-generator"
       description="Create custom QR codes for links, text, contact info, and campaign assets with instant PNG and SVG download support. Theme-ready and privacy-friendly."
       category={{ name: "Image Tools", slug: "image-tools" }}
       relatedTools={[

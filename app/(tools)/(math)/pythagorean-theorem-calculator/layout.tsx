@@ -20,6 +20,9 @@ export const metadata: Metadata = {
       "Calculate the missing side of a right triangle using a² + b² = c². Find the hypotenuse or legs instantly with full triangle analysis.",
     type: "website",
   },
+  alternates: {
+    canonical: "https://softzar.com/pythagorean-theorem-calculator/",
+  },
 };
 
 export default function PythagoreanTheoremCalculatorLayout({

@@ -455,10 +455,11 @@ export default function BankStatementConverterPage() {
   return (
     <ToolLayout
       title="Bank Statement Converter"
-      description="Convert PDF bank statements to Excel (XLSX) and CSV format instantly. Extract transactions with smart AI-powered parsing. Free, secure, and works with statements from any bank worldwide."
+      slug="bank-statement-converter"
+      description="Convert PDF bank statements to Excel (XLSX) and CSV format instantly. Extract transactions with smart pattern-based parsing. Free, secure, and works with statements from any bank worldwide."
       category={{ name: "Finance Tools", slug: "finance-tools" }}
       relatedTools={[
-        { name: "Currency Converter", href: "/currency-converter/" },
+        { name: "Payroll Calculator", href: "/payroll-calculator/" },
         { name: "Loan Calculator", href: "/loan-calculator/" },
         { name: "PDF to Word", href: "/pdf-to-word/" },
         { name: "ROI Calculator", href: "/roi-calculator/" },
@@ -946,7 +947,7 @@ export default function BankStatementConverterPage() {
                 <div>
                   <h4 className="font-semibold text-sm">Smart Extraction</h4>
                   <p className="text-xs text-muted-foreground mt-1">
-                    AI-powered transaction parsing
+                    Pattern-based transaction parsing
                   </p>
                 </div>
               </div>

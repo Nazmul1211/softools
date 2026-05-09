@@ -161,6 +161,7 @@ export default function JSONFormatter() {
   return (
     <ToolLayout
       title="JSON Formatter & Validator"
+      slug="json-formatter"
       description="Format, beautify, validate, and minify JSON data instantly. Our free online tool includes syntax highlighting and detailed error messages to help you work with JSON more efficiently."
       category={{ name: "Developer Tools", slug: "developer-tools" }}
       lastUpdated="March 2026"

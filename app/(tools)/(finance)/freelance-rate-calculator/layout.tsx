@@ -26,6 +26,9 @@ export const metadata: Metadata = {
     description:
       "Calculate your ideal freelance hourly rate. Input income, expenses, and hours — get your minimum rate instantly.",
   },
+  alternates: {
+    canonical: "https://softzar.com/freelance-rate-calculator/",
+  },
 };
 
 export default function FreelanceRateCalculatorLayout({

@@ -153,6 +153,7 @@ export default function HeartRateZonesCalculator() {
   return (
     <ToolLayout
       title="Heart Rate Zones Calculator"
+      slug="heart-rate-zones-calculator"
       description="Calculate your 5 personalized heart rate training zones based on age, resting heart rate, and maximum heart rate. Choose between the standard percentage method or the more accurate Karvonen (Heart Rate Reserve) method used by professional coaches."
       category={{ name: "Health & Fitness", slug: "health-fitness" }}
       lastUpdated="April 2026"

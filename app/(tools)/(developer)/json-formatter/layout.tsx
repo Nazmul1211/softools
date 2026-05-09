@@ -19,6 +19,9 @@ export const metadata: Metadata = {
     description: "Format, beautify, validate, and minify JSON data instantly. Includes syntax highlighting and detailed error messages.",
     type: "website",
   },
+  alternates: {
+    canonical: "https://softzar.com/json-formatter/",
+  },
 };
 
 export default function JSONFormatterLayout({

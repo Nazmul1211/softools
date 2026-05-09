@@ -90,6 +90,7 @@ export default function BMICalculator() {
   return (
     <ToolLayout
       title="BMI Calculator"
+      slug="bmi-calculator"
       description="Calculate your Body Mass Index (BMI) to see if you're at a healthy weight. Get personalized results based on your height and weight."
       category={{ name: "Health & Fitness", slug: "health-fitness" }}
       relatedTools={[

@@ -826,6 +826,14 @@ export const tools: Tool[] = [
     keywords: ["payroll calculator", "take-home pay", "gross to net", "paycheck estimator", "salary payroll"],
   },
   {
+    slug: "bank-statement-converter",
+    name: "Bank Statement Converter",
+    description:
+      "Convert PDF bank statements to structured Excel (XLSX) and CSV files with fast, pattern-based transaction extraction",
+    category: "finance",
+    keywords: ["bank statement converter", "pdf to excel", "pdf to csv", "statement extraction", "transaction parser"],
+  },
+  {
     slug: "vat-calculator",
     name: "VAT Calculator",
     description:

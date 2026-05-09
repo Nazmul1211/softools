@@ -146,6 +146,7 @@ export default function PDFToJPGPage() {
   return (
     <ToolLayout
       title="PDF to JPG Converter"
+      slug="pdf-to-jpg"
       description="Convert PDF pages to high-quality JPG images instantly. All processing happens in your browser - 100% private and secure."
       category={{ name: "PDF Tools", slug: "pdf-tools" }}
       relatedTools={[

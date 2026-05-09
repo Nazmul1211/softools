@@ -186,6 +186,7 @@ export default function GCFCalculator() {
   return (
     <ToolLayout
       title="GCF Calculator"
+      slug="gcf-calculator"
       description="Find the Greatest Common Factor (GCF), also called Greatest Common Divisor (GCD) or Highest Common Factor (HCF), of two or more numbers. View step-by-step solutions using prime factorization, the listing method, and the Euclidean algorithm."
       category={{ name: "Math Calculators", slug: "math-calculators" }}
       lastUpdated="April 2026"

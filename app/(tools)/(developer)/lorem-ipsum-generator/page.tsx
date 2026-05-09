@@ -110,6 +110,7 @@ export default function LoremIpsumGenerator() {
   return (
     <ToolLayout
       title="Lorem Ipsum Generator"
+      slug="lorem-ipsum-generator"
       description="Generate Lorem Ipsum placeholder text for your web designs, mockups, and documents. Create paragraphs, sentences, or words of dummy text instantly."
       category={{ name: "Developer Tools", slug: "developer-tools" }}
       relatedTools={[

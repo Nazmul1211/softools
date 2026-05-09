@@ -26,6 +26,9 @@ export const metadata: Metadata = {
     description:
       "Compute confidence-based margin of error for surveys and statistical estimates.",
   },
+  alternates: {
+    canonical: "https://softzar.com/margin-of-error-calculator/",
+  },
 };
 
 export default function MarginOfErrorCalculatorLayout({

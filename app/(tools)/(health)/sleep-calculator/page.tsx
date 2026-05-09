@@ -109,6 +109,7 @@ export default function SleepCalculator() {
   return (
     <ToolLayout
       title="Sleep Calculator"
+      slug="sleep-calculator"
       description="Calculate optimal bedtimes and wake times based on 90-minute sleep cycles. Wake up feeling refreshed instead of groggy by timing your sleep to complete full cycles. Get personalized sleep schedules for better rest."
       category={{ name: "Health & Fitness", slug: "health-fitness" }}
       lastUpdated="March 2026"

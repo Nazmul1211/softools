@@ -129,6 +129,7 @@ Studies show that online readers prefer content between 1,500 and 2,500 words fo
   return (
     <ToolLayout
       title="Word Counter"
+      slug="word-counter"
       description="Count words, characters, sentences, and paragraphs in your text. Estimate reading and speaking time for better content planning. Free online tool for writers, students, and content creators."
       category={{ name: "Text Tools", slug: "text-tools" }}
       lastUpdated="March 2026"

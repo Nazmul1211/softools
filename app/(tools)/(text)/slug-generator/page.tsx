@@ -199,6 +199,7 @@ export default function SlugGeneratorPage() {
   return (
     <ToolLayout
       title="Slug Generator"
+      slug="slug-generator"
       description="Generate clean SEO-friendly URL slugs from titles and bulk text. Control separators, stop words, casing, and slug length with live preview."
       category={{ name: "Text Tools", slug: "text-tools" }}
       relatedTools={[

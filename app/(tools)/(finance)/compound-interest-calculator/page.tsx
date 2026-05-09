@@ -62,6 +62,7 @@ export default function CompoundInterestCalculator() {
   return (
     <ToolLayout
       title="Compound Interest Calculator"
+      slug="compound-interest-calculator"
       description="See how your money grows over time with compound interest. Enter your initial investment, interest rate, time period, and optional monthly contributions to visualize your wealth accumulation."
       category={{ name: "Finance Tools", slug: "finance-tools" }}
       relatedTools={[

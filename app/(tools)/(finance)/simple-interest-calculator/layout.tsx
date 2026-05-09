@@ -19,6 +19,9 @@ export const metadata: Metadata = {
       "Calculate simple interest on loans and savings instantly. Free simple interest calculator with formula breakdown.",
     type: "website",
   },
+  alternates: {
+    canonical: "https://softzar.com/simple-interest-calculator/",
+  },
 };
 
 export default function SimpleInterestCalculatorLayout({

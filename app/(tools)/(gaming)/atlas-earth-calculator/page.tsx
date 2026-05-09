@@ -254,6 +254,7 @@ export default function AtlasEarthCalculator() {
   return (
     <ToolLayout
       title="Atlas Earth Calculator"
+      slug="atlas-earth-calculator"
       description="Calculate your Atlas Earth earnings, ROI, badge boosts, and optimize your virtual land investment strategy. Also known as AE Calculator."
       category={{ name: "Gaming Tools", slug: "gaming-tools" }}
       relatedTools={[

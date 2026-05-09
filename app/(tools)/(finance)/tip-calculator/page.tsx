@@ -82,6 +82,7 @@ export default function TipCalculator() {
   return (
     <ToolLayout
       title="Tip Calculator"
+      slug="tip-calculator"
       description="Quickly calculate tips for restaurants, delivery, and services. Split bills easily among friends and see exactly how much everyone owes with our free tip calculator."
       category={{ name: "Finance Tools", slug: "finance-tools" }}
       lastUpdated="March 2026"

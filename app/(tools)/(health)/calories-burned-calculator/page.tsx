@@ -126,6 +126,7 @@ export default function CaloriesBurnedCalculatorPage() {
   return (
     <ToolLayout
       title="Calories Burned Calculator"
+      slug="calories-burned-calculator"
       description="Calculate how many calories you burn during exercise and daily activities. Enter your weight, choose an activity, and see accurate calorie estimates based on MET values."
       category={{ name: "Health & Fitness", slug: "health-fitness" }}
       relatedTools={[

@@ -19,6 +19,9 @@ export const metadata: Metadata = {
     description: "Calculate the best times to sleep and wake based on 90-minute sleep cycles. Wake up feeling refreshed instead of groggy.",
     type: "website",
   },
+  alternates: {
+    canonical: "https://softzar.com/sleep-calculator/",
+  },
 };
 
 export default function SleepCalculatorLayout({

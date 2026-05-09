@@ -18,6 +18,9 @@ export const metadata: Metadata = {
     description: "Instantly convert text between different cases: uppercase, lowercase, title case, camelCase, snake_case, and more.",
     type: "website",
   },
+  alternates: {
+    canonical: "https://softzar.com/text-case-converter/",
+  },
 };
 
 export default function TextCaseConverterLayout({

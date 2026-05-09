@@ -19,6 +19,9 @@ export const metadata: Metadata = {
     description: "Calculate discounts, final prices, and savings. Support for percentage off, fixed discounts, and multiple discount stacking.",
     type: "website",
   },
+  alternates: {
+    canonical: "https://softzar.com/discount-calculator/",
+  },
 };
 
 export default function DiscountCalculatorLayout({

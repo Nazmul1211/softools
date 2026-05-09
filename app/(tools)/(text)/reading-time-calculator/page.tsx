@@ -177,6 +177,7 @@ export default function ReadingTimeCalculator() {
   return (
     <ToolLayout
       title="Reading Time Calculator"
+      slug="reading-time-calculator"
       description="Estimate how long it takes to read or speak any piece of text. Paste your content to get reading time, speaking time, word count, and readability analysis. Perfect for bloggers, students, presenters, and content creators."
       category={{ name: "Text Tools", slug: "text-tools" }}
       lastUpdated="April 2026"

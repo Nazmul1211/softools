@@ -18,6 +18,9 @@ export const metadata: Metadata = {
       "Find your ideal body weight using scientifically validated formulas for men and women.",
     type: "website",
   },
+  alternates: {
+    canonical: "https://softzar.com/ideal-weight-calculator/",
+  },
 };
 
 export default function IdealWeightCalculatorLayout({

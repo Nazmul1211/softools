@@ -19,6 +19,9 @@ export const metadata: Metadata = {
     description: "Generate strong, random passwords that are difficult to crack. Customize your password with various options and check its strength instantly.",
     type: "website",
   },
+  alternates: {
+    canonical: "https://softzar.com/password-generator/",
+  },
 };
 
 export default function PasswordGeneratorLayout({

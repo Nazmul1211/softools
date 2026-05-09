@@ -58,6 +58,7 @@ export default function RandomNumberGenerator() {
   return (
     <ToolLayout
       title="Random Number Generator"
+      slug="random-number-generator"
       description="Generate random numbers within a specified range. Perfect for games, raffles, lottery picks, and random sampling."
       category={{ name: "Random Generators", slug: "random-generators" }}
       relatedTools={[

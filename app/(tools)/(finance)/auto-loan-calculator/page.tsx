@@ -129,6 +129,7 @@ export default function AutoLoanCalculatorPage() {
   return (
     <ToolLayout
       title="Auto Loan Calculator"
+      slug="auto-loan-calculator"
       description="Calculate your monthly car payment, total interest, and view a complete amortization schedule. Enter your vehicle price, down payment, and loan terms to see exactly what you'll pay."
       category={{ name: "Finance Tools", slug: "finance-tools" }}
       relatedTools={[

@@ -7,6 +7,7 @@ export default function PngToWebpConverterPage() {
   return (
     <ToolLayout
       title="PNG to WEBP Converter"
+      slug="png-to-webp-converter"
       description="Convert one or multiple PNG images to WEBP for significantly smaller file sizes and faster website delivery. Private browser conversion with quality control."
       category={{ name: "Image Tools", slug: "image-tools" }}
       relatedTools={[

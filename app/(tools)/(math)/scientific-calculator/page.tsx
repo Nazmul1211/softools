@@ -313,6 +313,7 @@ export default function ScientificCalculator() {
   return (
     <ToolLayout
       title="Scientific Calculator"
+      slug="scientific-calculator"
       description="Free online scientific calculator with trigonometric, logarithmic, and exponential functions. Calculate sin, cos, tan, log, ln, powers, roots, factorials, and more. Perfect for students, engineers, and scientists."
       category={{ name: "Math", slug: "math-calculators" }}
       lastUpdated="March 2026"

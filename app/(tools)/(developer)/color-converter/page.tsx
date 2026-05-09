@@ -191,6 +191,7 @@ export default function ColorConverter() {
   return (
     <ToolLayout
       title="Color Converter"
+      slug="color-converter"
       description="Convert colors between HEX, RGB, HSL, and HSV formats. Includes a color picker, live preview, and easy copy-to-clipboard functionality for CSS."
       category={{ name: "Developer Tools", slug: "developer-tools" }}
       relatedTools={[

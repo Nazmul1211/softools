@@ -26,6 +26,9 @@ export const metadata: Metadata = {
     description:
       "Check how strong your password is. Get crack time estimates, entropy scores, and security tips. 100% private.",
   },
+  alternates: {
+    canonical: "https://softzar.com/password-strength-checker/",
+  },
 };
 
 export default function PasswordStrengthCheckerLayout({

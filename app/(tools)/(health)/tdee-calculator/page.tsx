@@ -94,6 +94,7 @@ export default function TDEECalculator() {
   return (
     <ToolLayout
       title="TDEE Calculator"
+      slug="tdee-calculator"
       description="Calculate your Total Daily Energy Expenditure (TDEE) to understand how many calories you burn each day. Essential for weight loss, muscle gain, or maintaining your current weight."
       category={{ name: "Health & Fitness", slug: "health-fitness" }}
       relatedTools={[

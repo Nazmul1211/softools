@@ -25,6 +25,9 @@ export const metadata: Metadata = {
       "Convert between metric and imperial units. Length, weight, temperature, volume, area, speed, and time conversions.",
     url: "https://softzar.com/unit-converter/",
   },
+  alternates: {
+    canonical: "https://softzar.com/unit-converter/",
+  },
 };
 
 export default function UnitConverterLayout({

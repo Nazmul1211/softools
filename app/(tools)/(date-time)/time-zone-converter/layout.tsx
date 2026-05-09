@@ -17,6 +17,9 @@ export const metadata: Metadata = {
     description: "Convert times between any time zones worldwide instantly.",
     type: "website",
   },
+  alternates: {
+    canonical: "https://softzar.com/time-zone-converter/",
+  },
 };
 
 export default function TimeZoneConverterLayout({

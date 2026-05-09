@@ -370,6 +370,7 @@ Whether you're tracking billable hours, planning events, or analyzing time data,
   return (
     <ToolLayout
       title="Time Calculator"
+      slug="time-calculator"
       description="Add and subtract time durations (hours, minutes, seconds) easily. Convert between time units and calculate total time for work hours, schedules, and more."
       category={{ name: "Date & Time", slug: "date-time" }}
       faqs={faqs}

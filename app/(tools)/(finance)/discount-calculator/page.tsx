@@ -143,6 +143,7 @@ export default function DiscountCalculator() {
   return (
     <ToolLayout
       title="Discount Calculator"
+      slug="discount-calculator"
       description="Calculate discounts, sale prices, and total savings instantly. Support for percentage off, fixed amount discounts, and stacking multiple discounts. Perfect for shopping, business pricing, and sales analysis."
       category={{ name: "Finance", slug: "finance-tools" }}
       lastUpdated="March 2026"

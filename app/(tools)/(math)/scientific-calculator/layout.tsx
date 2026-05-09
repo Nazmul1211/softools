@@ -19,6 +19,9 @@ export const metadata: Metadata = {
     description: "Full-featured scientific calculator with trigonometric, logarithmic, and exponential functions. Perfect for students, engineers, and scientists.",
     type: "website",
   },
+  alternates: {
+    canonical: "https://softzar.com/scientific-calculator/",
+  },
 };
 
 export default function ScientificCalculatorLayout({

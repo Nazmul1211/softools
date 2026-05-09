@@ -18,6 +18,9 @@ export const metadata: Metadata = {
       "Instantly calculate VAT-inclusive and VAT-exclusive prices with configurable tax rates for invoices and pricing.",
     type: "website",
   },
+  alternates: {
+    canonical: "https://softzar.com/vat-calculator/",
+  },
 };
 
 export default function VatCalculatorLayout({

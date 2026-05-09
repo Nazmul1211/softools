@@ -42,6 +42,7 @@ export default function DownPaymentCalculatorPage() {
   return (
     <ToolLayout
       title="Down Payment Calculator"
+      slug="down-payment-calculator"
       description="Calculate down payment amount, financed loan amount, and estimated monthly housing cost including optional PMI assumptions."
       category={{ name: "Finance Tools", slug: "finance-tools" }}
       relatedTools={[

@@ -18,6 +18,9 @@ export const metadata: Metadata = {
       "Estimate how inflation affects buying power and what prices become over time using annual inflation assumptions.",
     type: "website",
   },
+  alternates: {
+    canonical: "https://softzar.com/inflation-calculator/",
+  },
 };
 
 export default function InflationCalculatorLayout({

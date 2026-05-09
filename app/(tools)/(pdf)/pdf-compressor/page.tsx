@@ -82,6 +82,7 @@ export default function CompressPDFPage() {
   return (
     <ToolLayout
       title="PDF Compressor"
+      slug="pdf-compressor"
       description="Compress PDF files instantly without uploading to any server. Reduce file size while maintaining quality. 100% free and private."
       category={{ name: "PDF Tools", slug: "pdf-tools" }}
       relatedTools={[

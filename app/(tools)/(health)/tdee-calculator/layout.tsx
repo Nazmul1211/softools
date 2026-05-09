@@ -18,6 +18,9 @@ export const metadata: Metadata = {
       "Calculate how many calories you burn daily based on your BMR and activity level.",
     type: "website",
   },
+  alternates: {
+    canonical: "https://softzar.com/tdee-calculator/",
+  },
 };
 
 export default function TDEECalculatorLayout({

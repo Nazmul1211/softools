@@ -158,6 +158,7 @@ export default function BMRCalculator() {
   return (
     <ToolLayout
       title="BMR Calculator"
+      slug="bmr-calculator"
       description="Calculate your Basal Metabolic Rate (BMR) using multiple scientifically validated formulas. Learn how many calories your body burns at rest and estimate your Total Daily Energy Expenditure (TDEE) based on your activity level."
       category={{ name: "Health & Fitness", slug: "health-fitness" }}
       lastUpdated="March 2026"

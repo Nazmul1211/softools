@@ -141,6 +141,7 @@ export default function SalesTaxCalculatorPage() {
   return (
     <ToolLayout
       title="Sales Tax Calculator"
+      slug="sales-tax-calculator"
       description="Calculate sales tax instantly for any purchase. Add tax to a price or reverse-calculate to find the pre-tax amount. Includes US state tax rates for quick reference."
       category={{ name: "Finance Tools", slug: "finance-tools" }}
       relatedTools={[

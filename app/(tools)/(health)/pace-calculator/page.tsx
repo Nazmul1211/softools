@@ -179,6 +179,7 @@ export default function PaceCalculator() {
   return (
     <ToolLayout
       title="Pace Calculator"
+      slug="pace-calculator"
       description="Calculate your running, walking, or cycling pace, finish time, or distance. Enter any two values and the calculator solves for the third. Supports both miles and kilometers with race finish time predictions for common distances."
       category={{ name: "Health & Fitness", slug: "health-fitness" }}
       lastUpdated="April 2026"

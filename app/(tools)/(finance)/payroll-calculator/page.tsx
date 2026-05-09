@@ -47,6 +47,7 @@ export default function PayrollCalculatorPage() {
   return (
     <ToolLayout
       title="Payroll Calculator"
+      slug="payroll-calculator"
       description="Estimate paycheck results from gross to net pay. Include overtime, tax withholding, and fixed deductions for realistic payroll planning."
       category={{ name: "Finance Tools", slug: "finance-tools" }}
       relatedTools={[

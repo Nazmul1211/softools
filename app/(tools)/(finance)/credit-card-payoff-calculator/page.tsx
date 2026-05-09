@@ -319,6 +319,7 @@ Your debt-free date is calculable and achievable. Let's find it together.
   return (
     <ToolLayout
       title="Credit Card Payoff Calculator"
+      slug="credit-card-payoff-calculator"
       description="Calculate how long to pay off credit card debt and how much interest you'll pay. Find the optimal payment strategy to become debt-free faster."
       category={{ name: "Finance Tools", slug: "finance-tools" }}
       faqs={faqs}

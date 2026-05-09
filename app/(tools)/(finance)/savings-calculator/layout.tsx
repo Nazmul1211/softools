@@ -20,6 +20,9 @@ export const metadata: Metadata = {
       "Project your savings growth with compound interest. Free savings calculator to plan your financial future.",
     type: "website",
   },
+  alternates: {
+    canonical: "https://softzar.com/savings-calculator/",
+  },
 };
 
 export default function SavingsCalculatorLayout({

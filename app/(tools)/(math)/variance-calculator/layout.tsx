@@ -26,6 +26,9 @@ export const metadata: Metadata = {
     description:
       "Find variance and standard deviation from your data in seconds.",
   },
+  alternates: {
+    canonical: "https://softzar.com/variance-calculator/",
+  },
 };
 
 export default function VarianceCalculatorLayout({

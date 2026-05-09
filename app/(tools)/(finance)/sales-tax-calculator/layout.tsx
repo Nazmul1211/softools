@@ -20,6 +20,9 @@ export const metadata: Metadata = {
       "Calculate sales tax instantly. Find total price with tax or reverse calculate pre-tax amount.",
     type: "website",
   },
+  alternates: {
+    canonical: "https://softzar.com/sales-tax-calculator/",
+  },
 };
 
 export default function SalesTaxCalculatorLayout({

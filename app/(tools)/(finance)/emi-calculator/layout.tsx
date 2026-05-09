@@ -13,6 +13,9 @@ export const metadata: Metadata = {
     "personal loan calculator",
     "equated monthly installment",
   ],
+  alternates: {
+    canonical: "https://softzar.com/emi-calculator/",
+  },
 };
 
 export default function EMICalculatorLayout({

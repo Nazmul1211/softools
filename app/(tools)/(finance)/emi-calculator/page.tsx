@@ -92,6 +92,7 @@ export default function EMICalculator() {
   return (
     <ToolLayout
       title="EMI Calculator"
+      slug="emi-calculator"
       description="Calculate your Equated Monthly Installment (EMI) for any loan. Perfect for home loans, car loans, personal loans, and education loans."
       category={{ name: "Finance", slug: "finance" }}
       relatedTools={[

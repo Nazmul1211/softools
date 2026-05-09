@@ -26,6 +26,9 @@ export const metadata: Metadata = {
     description:
       "Plan your study with confidence-based sample size estimates.",
   },
+  alternates: {
+    canonical: "https://softzar.com/sample-size-calculator/",
+  },
 };
 
 export default function SampleSizeCalculatorLayout({

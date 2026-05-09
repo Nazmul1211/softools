@@ -21,6 +21,9 @@ export const metadata: Metadata = {
       "Calculate all triangle properties from sides and angles. Find area, perimeter, altitudes, medians, and more using SSS, SAS, ASA, or AAS methods.",
     type: "website",
   },
+  alternates: {
+    canonical: "https://softzar.com/triangle-calculator/",
+  },
 };
 
 export default function TriangleCalculatorLayout({

@@ -18,6 +18,9 @@ export const metadata: Metadata = {
       "Calculate your body fat percentage using multiple methods including the US Navy formula and BMI method.",
     type: "website",
   },
+  alternates: {
+    canonical: "https://softzar.com/body-fat-calculator/",
+  },
 };
 
 export default function BodyFatCalculatorLayout({

@@ -12,6 +12,9 @@ export const metadata: Metadata = {
     "percentage decrease",
     "what percent",
   ],
+  alternates: {
+    canonical: "https://softzar.com/percentage-calculator/",
+  },
 };
 
 export default function PercentageCalculatorLayout({

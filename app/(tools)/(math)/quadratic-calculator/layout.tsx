@@ -20,6 +20,9 @@ export const metadata: Metadata = {
       "Solve any quadratic equation using the quadratic formula. Get roots, vertex, and discriminant analysis.",
     type: "website",
   },
+  alternates: {
+    canonical: "https://softzar.com/quadratic-calculator/",
+  },
 };
 
 export default function QuadraticCalculatorLayout({

@@ -18,6 +18,9 @@ export const metadata: Metadata = {
       "Estimate annual percentage rate by combining nominal rate and upfront fees for a clearer loan comparison.",
     type: "website",
   },
+  alternates: {
+    canonical: "https://softzar.com/apr-calculator/",
+  },
 };
 
 export default function AprCalculatorLayout({

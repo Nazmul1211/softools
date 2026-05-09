@@ -154,6 +154,7 @@ export default function DogAgeCalculator() {
   return (
     <ToolLayout
       title="Dog Age Calculator"
+      slug="dog-age-calculator"
       description="Convert dog years to human years with size-aware age conversion, life-stage interpretation, and optional DNA-log comparison to support better preventive care planning."
       category={{ name: "Health & Fitness", slug: "health-fitness" }}
       lastUpdated="April 2026"

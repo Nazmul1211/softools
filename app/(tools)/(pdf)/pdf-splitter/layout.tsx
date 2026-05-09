@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     description: "Split PDF into pages. Free, fast, and secure.",
   },
   alternates: {
-    canonical: "https://softzar.com/split-pdf/",
+    canonical: "https://softzar.com/pdf-splitter/",
   },
 };
 

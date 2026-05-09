@@ -17,6 +17,9 @@ export const metadata: Metadata = {
     description: "Solve ratio and proportion problems, simplify ratios, and find missing values.",
     type: "website",
   },
+  alternates: {
+    canonical: "https://softzar.com/ratio-calculator/",
+  },
 };
 
 export default function RatioCalculatorLayout({

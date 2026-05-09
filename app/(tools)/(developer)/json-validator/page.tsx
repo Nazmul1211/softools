@@ -284,6 +284,7 @@ export default function JSONValidatorPage() {
   return (
     <ToolLayout
       title="JSON Validator"
+      slug="json-validator"
       description="Validate JSON syntax with line-aware error hints, then format or minify instantly. Browser-side processing keeps your payload private and fast."
       category={{ name: "Developer Tools", slug: "developer-tools" }}
       relatedTools={[

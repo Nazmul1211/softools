@@ -50,6 +50,7 @@ export default function ROICalculator() {
   return (
     <ToolLayout
       title="ROI Calculator"
+      slug="roi-calculator"
       description="Calculate your Return on Investment (ROI) to evaluate the profitability of any investment, business decision, or marketing campaign. Get both basic and annualized ROI."
       category={{ name: "Finance Tools", slug: "finance-tools" }}
       relatedTools={[

@@ -13,6 +13,9 @@ export const metadata: Metadata = {
     "paycheck calculator",
     "income calculator",
   ],
+  alternates: {
+    canonical: "https://softzar.com/salary-calculator/",
+  },
 };
 
 export default function SalaryCalculatorLayout({

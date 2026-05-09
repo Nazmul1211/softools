@@ -123,6 +123,7 @@ export default function VarianceCalculatorPage() {
   return (
     <ToolLayout
       title="Variance Calculator"
+      slug="variance-calculator"
       description="Calculate population or sample variance from a dataset and see mean, standard deviation, and deviation breakdowns step by step."
       category={{ name: "Math Calculators", slug: "math-calculators" }}
       lastUpdated="April 2026"

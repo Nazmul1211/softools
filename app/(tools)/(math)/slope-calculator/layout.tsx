@@ -20,6 +20,9 @@ export const metadata: Metadata = {
       "Calculate slope from two points, rise and run, or equation form. Get slope as decimal, fraction, degrees, percent grade, and all equation forms.",
     type: "website",
   },
+  alternates: {
+    canonical: "https://softzar.com/slope-calculator/",
+  },
 };
 
 export default function SlopeCalculatorLayout({

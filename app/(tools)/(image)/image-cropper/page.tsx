@@ -468,6 +468,7 @@ export default function ImageCropperPage() {
   return (
     <ToolLayout
       title="Image Cropper"
+      slug="image-cropper"
       description="Crop JPG, PNG, and WEBP images with precise pixel controls, smart aspect ratios, and secure browser-based processing. No uploads to servers."
       category={{ name: "Image Tools", slug: "image-tools" }}
       relatedTools={[

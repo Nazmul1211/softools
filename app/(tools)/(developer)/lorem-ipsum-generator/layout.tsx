@@ -17,6 +17,9 @@ export const metadata: Metadata = {
     description: "Generate Lorem Ipsum placeholder text for your design projects.",
     type: "website",
   },
+  alternates: {
+    canonical: "https://softzar.com/lorem-ipsum-generator/",
+  },
 };
 
 export default function LoremIpsumGeneratorLayout({

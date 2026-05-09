@@ -12,6 +12,9 @@ export const metadata: Metadata = {
     "auto loan calculator",
     "EMI calculator",
   ],
+  alternates: {
+    canonical: "https://softzar.com/loan-calculator/",
+  },
 };
 
 export default function LoanCalculatorLayout({

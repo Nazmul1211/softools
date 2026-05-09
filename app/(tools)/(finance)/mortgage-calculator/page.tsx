@@ -134,6 +134,7 @@ export default function MortgageCalculator() {
   return (
     <ToolLayout
       title="Mortgage Calculator"
+      slug="mortgage-calculator"
       description="Calculate your monthly mortgage payment, total interest, and view a detailed amortization schedule. Make informed decisions about your home purchase with our free mortgage calculator."
       category={{ name: "Finance Tools", slug: "finance-tools" }}
       lastUpdated="March 2026"

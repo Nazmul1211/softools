@@ -86,6 +86,7 @@ export default function MarkupCalculatorPage() {
   return (
     <ToolLayout
       title="Markup Calculator"
+      slug="markup-calculator"
       description="Calculate selling price, markup percentage, and profit margin from your product cost. Essential for retail pricing, wholesale calculations, and business profitability planning."
       category={{ name: "Finance Tools", slug: "finance-tools" }}
       relatedTools={[

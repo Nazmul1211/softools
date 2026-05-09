@@ -158,6 +158,7 @@ export default function PasswordGenerator() {
   return (
     <ToolLayout
       title="Password Generator"
+      slug="password-generator"
       description="Generate strong, secure, random passwords instantly. Customize length and character types for maximum security. All passwords are generated locally in your browser for complete privacy."
       category={{ name: "Random Generators", slug: "random-generators" }}
       lastUpdated="March 2026"

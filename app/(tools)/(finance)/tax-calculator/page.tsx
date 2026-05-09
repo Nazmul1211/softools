@@ -183,6 +183,7 @@ export default function TaxCalculator() {
   return (
     <ToolLayout
       title="Tax Calculator"
+      slug="tax-calculator"
       description="Estimate your federal income tax, Social Security, Medicare, and take-home pay. Based on 2024 US tax brackets and rates."
       category={{ name: "Finance", slug: "finance" }}
       relatedTools={[

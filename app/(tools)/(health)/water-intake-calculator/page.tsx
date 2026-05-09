@@ -114,6 +114,7 @@ export default function WaterIntakeCalculator() {
   return (
     <ToolLayout
       title="Water Intake Calculator"
+      slug="water-intake-calculator"
       description="Calculate how much water you should drink daily based on your weight, activity level, and climate. Stay properly hydrated for optimal health and performance."
       category={{ name: "Health & Fitness", slug: "health-fitness" }}
       relatedTools={[

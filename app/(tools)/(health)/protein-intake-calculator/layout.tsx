@@ -26,6 +26,9 @@ export const metadata: Metadata = {
     description:
       "Find your optimal daily protein target based on weight, activity, and goals. Free evidence-based calculator.",
   },
+  alternates: {
+    canonical: "https://softzar.com/protein-intake-calculator/",
+  },
 };
 
 export default function ProteinIntakeCalculatorLayout({

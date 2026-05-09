@@ -17,6 +17,9 @@ export const metadata: Metadata = {
     description: "Create countdown timers for any event, deadline, or special occasion.",
     type: "website",
   },
+  alternates: {
+    canonical: "https://softzar.com/countdown-timer/",
+  },
 };
 
 export default function CountdownTimerLayout({

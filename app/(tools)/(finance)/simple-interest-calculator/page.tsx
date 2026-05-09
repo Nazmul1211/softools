@@ -87,6 +87,7 @@ export default function SimpleInterestCalculatorPage() {
   return (
     <ToolLayout
       title="Simple Interest Calculator"
+      slug="simple-interest-calculator"
       description="Calculate simple interest on loans, savings, and investments. Enter your principal amount, interest rate, and time period to see exactly how much interest you'll earn or pay."
       category={{ name: "Finance Tools", slug: "finance-tools" }}
       relatedTools={[

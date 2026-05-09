@@ -20,6 +20,9 @@ export const metadata: Metadata = {
       "Calculate the area of any geometric shape instantly. Includes circles, rectangles, triangles, and more.",
     type: "website",
   },
+  alternates: {
+    canonical: "https://softzar.com/area-calculator/",
+  },
 };
 
 export default function AreaCalculatorLayout({

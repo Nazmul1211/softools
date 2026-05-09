@@ -117,6 +117,7 @@ export default function RetirementCalculatorPage() {
   return (
     <ToolLayout
       title="Retirement Calculator"
+      slug="retirement-calculator"
       description="Plan your financial future by calculating how much you need to save for retirement. See projected savings, monthly retirement income, and create a personalized plan."
       category={{ name: "Finance Tools", slug: "finance-tools" }}
       relatedTools={[

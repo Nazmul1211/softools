@@ -20,6 +20,9 @@ export const metadata: Metadata = {
       "Calculate your break-even point to know exactly how many units or dollars in sales you need to cover costs.",
     type: "website",
   },
+  alternates: {
+    canonical: "https://softzar.com/break-even-calculator/",
+  },
 };
 
 export default function BreakEvenCalculatorLayout({

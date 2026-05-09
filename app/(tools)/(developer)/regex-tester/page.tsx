@@ -126,6 +126,7 @@ export default function RegexTester() {
   return (
     <ToolLayout
       title="Regex Tester"
+      slug="regex-tester"
       description="Test and debug regular expressions in real-time. See matches highlighted, view capture groups, and test replacements."
       category={{ name: "Developer Tools", slug: "developer-tools" }}
       relatedTools={[

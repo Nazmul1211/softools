@@ -87,6 +87,7 @@ export default function BreakEvenCalculatorPage() {
   return (
     <ToolLayout
       title="Break-Even Calculator"
+      slug="break-even-calculator"
       description="Calculate your break-even point to determine how many units you need to sell or how much revenue you need to cover all costs. Essential for pricing decisions and business planning."
       category={{ name: "Finance Tools", slug: "finance-tools" }}
       relatedTools={[

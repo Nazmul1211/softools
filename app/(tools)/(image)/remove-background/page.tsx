@@ -132,6 +132,7 @@ export default function RemoveBackgroundPage() {
   return (
     <ToolLayout
       title="Remove Background"
+      slug="remove-background"
       description="Remove backgrounds from images instantly using AI. Create transparent PNG images for photos, products, portraits, and more. Works entirely in your browser - your images never leave your device."
       category={{ name: "Image Tools", slug: "image-tools" }}
       relatedTools={[

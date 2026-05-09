@@ -20,6 +20,9 @@ export const metadata: Metadata = {
       "Calculate profit margins and markup for your business. Free margin calculator for pricing decisions.",
     type: "website",
   },
+  alternates: {
+    canonical: "https://softzar.com/margin-calculator/",
+  },
 };
 
 export default function MarginCalculatorLayout({

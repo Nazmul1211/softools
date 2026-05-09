@@ -220,6 +220,7 @@ export default function RentVsBuyCalculator() {
   return (
     <ToolLayout
       title="Rent vs Buy Calculator"
+      slug="rent-vs-buy-calculator"
       description="Compare the total financial cost of renting vs buying a home over your time horizon. This calculator models mortgage payments, property taxes, maintenance, appreciation, opportunity cost of the down payment, and investment returns to determine which option builds more long-term wealth."
       category={{ name: "Finance Tools", slug: "finance-tools" }}
       lastUpdated="April 2026"

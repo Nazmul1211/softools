@@ -133,6 +133,7 @@ export default function MacroCalculator() {
   return (
     <ToolLayout
       title="Macro Calculator"
+      slug="macro-calculator"
       description="Calculate your optimal daily macronutrient intake (protein, carbohydrates, and fat) based on your body stats and fitness goals. Perfect for IIFYM, flexible dieting, and meal planning."
       category={{ name: "Health & Fitness", slug: "health-fitness" }}
       relatedTools={[

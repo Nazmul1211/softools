@@ -90,6 +90,7 @@ export default function StandardDeviationCalculator() {
   return (
     <ToolLayout
       title="Standard Deviation Calculator"
+      slug="standard-deviation-calculator"
       description="Calculate standard deviation, variance, mean, and other statistical measures for both population and sample data sets. Perfect for statistics homework and data analysis."
       category={{ name: "Math Calculators", slug: "math-calculators" }}
       relatedTools={[

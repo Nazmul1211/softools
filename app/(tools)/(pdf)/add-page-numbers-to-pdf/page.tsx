@@ -188,6 +188,7 @@ export default function AddPageNumbersPage() {
   return (
     <ToolLayout
       title="Add Page Numbers to PDF"
+      slug="add-page-numbers-to-pdf"
       description="Add page numbers to any PDF document online for free. Choose from Arabic numbers, Roman numerals, or 'Page X of Y' format. Position numbers at the top or bottom of each page. 100% client-side processing."
       category={{ name: "PDF Tools", slug: "pdf-tools" }}
       lastUpdated="April 2026"

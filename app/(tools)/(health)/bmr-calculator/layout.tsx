@@ -19,6 +19,9 @@ export const metadata: Metadata = {
     description: "Calculate your Basal Metabolic Rate (BMR) using scientifically validated formulas. Understand how many calories your body burns at rest.",
     type: "website",
   },
+  alternates: {
+    canonical: "https://softzar.com/bmr-calculator/",
+  },
 };
 
 export default function BMRCalculatorLayout({

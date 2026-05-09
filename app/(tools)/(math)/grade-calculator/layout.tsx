@@ -17,6 +17,9 @@ export const metadata: Metadata = {
     description: "Calculate your current grade and find out what you need on finals.",
     type: "website",
   },
+  alternates: {
+    canonical: "https://softzar.com/grade-calculator/",
+  },
 };
 
 export default function GradeCalculatorLayout({

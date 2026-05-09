@@ -162,6 +162,7 @@ export default function Calculator401kPage() {
   return (
     <ToolLayout
       title="401k Calculator"
+      slug="401k-calculator"
       description="Calculate how your 401k retirement savings will grow over time. Factor in employer matching, contribution limits, expected returns, and see year-by-year projections for your retirement nest egg."
       category={{ name: "Finance Tools", slug: "finance-tools" }}
       relatedTools={[

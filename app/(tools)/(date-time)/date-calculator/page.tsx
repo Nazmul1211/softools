@@ -155,6 +155,7 @@ export default function DateCalculator() {
   return (
     <ToolLayout
       title="Date Calculator"
+      slug="date-calculator"
       description="Calculate the exact number of days, weeks, months, and years between any two dates. Add or subtract days from a date. Find business days and weekends for planning and scheduling."
       category={{ name: "Date & Time", slug: "date-time" }}
       lastUpdated="March 2026"

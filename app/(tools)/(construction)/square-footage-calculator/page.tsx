@@ -166,6 +166,7 @@ export default function SquareFootageCalculator() {
   return (
     <ToolLayout
       title="Square Footage Calculator"
+      slug="square-footage-calculator"
       description="Calculate the square footage of any area — rooms, floors, walls, yards, and land. Supports rectangles, triangles, circles, and trapezoids. Add multiple areas for total square footage with waste factor."
       category={{ name: "Construction & Home", slug: "construction-calculators" }}
       lastUpdated="April 2026"

@@ -19,6 +19,9 @@ export const metadata: Metadata = {
     description: "Count words, characters, sentences and paragraphs instantly. Check reading time and analyze your text for better writing.",
     type: "website",
   },
+  alternates: {
+    canonical: "https://softzar.com/word-counter/",
+  },
 };
 
 export default function WordCounterLayout({

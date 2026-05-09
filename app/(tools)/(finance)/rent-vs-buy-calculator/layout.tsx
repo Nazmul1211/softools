@@ -27,6 +27,9 @@ export const metadata: Metadata = {
     description:
       "Should you rent or buy? Compare total housing costs over time with this free calculator.",
   },
+  alternates: {
+    canonical: "https://softzar.com/rent-vs-buy-calculator/",
+  },
 };
 
 export default function RentVsBuyLayout({

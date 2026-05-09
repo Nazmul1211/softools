@@ -300,6 +300,7 @@ Whether you're a student learning linear equations, a professional calculating g
   return (
     <ToolLayout
       title="Slope Calculator"
+      slug="slope-calculator"
       description="Calculate the slope of a line from two points, rise and run, or equation form. Get slope in decimal, fraction, degrees, percent grade, plus all equation forms."
       category={{ name: "Math Calculators", slug: "math-calculators" }}
       faqs={faqs}

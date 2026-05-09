@@ -27,6 +27,9 @@ export const metadata: Metadata = {
     description:
       "Calculate your running, walking, or cycling pace. Get finish time predictions and race splits.",
   },
+  alternates: {
+    canonical: "https://softzar.com/pace-calculator/",
+  },
 };
 
 export default function PaceCalculatorLayout({

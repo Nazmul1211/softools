@@ -174,7 +174,7 @@ export default function RootLayout({
               "@id": "https://softzar.com/#organization",
               name: "Softzar",
               url: "https://softzar.com",
-              logo: "https://softzar.com/logo.png",
+              logo: "https://softzar.com/softzar-logo.png",
               description:
                 "Free online calculators, converters, and utility tools for everyone.",
               foundingDate: "2019",

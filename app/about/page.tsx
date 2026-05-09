@@ -114,7 +114,7 @@ export default function AboutPage() {
             url: "https://softzar.com",
             logo: {
               "@type": "ImageObject",
-              url: "https://softzar.com/logo.png",
+              url: "https://softzar.com/softzar-logo.png",
               width: 512,
               height: 512,
             },

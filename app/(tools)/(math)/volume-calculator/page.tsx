@@ -169,6 +169,7 @@ export default function VolumeCalculatorPage() {
   return (
     <ToolLayout
       title="Volume Calculator"
+      slug="volume-calculator"
       description="Calculate the volume of any 3D shape including cubes, spheres, cylinders, cones, pyramids, and more. Get instant results with step-by-step formula breakdowns."
       category={{ name: "Math Calculators", slug: "math-calculators" }}
       relatedTools={[
