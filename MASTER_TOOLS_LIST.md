@@ -21,8 +21,10 @@
 | Text Tools | 20 | 5 | 15 |
 | Image Tools | 20 | 10 | 10 |
 | PDF Tools | 20 | 8 | 12 |
-| Developer Tools | 25 | 11 | 14 |
-| Education | 12 | 5 | 7 |
+| Developer Tools | 25 | 16 | 9 |
+| Education | 15 | 15 | 0 |
+| Salary & Tax | 5 | 5 | 0 |
+| Creator Economy | 5 | 5 | 0 |
 | Construction & Home | 15 | 2 | 13 |
 | Science & Physics | 20 | 0 | 20 |
 | Automotive & Travel | 12 | 0 | 12 |
@@ -30,7 +32,7 @@
 | Food & Cooking | 8 | 0 | 8 |
 | Fun & Lifestyle | 12 | 3 | 9 |
 | Weather & Environment | 8 | 0 | 8 |
-| **TOTAL** | **~354** | **~121** | **~233** |
+| **TOTAL** | **~369** | **~141** | **~228** |
 
 ---
 
@@ -309,20 +311,35 @@
 | 202 | Lorem Ipsum Generator | Various | ✅ Done |
 | 203 | Regex Tester | Various | ✅ Done |
 | 204 | Color Converter (HEX/RGB/HSL) | Omni | ✅ Done |
-| 205 | JSON to CSV Converter | Various | ⬜ Todo |
-| 206 | XML Formatter | Various | ⬜ Todo |
-| 207 | HTML Formatter | Various | ⬜ Todo |
-| 208 | CSS Formatter | Various | ⬜ Todo |
-| 209 | JavaScript Minifier | Various | ⬜ Todo |
-| 210 | SQL Formatter | Various | ⬜ Todo |
-| 211 | SHA Hash Generator | Various | ⬜ Todo |
-| 212 | HTML Encoder/Decoder | Various | ⬜ Todo |
-| 213 | Cron Expression Generator | Various | ⬜ Todo |
-| 214 | IP Subnet Calculator | Calculator.net, Omni | ⬜ Todo |
-| 215 | JWT Decoder | Various | ⬜ Todo |
-| 216 | ASCII Converter | Omni | ⬜ Todo |
-| 217 | Chmod Calculator | Omni | ⬜ Todo |
-| 218 | Morse Code Translator | Omni | ⬜ Todo |
+
+### AI Productivity & Developer Tools (Batch 5)
+
+| # | Tool Name | Competitor | Status |
+|---|-----------|------------|--------|
+| 205 | Token Counter Calculator | OpenAI, Various | ✅ Done |
+| 206 | AI Prompt Cost Calculator | OpenAI, Various | ✅ Done |
+| 207 | Markdown to PDF Converter | Pandoc, Vertopal | ✅ Done |
+| 208 | JSON to TypeScript Converter | QuickType, Various | ✅ Done |
+| 209 | Regex Generator & Tester | Regex101, Various | ✅ Done |
+
+### Developer Tools (Continued)
+
+| # | Tool Name | Competitor | Status |
+|---|-----------|------------|--------|
+| 210 | JSON to CSV Converter | Various | ⬜ Todo |
+| 211 | XML Formatter | Various | ⬜ Todo |
+| 212 | HTML Formatter | Various | ⬜ Todo |
+| 213 | CSS Formatter | Various | ⬜ Todo |
+| 214 | JavaScript Minifier | Various | ⬜ Todo |
+| 215 | SQL Formatter | Various | ⬜ Todo |
+| 216 | SHA Hash Generator | Various | ⬜ Todo |
+| 217 | HTML Encoder/Decoder | Various | ⬜ Todo |
+| 218 | Cron Expression Generator | Various | ⬜ Todo |
+| 219 | IP Subnet Calculator | Calculator.net, Omni | ⬜ Todo |
+| 220 | JWT Decoder | Various | ⬜ Todo |
+| 221 | ASCII Converter | Omni | ⬜ Todo |
+| 222 | Chmod Calculator | Omni | ⬜ Todo |
+| 223 | Morse Code Translator | Omni | ⬜ Todo |
 
 ## 📝 Text Tools
 
@@ -394,13 +411,42 @@
 | 261 | Cumulative GPA Calculator | GPA.io, Omni | ✅ Done |
 | 262 | Grade Calculator | Calculator.net, Calculator.io, Omni | ✅ Done |
 | 263 | College GPA Calculator | GPA.io, Omni | ✅ Done |
-| 264 | Final Grade Calculator | GPA.io, Omni | ⬜ Todo |
-| 265 | Weighted Grade Calculator | GPA.io | ⬜ Todo |
-| 266 | Test Score Calculator | Various | ⬜ Todo |
+| 264 | Final Grade Calculator | GPA.io, Omni | ✅ Done |
+| 265 | Weighted Grade Calculator | GPA.io | ✅ Done |
+| 266 | Test Score Calculator | Various | ✅ Done |
 | 267 | College Savings Calculator | Calculator.net | ⬜ Todo |
 | 268 | Student Loan Calculator | Calculator.net, Omni | ⬜ Todo |
-| 269 | ACT Score Calculator | Omni | ⬜ Todo |
-| 270 | Semester Grade Calculator | Omni | ⬜ Todo |
+| 269 | ACT Score Calculator | Omni | ✅ Done |
+| 270 | Semester Grade Calculator | Omni | ✅ Done |
+| 271 | Study Time Calculator | New-Content-recommendation.md | ✅ Done |
+| 272 | Attendance Percentage Calculator | New-Content-recommendation.md | ✅ Done |
+| 273 | CGPA to Percentage Converter | New-Content-recommendation.md | ✅ Done |
+| 274 | SAT Score Calculator | New-Content-recommendation.md | ✅ Done |
+| 275 | Credit Hour Calculator | New-Content-recommendation.md | ✅ Done |
+
+## 💰 Salary & Tax Calculators
+
+> **High-priority opportunity:** Salary and tax tools have massive search demand across all income levels. Strong localization potential and profitable affiliate opportunities. Low competition in niche variants (city-specific, industry-specific).
+
+| # | Tool Name | Reference | Status |
+|---|-----------|-----------|--------|
+| 276 | Hourly to Salary Calculator | New-Content-recommendation.md | ✅ Done |
+| 277 | Salary After Tax Calculator | New-Content-recommendation.md | ✅ Done |
+| 278 | Freelance Tax Calculator | New-Content-recommendation.md | ✅ Done |
+| 279 | Overtime Pay Calculator | New-Content-recommendation.md | ✅ Done |
+| 280 | Self-Employment Tax Calculator | New-Content-recommendation.md | ✅ Done |
+
+## 🎬 Creator Economy & Influencer Calculators
+
+> **Emerging trend:** Creator economy calculators have 50K+ monthly searches combined. High value for content creators, influencers, and affiliate marketers. New niche with minimal competition on traditional calculator sites.
+
+| # | Tool Name | Reference | Status |
+|---|-----------|-----------|--------|
+| 281 | YouTube CPM Calculator | New-Content-recommendation.md | ✅ Done |
+| 282 | TikTok Money Calculator | New-Content-recommendation.md | ✅ Done |
+| 283 | Instagram Engagement Rate Calculator | New-Content-recommendation.md | ✅ Done |
+| 284 | Sponsorship Rate Calculator | New-Content-recommendation.md | ✅ Done |
+| 285 | Affiliate Commission Calculator | New-Content-recommendation.md | ✅ Done |
 
 ## 🏗️ Construction & Home Calculators
 
@@ -408,21 +454,21 @@
 
 | # | Tool Name | Competitor | Status |
 |---|-----------|------------|--------|
-| 271 | Concrete Calculator | Calculator.net, Omni, Calculator.io | ✅ Done |
-| 272 | Square Footage Calculator | Calculator.net, Omni, Calculator.io | ✅ Done |
-| 273 | Roofing Calculator | Calculator.net, Omni, Calculator.io | ⬜ Todo |
-| 274 | Tile Calculator | Calculator.net, Omni | ⬜ Todo |
-| 275 | Paint Calculator | Omni | ⬜ Todo |
-| 276 | Flooring Calculator | Omni | ⬜ Todo |
-| 277 | Mulch Calculator | Calculator.net, Omni | ⬜ Todo |
-| 278 | Gravel Calculator | Calculator.net, Omni | ⬜ Todo |
-| 279 | Fence Calculator | Omni | ⬜ Todo |
-| 280 | BTU Calculator | Calculator.net, Omni | ⬜ Todo |
-| 281 | Electricity Cost Calculator | Omni | ⬜ Todo |
-| 282 | Drywall Calculator | Omni | ⬜ Todo |
-| 283 | Lumber Calculator | Omni | ⬜ Todo |
-| 284 | Stair Calculator | Calculator.net, Omni | ⬜ Todo |
-| 285 | Board Foot Calculator | Omni | ⬜ Todo |
+| 286 | Concrete Calculator | Calculator.net, Omni, Calculator.io | ✅ Done |
+| 287 | Square Footage Calculator | Calculator.net, Omni, Calculator.io | ✅ Done |
+| 288 | Roofing Calculator | Calculator.net, Omni, Calculator.io | ⬜ Todo |
+| 289 | Tile Calculator | Calculator.net, Omni | ⬜ Todo |
+| 290 | Paint Calculator | Omni | ⬜ Todo |
+| 291 | Flooring Calculator | Omni | ⬜ Todo |
+| 292 | Mulch Calculator | Calculator.net, Omni | ⬜ Todo |
+| 293 | Gravel Calculator | Calculator.net, Omni | ⬜ Todo |
+| 294 | Fence Calculator | Omni | ⬜ Todo |
+| 295 | BTU Calculator | Calculator.net, Omni | ⬜ Todo |
+| 296 | Electricity Cost Calculator | Omni | ⬜ Todo |
+| 297 | Drywall Calculator | Omni | ⬜ Todo |
+| 298 | Lumber Calculator | Omni | ⬜ Todo |
+| 299 | Stair Calculator | Calculator.net, Omni | ⬜ Todo |
+| 300 | Board Foot Calculator | Omni | ⬜ Todo |
 
 ## ⚡ Science & Physics Calculators
 

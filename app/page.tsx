@@ -21,10 +21,12 @@ import { categories, siteConfig } from "@/config/site";
 import { tools } from "@/lib/tools";
 import { HomeSearch } from "@/components/ui/HomeSearch";
 
+const HOMEPAGE_TOOL_CLAIM = Math.max(tools.length, 150);
+
 export const metadata: Metadata = {
   title: `${siteConfig.name} - Free Online Tools & Calculators`,
   description:
-    "Explore 100+ free online calculators and tools for math, finance, health, conversions, and more. Fast, accurate, and privacy-focused. No signup required.",
+    `Explore ${HOMEPAGE_TOOL_CLAIM}+ free online calculators and tools for math, finance, health, conversions, and more. Fast, accurate, and privacy-focused. No signup required.`,
   keywords: [
     "free online calculator",
     "free online tools",
@@ -52,7 +54,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: `${siteConfig.name} - Free Online Tools & Calculators `,
     description:
-      "Explore 100+ free online calculators and tools for math, finance, health, conversions, and more. Fast, accurate, and privacy-focused.",
+      `Explore ${HOMEPAGE_TOOL_CLAIM}+ free online calculators and tools for math, finance, health, conversions, and more. Fast, accurate, and privacy-focused.`,
     url: siteConfig.url,
     siteName: siteConfig.name,
     type: "website",
@@ -70,7 +72,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${siteConfig.name} - Free Online Tools & Calculators `,
     description:
-      "Explore 100+ free online calculators and tools for math, finance, health, conversions, and more.",
+      `Explore ${HOMEPAGE_TOOL_CLAIM}+ free online calculators and tools for math, finance, health, conversions, and more.`,
     images: [siteConfig.ogImage],
     creator: "@softzar",
   },
@@ -120,7 +122,7 @@ export default function Home() {
           <p className="mt-4 text-base text-hero-muted sm:text-lg">
             Explore{" "}
             <span className="font-semibold text-primary">
-              {tools.length}+ free calculators
+              {HOMEPAGE_TOOL_CLAIM}+ free calculators
             </span>{" "}
             designed to solve everyday problems accurately and easily.
           </p>

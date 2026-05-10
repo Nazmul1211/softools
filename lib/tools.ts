@@ -90,6 +90,46 @@ export const tools: Tool[] = [
     keywords: ["grade calculator", "weighted grade", "final grade", "what grade do I need"],
   },
   {
+    slug: "final-grade-calculator",
+    name: "Final Grade Calculator",
+    description:
+      "Find the exact final exam score needed to reach your target course grade using current average and exam weight",
+    category: "math",
+    keywords: ["final grade calculator", "what grade do i need on my final", "final exam score needed", "course target grade", "grade planning"],
+  },
+  {
+    slug: "weighted-grade-calculator",
+    name: "Weighted Grade Calculator",
+    description:
+      "Calculate weighted class grades by category, monitor unassigned weight, and estimate the score needed on remaining coursework",
+    category: "math",
+    keywords: ["weighted grade calculator", "category grade calculator", "weighted average grade", "class grade by weight", "syllabus weights"],
+  },
+  {
+    slug: "test-score-calculator",
+    name: "Test Score Calculator",
+    description:
+      "Convert correct, incorrect, and blank answers into raw points, percentage, letter grade, and scaled score",
+    category: "math",
+    keywords: ["test score calculator", "exam percentage calculator", "quiz score calculator", "raw score", "scaled score"],
+  },
+  {
+    slug: "act-score-calculator",
+    name: "ACT Score Calculator",
+    description:
+      "Estimate ACT composite score, percentile, and section benchmark status from English, Math, Reading, and Science scores",
+    category: "math",
+    keywords: ["act score calculator", "act composite calculator", "act percentile", "act benchmark", "college readiness act"],
+  },
+  {
+    slug: "semester-grade-calculator",
+    name: "Semester Grade Calculator",
+    description:
+      "Calculate semester GPA from credit-weighted course grades and project your updated cumulative GPA",
+    category: "math",
+    keywords: ["semester grade calculator", "semester gpa calculator", "term gpa", "projected cumulative gpa", "quality points"],
+  },
+  {
     slug: "quadratic-calculator",
     name: "Quadratic Formula Calculator",
     description:
@@ -1083,6 +1123,170 @@ export const tools: Tool[] = [
       "Calculate sample or population variance from datasets with standard deviation, mean, and squared deviation breakdown",
     category: "math",
     keywords: ["variance calculator", "sample variance", "population variance", "dispersion", "standard deviation", "statistics"],
+  },
+  // Creator Economy Tools (Batch 2)
+  {
+    slug: "youtube-cpm-calculator",
+    name: "YouTube CPM Calculator",
+    description:
+      "Calculate estimated YouTube ad revenue from views and CPM rates. See earnings projections and RPM after platform fees.",
+    category: "finance",
+    keywords: ["youtube cpm calculator", "youtube revenue calculator", "youtube ad revenue", "cpm rpm calculator", "youtube earnings", "video creator revenue"],
+  },
+  {
+    slug: "tiktok-money-calculator",
+    name: "TikTok Money Calculator",
+    description:
+      "Calculate TikTok Creator Fund earnings, brand deal rates, and monthly revenue from livestream gifts and sponsorships.",
+    category: "finance",
+    keywords: ["tiktok money calculator", "tiktok earnings calculator", "creator fund calculator", "tiktok revenue estimator", "livestream money", "brand deal rates"],
+  },
+  {
+    slug: "instagram-engagement-rate-calculator",
+    name: "Instagram Engagement Rate Calculator",
+    description:
+      "Calculate your Instagram engagement rate from likes, comments, and shares. Benchmark against industry standards.",
+    category: "finance",
+    keywords: ["instagram engagement rate calculator", "engagement rate formula", "instagram analytics calculator", "social media engagement metrics", "influencer engagement"],
+  },
+  {
+    slug: "sponsorship-rate-calculator",
+    name: "Sponsorship Rate Calculator",
+    description:
+      "Calculate fair influencer sponsorship rates based on followers, engagement, and niche. Get pricing for brand partnerships.",
+    category: "finance",
+    keywords: ["sponsorship rate calculator", "influencer pricing calculator", "brand deal rate calculator", "influencer rate card", "content creator pricing"],
+  },
+  {
+    slug: "affiliate-commission-calculator",
+    name: "Affiliate Commission Calculator",
+    description:
+      "Calculate affiliate marketing earnings from traffic, conversion rate, and commission percentage. Estimate monthly revenue and EPC.",
+    category: "finance",
+    keywords: ["affiliate commission calculator", "affiliate earnings calculator", "commission percentage calculator", "affiliate marketing revenue", "epc calculator"],
+  },
+  // Student & Academic Tools - Batch 3 (Expansion)
+  {
+    slug: "study-time-calculator",
+    name: "Study Time Calculator",
+    description:
+      "Calculate total study hours needed based on learning goals, subject difficulty, and available time. Optimize study planning.",
+    category: "math",
+    keywords: ["study time calculator", "study hours calculator", "how many hours to study", "exam preparation calculator", "study duration estimator"],
+  },
+  {
+    slug: "attendance-percentage-calculator",
+    name: "Attendance Percentage Calculator",
+    description:
+      "Calculate class attendance percentage and determine how many classes you can miss while maintaining your target attendance rate.",
+    category: "math",
+    keywords: ["attendance percentage calculator", "class attendance calculator", "school attendance calculator", "attendance rate calculator", "classes missed"],
+  },
+  {
+    slug: "cgpa-to-percentage-calculator",
+    name: "CGPA to Percentage Converter",
+    description:
+      "Convert CGPA (Cumulative GPA) to percentage equivalent. Support for 4.0, 5.0, and 10.0 scale conversions.",
+    category: "math",
+    keywords: ["cgpa to percentage converter", "gpa to percentage calculator", "cumulative gpa to percentage", "4.0 to percentage", "5.0 scale converter"],
+  },
+  {
+    slug: "sat-score-calculator",
+    name: "SAT Score Calculator",
+    description:
+      "Calculate SAT composite score and percentile from section scores. See college admission benchmarks and competitiveness.",
+    category: "math",
+    keywords: ["sat score calculator", "sat composite calculator", "sat percentile calculator", "sat score estimator", "college entrance exam"],
+  },
+  {
+    slug: "credit-hour-calculator",
+    name: "Credit Hour Calculator",
+    description:
+      "Calculate credit hours needed for semester completion and degree progress. Plan your course load and graduation timeline.",
+    category: "math",
+    keywords: ["credit hour calculator", "semester credit hours", "degree progress calculator", "credit requirements", "graduation timeline calculator"],
+  },
+  // Batch 4: Salary & Tax Calculators
+  {
+    slug: "hourly-to-salary-calculator",
+    name: "Hourly to Salary Calculator",
+    description:
+      "Convert hourly wage to annual salary. Account for hours, PTO, overtime, bonuses, and benefits to see true earning potential.",
+    category: "finance",
+    keywords: ["hourly to salary", "wage to salary converter", "annual salary calculator", "hourly rate to salary", "pay calculator"],
+  },
+  {
+    slug: "salary-after-tax-calculator",
+    name: "Salary After Tax Calculator",
+    description:
+      "Calculate net salary after federal, state, and FICA taxes. Includes tax deductions and withholding estimates.",
+    category: "finance",
+    keywords: ["salary after tax", "net salary calculator", "take home pay", "income tax calculator", "paycheck calculator"],
+  },
+  {
+    slug: "freelance-tax-calculator",
+    name: "Freelance Tax Calculator",
+    description:
+      "Calculate self-employment taxes, quarterly estimated payments, and deductions for freelancers and contractors.",
+    category: "finance",
+    keywords: ["freelance tax calculator", "self-employment tax", "1099 tax calculator", "contractor tax", "quarterly estimated tax"],
+  },
+  {
+    slug: "overtime-pay-calculator",
+    name: "Overtime Pay Calculator",
+    description:
+      "Calculate gross and net overtime earnings. Account for time-and-a-half, double-time, and tax withholding.",
+    category: "finance",
+    keywords: ["overtime pay calculator", "overtime earnings", "time and a half", "overtime rate", "FLSA calculator"],
+  },
+  {
+    slug: "self-employment-tax-calculator",
+    name: "Self-Employment Tax Calculator",
+    description:
+      "Calculate self-employment taxes and quarterly estimated payments for freelancers, contractors, and business owners.",
+    category: "finance",
+    keywords: ["self-employment tax", "SE tax calculator", "quarterly tax", "1099 income tax", "contractor quarterly payments"],
+  },
+  // Batch 5: AI Productivity Tools
+  {
+    slug: "token-counter-calculator",
+    name: "Token Counter Calculator",
+    description:
+      "Free token counter for GPT-4, GPT-3.5, Claude, and Gemini. Count tokens, estimate API costs, and optimize prompts instantly.",
+    category: "developer",
+    keywords: ["token counter", "openai token", "gpt token counter", "claude tokens", "gemini token counter", "ai token calculator"],
+  },
+  {
+    slug: "ai-prompt-cost-calculator",
+    name: "AI Prompt Cost Calculator",
+    description:
+      "Calculate API costs for AI prompts across GPT-4, GPT-3.5, Claude, and Gemini based on token count and model choice.",
+    category: "developer",
+    keywords: ["ai prompt cost", "api cost calculator", "gpt cost", "openai pricing calculator", "prompt pricing", "token cost"],
+  },
+  {
+    slug: "markdown-to-pdf-converter",
+    name: "Markdown to PDF Converter",
+    description:
+      "Convert Markdown text to PDF documents with formatting options. Free, no signup required, browser-based conversion.",
+    category: "developer",
+    keywords: ["markdown to pdf", "md to pdf converter", "markdown pdf", "free pdf converter", "markdown parser", "document converter"],
+  },
+  {
+    slug: "json-to-typescript-converter",
+    name: "JSON to TypeScript Converter",
+    description:
+      "Convert JSON to TypeScript interfaces and types. Generate strongly-typed interfaces from JSON objects instantly.",
+    category: "developer",
+    keywords: ["json to typescript", "typescript interface generator", "type generator", "json schema", "typescript types"],
+  },
+  {
+    slug: "regex-generator",
+    name: "Regex Generator & Tester",
+    description:
+      "Free regex pattern generator and tester with common patterns for email, phone, URL, and more. Build and test regular expressions.",
+    category: "developer",
+    keywords: ["regex generator", "regular expression tester", "email regex", "phone regex", "url regex", "regex patterns"],
   },
 ];
 
