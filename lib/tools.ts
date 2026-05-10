@@ -169,6 +169,38 @@ export const tools: Tool[] = [
     category: "construction",
     keywords: ["square footage", "area calculator", "sq ft", "room size", "flooring calculator"],
   },
+  {
+    slug: "roofing-calculator",
+    name: "Roofing Calculator",
+    description:
+      "Estimate roof area, roofing squares, shingle bundles, and material cost using dimensions, pitch, and waste factor",
+    category: "construction",
+    keywords: ["roofing calculator", "roof area", "shingle bundles", "roof squares", "roof estimate"],
+  },
+  {
+    slug: "paint-calculator",
+    name: "Paint Calculator",
+    description:
+      "Estimate paint and primer gallons from room dimensions, coats, openings, and coverage assumptions",
+    category: "construction",
+    keywords: ["paint calculator", "paint estimator", "how much paint", "room paint", "paint gallons"],
+  },
+  {
+    slug: "flooring-calculator",
+    name: "Flooring Calculator",
+    description:
+      "Calculate flooring area, box quantity, waste-adjusted coverage, and budget for laminate, vinyl, and hardwood projects",
+    category: "construction",
+    keywords: ["flooring calculator", "flooring boxes", "laminate calculator", "vinyl plank estimate", "floor cost"],
+  },
+  {
+    slug: "tile-calculator",
+    name: "Tile Calculator",
+    description:
+      "Estimate tile count, box quantity, thinset, grout, and material costs for floor and wall tile installations",
+    category: "construction",
+    keywords: ["tile calculator", "tile count", "tiles per box", "thinset calculator", "grout calculator"],
+  },
 
   // Finance Calculators
   {
@@ -420,6 +452,22 @@ export const tools: Tool[] = [
     category: "date-time",
     keywords: ["time calculator", "add time", "subtract time", "hours calculator", "time duration"],
   },
+  {
+    slug: "business-days-calculator",
+    name: "Business Days Calculator",
+    description:
+      "Count working days between dates or add/subtract business days with optional US federal holiday exclusion",
+    category: "date-time",
+    keywords: ["business days calculator", "working days", "weekday calculator", "deadline calculator", "date planning"],
+  },
+  {
+    slug: "time-card-calculator",
+    name: "Time Card Calculator",
+    description:
+      "Calculate weekly work hours, overtime, and gross pay from daily start/end times, breaks, and payroll rules",
+    category: "date-time",
+    keywords: ["time card calculator", "timesheet calculator", "overtime calculator", "work hours", "gross pay"],
+  },
 
   // Random Generators
   {
@@ -656,6 +704,14 @@ export const tools: Tool[] = [
     keywords: ["image to jpg", "convert image to jpg", "png to jpg", "jpg converter"],
   },
   {
+    slug: "heic-to-jpg-converter",
+    name: "HEIC to JPG Converter",
+    description:
+      "Convert HEIC and HEIF photos to JPG with browser-based processing, quality controls, and batch export",
+    category: "image",
+    keywords: ["heic to jpg", "heif to jpg", "iphone photo converter", "batch heic", "jpg compatibility"],
+  },
+  {
     slug: "webp-to-png-converter",
     name: "WEBP to PNG Converter",
     description:
@@ -824,6 +880,22 @@ export const tools: Tool[] = [
       "Calculate gross pay, estimated taxes, deductions, and take-home pay for common payroll schedules",
     category: "finance",
     keywords: ["payroll calculator", "take-home pay", "gross to net", "paycheck estimator", "salary payroll"],
+  },
+  {
+    slug: "us-paycheck-calculator",
+    name: "US Paycheck Calculator",
+    description:
+      "Estimate US net pay per paycheck with federal tax brackets, FICA, state tax assumptions, and deduction modeling",
+    category: "finance",
+    keywords: ["us paycheck calculator", "take home pay usa", "federal and state tax", "salary to paycheck", "net pay"],
+  },
+  {
+    slug: "uk-salary-calculator",
+    name: "UK Salary Calculator 2026/27",
+    description:
+      "Estimate UK take-home pay for 2026/27 including income tax, National Insurance, pension, and student loan plans",
+    category: "finance",
+    keywords: ["uk salary calculator 2026/27", "uk take home pay", "national insurance", "uk tax calculator", "net salary uk"],
   },
   {
     slug: "bank-statement-converter",

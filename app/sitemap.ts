@@ -2,6 +2,7 @@ import { MetadataRoute } from "next";
 import { tools } from "@/lib/tools";
 import { categories, siteConfig } from "@/config/site";
 import { client } from "@/sanity";
+import { usPaycheckStates } from "@/lib/us-paycheck-data";
 
 // Fetch all Sanity content for sitemap
 async function getSanityContent() {
@@ -45,6 +46,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     lastModified: new Date(),
     changeFrequency: "weekly" as const,
     priority: 0.7,
+  }));
+
+  const usPaycheckStatePages = usPaycheckStates.map((state) => ({
+    url: absoluteUrl(`/us-paycheck-calculator/${state.slug}/`),
+    lastModified: new Date(),
+    changeFrequency: "weekly" as const,
+    priority: 0.75,
   }));
 
   const staticPages = [
@@ -116,6 +124,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
     ...categoryPages,
     ...toolPages,
+    ...usPaycheckStatePages,
     ...staticPages,
     // Sanity CMS content
     ...sanityBlogPages,
