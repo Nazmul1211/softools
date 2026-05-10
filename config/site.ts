@@ -97,3 +97,22 @@ export const categories = [
     icon: "hard-hat",
   },
 ];
+
+export const categorySeoDescriptions: Record<string, string> = {
+  "math-calculators":
+    "Use Softzar free math calculators for percentages, equations, GPA, statistics, geometry, and more with fast, accurate results for school, work, and daily use.",
+  "unit-converters":
+    "Convert units instantly with Softzar converters for length, weight, temperature, and more. Get precise results for study, engineering, cooking, and daily use.",
+  "text-tools":
+    "Use Softzar text tools to count words, transform case, create slugs, and estimate reading time. Clean and format content quickly for writing and SEO workflows.",
+  "date-time":
+    "Plan schedules faster with Softzar date and time tools. Calculate business days, age, countdowns, time zones, and durations with accurate instant results.",
+  "developer-tools":
+    "Boost workflow with Softzar developer tools. Encode, validate, format, hash, test regex patterns, and generate UUIDs quickly in your browser for coding tasks.",
+  "pdf-tools":
+    "Work with PDFs online using Softzar PDF tools. Merge, split, compress, rotate, convert, and add page numbers securely, with no software installation required.",
+  "image-tools":
+    "Edit and optimize images online with Softzar image tools. Compress, resize, convert, crop, remove backgrounds, and generate QR codes quickly in your browser.",
+  "gaming-tools":
+    "Level up with Softzar gaming tools and calculators built for popular games. Get quick, reliable formulas and estimates to plan resources and strategies.",
+};

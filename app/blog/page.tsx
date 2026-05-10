@@ -6,7 +6,8 @@ import type { BlogPostListItem } from '@/sanity/types'
 
 export const metadata: Metadata = {
   title: 'Blog - Softzar',
-  description: 'Read our latest articles about tools, calculators, software reviews, and productivity tips.',
+  description:
+    'Explore the Softzar blog for practical guides, calculator tutorials, software comparisons, and productivity tips to solve everyday tasks faster and smarter.',
 }
 
 export const revalidate = 3600 // Revalidate every hour

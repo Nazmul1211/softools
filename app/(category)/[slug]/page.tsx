@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { categories } from "@/config/site";
+import { categories, categorySeoDescriptions } from "@/config/site";
 import { tools } from "@/lib/tools";
 import { client, PAGE_BY_SLUG_QUERY, urlFor } from "@/sanity";
 import { PortableText } from "@/components/sanity/PortableText";
@@ -48,12 +48,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   // Check if it's a category
   const category = categories.find((c) => c.slug === slug);
   if (category) {
+    const seoDescription =
+      categorySeoDescriptions[category.slug] ??
+      `${category.description}. Browse all free ${category.name.toLowerCase()} available on Softzar.`;
+
     return {
       title: `${category.name} - Free Online Tools | Softzar`,
-      description: `${category.description}. Browse all free ${category.name.toLowerCase()} available on Softzar.`,
+      description: seoDescription,
       openGraph: {
         title: `${category.name} - Free Online Tools | Softzar`,
-        description: `${category.description}. Browse all free ${category.name.toLowerCase()} available on Softzar.`,
+        description: seoDescription,
         images: [`/images/categories/${categoryImages[category.id] || "math_abstract"}.webp`],
       },
     };

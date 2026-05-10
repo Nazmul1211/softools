@@ -4,7 +4,8 @@ import { Mail } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Contact Us",
-  description: `Get in touch with the ${siteConfig.name} team. We welcome your feedback, questions, and suggestions.`,
+  description:
+    "Contact Softzar for support, feedback, partnerships, or tool requests. Reach our team by email for quick help with calculators, converters, and utility tools.",
 };
 
 export default function ContactPage() {

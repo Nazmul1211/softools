@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { categories } from "@/config/site";
+import { categories, categorySeoDescriptions } from "@/config/site";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -10,9 +10,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const category = categories.find((c) => c.slug === slug);
   if (!category) return {};
 
+  const seoDescription =
+    categorySeoDescriptions[category.slug] ??
+    `Browse all free ${category.name.toLowerCase()} on Softzar. ${category.description}. Fast, accurate, and easy to use.`;
+
   return {
     title: `${category.name} - Free Online Tools`,
-    description: `Browse all free ${category.name.toLowerCase()} on Softzar. ${category.description}. Fast, accurate, and easy to use.`,
+    description: seoDescription,
   };
 }
 

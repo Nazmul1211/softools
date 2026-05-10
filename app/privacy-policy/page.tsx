@@ -3,7 +3,8 @@ import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: `Read the privacy policy for ${siteConfig.name}. Learn how we handle your data and protect your privacy.`,
+  description:
+    "Read the Softzar Privacy Policy to learn what data we collect, how cookies and analytics work, and how we protect your information while using our online tools.",
 };
 
 export default function PrivacyPolicyPage() {

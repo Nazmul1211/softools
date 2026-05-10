@@ -3,7 +3,8 @@ import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "Terms and Conditions",
-  description: `Read the terms and conditions for using ${siteConfig.name}. Understand your rights and responsibilities.`,
+  description:
+    "Review Softzar's Terms and Conditions to understand acceptable use, intellectual property, disclaimers, and your rights when using our free online tools.",
 };
 
 export default function TermsPage() {
