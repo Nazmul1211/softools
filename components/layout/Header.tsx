@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState, useEffect, useMemo, useRef } from "react";
+import { useState, useEffect, useMemo, useRef, useSyncExternalStore } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { useTheme } from "next-themes";
 import {
@@ -79,6 +79,11 @@ export function Header() {
   const router = useRouter();
   const pathname = usePathname();
   const { theme, resolvedTheme, setTheme } = useTheme();
+  const isHydrated = useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false,
+  );
 
   // Hide header while scrolling (up or down), show only after scrolling stops.
   useEffect(() => {
@@ -172,10 +177,14 @@ export function Header() {
   }, []);
 
   const cycleTheme = () => {
-    setTheme((resolvedTheme ?? theme) === "dark" ? "light" : "dark");
+    if (!isHydrated) {
+      return;
+    }
+
+    setTheme((resolvedTheme ?? theme ?? "light") === "dark" ? "light" : "dark");
   };
 
-  const isDarkTheme = (resolvedTheme ?? theme) === "dark";
+  const isDarkTheme = isHydrated && (resolvedTheme ?? theme ?? "light") === "dark";
 
   const searchItems = useMemo<SearchItem[]>(() => {
     const toolItems: SearchItem[] = tools.map((tool) => ({
@@ -558,10 +567,14 @@ export function Header() {
             className={iconButtonClassName}
             aria-label="Toggle theme"
           >
-            {isDarkTheme ? (
-              <Moon className="h-5 w-5" strokeWidth={1.5} />
+            {isHydrated ? (
+              isDarkTheme ? (
+                <Moon className="h-5 w-5" strokeWidth={1.5} />
+              ) : (
+                <Sun className="h-5 w-5" strokeWidth={1.5} />
+              )
             ) : (
-              <Sun className="h-5 w-5" strokeWidth={1.5} />
+              <span className="h-5 w-5" aria-hidden="true" />
             )}
           </button>
 
