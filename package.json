@@ -39,6 +39,7 @@
     "sanity": "^5.18.0",
     "sharp": "^0.34.5",
     "styled-components": "^6.3.12",
+    "tesseract.js": "^5.1.1",
     "tailwind-merge": "^3.5.0"
   },
   "devDependencies": {

@@ -701,6 +701,30 @@ export const tools: Tool[] = [
     category: "pdf",
     keywords: ["add page numbers to pdf", "pdf page numbers", "number pdf pages", "pdf page numbering"],
   },
+  {
+    slug: "word-to-pdf",
+    name: "Word to PDF Converter",
+    description:
+      "Convert DOCX and TXT documents to PDF in your browser with private client-side processing",
+    category: "pdf",
+    keywords: ["word to pdf", "docx to pdf", "convert word document", "text to pdf", "word file converter"],
+  },
+  {
+    slug: "pdf-to-excel",
+    name: "PDF to Excel Converter",
+    description:
+      "Extract PDF text and export it to XLSX spreadsheet format for analysis and editing",
+    category: "pdf",
+    keywords: ["pdf to excel", "pdf to xlsx", "convert pdf to spreadsheet", "extract pdf text", "pdf excel converter"],
+  },
+  {
+    slug: "unlock-pdf",
+    name: "Unlock PDF",
+    description:
+      "Remove PDF password protection with the correct password and download an unlocked copy",
+    category: "pdf",
+    keywords: ["unlock pdf", "remove pdf password", "pdf password remover", "decrypt pdf", "unprotect pdf"],
+  },
 
   // Image Tools
   {
@@ -1206,6 +1230,14 @@ export const tools: Tool[] = [
     category: "math",
     keywords: ["credit hour calculator", "semester credit hours", "degree progress calculator", "credit requirements", "graduation timeline calculator"],
   },
+  {
+    slug: "semester-gpa-predictor",
+    name: "Semester GPA Predictor",
+    description:
+      "Predict your cumulative GPA after the current semester and calculate the semester GPA needed to hit your target.",
+    category: "math",
+    keywords: ["semester gpa predictor", "required semester gpa", "gpa forecast", "target cumulative gpa", "college gpa planner"],
+  },
   // Batch 4: Salary & Tax Calculators
   {
     slug: "hourly-to-salary-calculator",
@@ -1222,6 +1254,62 @@ export const tools: Tool[] = [
       "Calculate net salary after federal, state, and FICA taxes. Includes tax deductions and withholding estimates.",
     category: "finance",
     keywords: ["salary after tax", "net salary calculator", "take home pay", "income tax calculator", "paycheck calculator"],
+  },
+  {
+    slug: "remote-work-salary-calculator",
+    name: "Remote Work Salary Calculator",
+    description:
+      "Compare remote job offers with salary adjustments, commute savings, stipend benefits, and remote-work costs.",
+    category: "finance",
+    keywords: ["remote work salary calculator", "remote salary adjustment", "work from home salary", "remote compensation calculator", "remote job offer value"],
+  },
+  {
+    slug: "us-salary-calculator",
+    name: "US Salary Calculator",
+    description:
+      "Calculate US take-home salary with federal and state income tax, FICA, filing status, and deductions.",
+    category: "finance",
+    keywords: ["us salary calculator", "usa salary calculator", "us tax calculator", "federal tax calculator", "fica calculator", "us net pay calculator"],
+  },
+  {
+    slug: "canada-salary-calculator",
+    name: "Canada Salary Calculator",
+    description:
+      "Estimate Canadian take-home pay with federal and provincial income tax, CPP, EI, and deductions.",
+    category: "finance",
+    keywords: ["canada salary calculator", "canadian tax calculator", "cpp calculator", "ei calculator", "canada net pay", "provincial tax calculator"],
+  },
+  {
+    slug: "australia-salary-calculator",
+    name: "Australia Salary Calculator",
+    description:
+      "Estimate Australian take-home salary after PAYG tax, Medicare levy, and superannuation contributions.",
+    category: "finance",
+    keywords: ["australia salary calculator", "australian tax calculator", "payg tax calculator", "medicare levy calculator", "superannuation calculator"],
+  },
+  {
+    slug: "singapore-salary-calculator",
+    name: "Singapore Salary Calculator",
+    description:
+      "Calculate Singapore take-home salary with PAYE income tax and CPF contributions.",
+    category: "finance",
+    keywords: ["singapore salary calculator", "singapore tax calculator", "cpf calculator", "singapore net pay", "paye calculator singapore"],
+  },
+  {
+    slug: "uae-salary-calculator",
+    name: "UAE Salary Calculator",
+    description:
+      "Calculate UAE take-home salary with allowances and deductions. UAE has no personal income tax.",
+    category: "finance",
+    keywords: ["uae salary calculator", "dubai salary calculator", "uae take home pay", "emirates salary calculator", "no tax salary uae"],
+  },
+  {
+    slug: "new-zealand-salary-calculator",
+    name: "New Zealand Salary Calculator",
+    description:
+      "Calculate New Zealand take-home salary with PAYE tax, ACC levy, and KiwiSaver deductions.",
+    category: "finance",
+    keywords: ["new zealand salary calculator", "nz salary calculator", "paye calculator nz", "kiwisaver calculator", "nz net pay calculator"],
   },
   {
     slug: "freelance-tax-calculator",
@@ -1287,6 +1375,71 @@ export const tools: Tool[] = [
       "Free regex pattern generator and tester with common patterns for email, phone, URL, and more. Build and test regular expressions.",
     category: "developer",
     keywords: ["regex generator", "regular expression tester", "email regex", "phone regex", "url regex", "regex patterns"],
+  },
+  // Batch 6: New High Priority Tools
+  {
+    slug: "youtube-thumbnail-downloader",
+    name: "YouTube Thumbnail Downloader",
+    description:
+      "Download YouTube thumbnails in max resolution, SD, HQ, MQ, and default sizes from any valid video URL.",
+    category: "finance",
+    keywords: ["youtube thumbnail downloader", "youtube thumbnail url", "download youtube thumbnail", "youtube image extractor", "youtube thumbnail hd"],
+  },
+  {
+    slug: "twitch-revenue-calculator",
+    name: "Twitch Revenue Calculator",
+    description:
+      "Estimate Twitch income from subscriptions, bits, ads, and donations with monthly and yearly projections.",
+    category: "finance",
+    keywords: ["twitch revenue calculator", "twitch earnings calculator", "twitch income estimate", "twitch bits calculator", "twitch subscription revenue"],
+  },
+  {
+    slug: "podcast-revenue-calculator",
+    name: "Podcast Revenue Calculator",
+    description:
+      "Estimate podcast sponsorship and total monthly revenue using downloads, CPM, ad slots, and extra monetization streams.",
+    category: "finance",
+    keywords: ["podcast revenue calculator", "podcast sponsorship calculator", "podcast cpm calculator", "podcast monetization", "podcast earnings tool"],
+  },
+  {
+    slug: "ai-prompt-formatter",
+    name: "AI Prompt Formatter",
+    description:
+      "Format raw AI prompts into structured sections including role, objective, context, constraints, and output format.",
+    category: "developer",
+    keywords: ["ai prompt formatter", "prompt builder", "structured prompt", "chatgpt prompt tool", "prompt template"],
+  },
+  {
+    slug: "sql-query-formatter",
+    name: "SQL Query Formatter",
+    description:
+      "Beautify SQL queries with readable formatting and generate minified SQL output instantly.",
+    category: "developer",
+    keywords: ["sql query formatter", "sql beautifier", "sql prettifier", "sql minifier", "format sql online"],
+  },
+  {
+    slug: "ai-detector-comparison-tool",
+    name: "AI Detector Comparison Tool",
+    description:
+      "Compare multiple AI detector percentages and estimate consensus risk from average score and score spread.",
+    category: "developer",
+    keywords: ["ai detector comparison tool", "ai detection score comparison", "gptzero turnitin compare", "ai content risk", "detector consensus"],
+  },
+  {
+    slug: "screenshot-to-text-ocr",
+    name: "Screenshot to Text (OCR)",
+    description:
+      "Upload screenshots and extract text with browser-based OCR processing and copy-ready output.",
+    category: "developer",
+    keywords: ["screenshot to text", "ocr online", "image to text", "extract text from image", "screenshot ocr"],
+  },
+  {
+    slug: "percentage-to-gpa-converter",
+    name: "Percentage to GPA Converter",
+    description:
+      "Convert percentage grades to GPA on 4.0, 5.0, and 10.0 scales for quick academic planning.",
+    category: "math",
+    keywords: ["percentage to gpa converter", "percentage to gpa calculator", "convert marks to gpa", "4.0 gpa conversion", "10.0 gpa conversion"],
   },
 ];
 
